@@ -1,0 +1,51 @@
+version: '3'
+
+services:
+  db_postgresql:
+    image: postgres:10.6-alpine
+    env_file:
+      - ./docker/db_postgresql/conf/db_conf_env
+    volumes:
+      - ./databases/postgresql_main_apps:/var/lib/postgresql/data
+    container_name: db_postgres_main
+    networks:
+      - fitness_club_to_postgresql
+    ports:
+      - 5432:5432
+  
+  fitness_club:
+    image: fitness_club:v0.1
+    #build: ./docker/fitness_club/
+    volumes:
+      - ./fitness_club/src:/fitness_club/src
+      - ./fitness_club/static:/fitness_club/static
+      - ./fitness_club/media:/fitness_club/media
+    container_name: Fitness_Club_Frontend_uwsgi_django
+    env_file:
+      - ./docker/db_postgresql/conf/db_conf_env
+    depends_on:
+      - db_postgresql
+    networks:
+      - nginx_to_fitness_club
+      - fitness_club_to_postgresql
+
+  server:
+    #image: server:v0.1
+    build: ./docker/server/
+    volumes:
+      - ./fitness_club/static:/fitness_club/static
+      - ./fitness_club/media:/fitness_club/media
+    ports:
+      - 80:80
+    container_name: server_nginx
+    networks:
+      - nginx_to_fitness_club
+    depends_on:
+      - fitness_club
+
+
+networks:
+  nginx_to_fitness_club:
+    driver: bridge
+  fitness_club_to_postgresql:
+    driver: bridge
