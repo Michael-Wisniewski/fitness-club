@@ -1,7 +1,7 @@
 *.temp
 *.pyc
 #databases
-#/databases/postgresql_main_apps
+/databases/postgresql_main_apps
 #fitness club static files
-#/fitness_club/static
-#/fitness_club/media
+/fitness_club/static
+/fitness_club/media
