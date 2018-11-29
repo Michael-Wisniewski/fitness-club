@@ -2,6 +2,5 @@
 *.pyc
 #databases
 /databases/postgresql_main_apps
-#fitness club static files
-/fitness_club/static
+#fitness club
 /fitness_club/media
