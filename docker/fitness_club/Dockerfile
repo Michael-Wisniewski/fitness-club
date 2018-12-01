@@ -1,7 +1,7 @@
 FROM alpine:3.8
 
 LABEL maintainer="Michał Wiśniewski <mikex929@gmail.com>"
-LABEL description="Fitness Clubb - client side application"
+LABEL description="Fitness Clubb - main application"
 
 RUN mkdir -p /fitness_club/src && \
     mkdir /fitness_club/static && \
