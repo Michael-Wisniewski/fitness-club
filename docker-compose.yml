@@ -14,7 +14,7 @@ services:
       - 5432:5432
   
   fitness_club:
-    image: fitness_club:v0.1
+    image: fitness_club:v0.3
     #build: ./docker/fitness_club/
     volumes:
       - ./fitness_club/src:/fitness_club/src

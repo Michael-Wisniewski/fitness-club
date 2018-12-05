@@ -18,7 +18,9 @@ RUN apk add --update --no-cache \
         linux-headers \
         pcre-dev \
         postgresql-dev \
-        musl-dev 
+        musl-dev \
+        nodejs \
+        nodejs-npm
 
 RUN pip3 install --no-cache-dir -r requirements.txt
 

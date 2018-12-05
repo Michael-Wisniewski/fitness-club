@@ -4,3 +4,4 @@
 /databases/postgresql_main_apps
 #fitness club
 /fitness_club/media
+/fitness_club/src/webpack/node_modules
