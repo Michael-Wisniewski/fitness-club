@@ -1,0 +1,25 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <!--[if lt IE 9]>
+        <script src="{% static "base_templates/html5shiv.js" %}></script>
+    <![endif]-->
+    <meta charset="UTF-8">
+    <title>{% block title %}Fitness Club{% endblock title %}</title>
+    <link href="{% block extra_css %}{% endblock extra_css %}" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <div class="container-fluid">
+        {% block content %} {% endblock content%}
+    </div>
+    <script src="{% block extra_javascript %}{% endblock extra_javascript %}"></script>
+</body>
+</html>
+
+
+<!--
+    header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+-->

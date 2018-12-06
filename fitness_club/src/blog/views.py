@@ -1,5 +1,5 @@
 from django.shortcuts import render
 
-def post_list(request):
+def posts_list(request):
 
-    return render(request, 'blog/list.html')
+    return render(request, 'blog/posts_list.html')

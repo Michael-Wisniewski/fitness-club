@@ -1,0 +1,20 @@
+{% extends "frontend/base.html" %}
+{% load staticfiles %}
+
+{% block title %}Blog Main{% endblock title %}
+
+{% block extra_css %}
+    {% static "blog/posts_list/posts_list.bunle.css" %}
+{% endblock extra_css %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-sm-4">
+            NAPIS
+        </div>
+    </div>
+{% endblock content %}
+
+{% block extra_javascript %}
+    {% static "blog/posts_list/posts_list.bunle.js" %}
+{% endblock extra_javascript %}
