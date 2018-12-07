@@ -1,3 +1,4 @@
+const staticRoot = '/fitness_club/static';
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
@@ -5,7 +6,7 @@ module.exports = {
         'blog/posts_list/posts_list': './src/blog/posts_list/posts_list.js'
     },
     output: {
-        path: '/fitness_club/static',
+        path: staticRoot,
 		filename: "[name].bunle.js"
     },
     module: {
@@ -15,21 +16,21 @@ module.exports = {
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader', 
                     use: 'css-loader',
-                    publicPath: '/fitness_club/static'})
+                    publicPath: staticRoot})
             },
             {
                 test: /\.scss$/, 
                 use: ExtractTextPlugin.extract({
                     fallback: 'style-loader', 
                     use: ['css-loader', 'sass-loader'],
-                    publicPath: '/fitness_club/static'})
+                    publicPath: staticRoot})
             }
         ]
     },
     plugins: [
         new ExtractTextPlugin({
             filename: "[name].bunle.css",
-            disable: false,
+            disable: true,
             allChunks: true
         }),
     ]

@@ -3,9 +3,9 @@
 
 {% block title %}Blog Main{% endblock title %}
 
-{% block extra_css %}
-    {% static "blog/posts_list/posts_list.bunle.css" %}
-{% endblock extra_css %}
+{% block css%}
+    <link href="{% static "blog/posts_list/posts_list.bunle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block content %}
     <div class="row">
@@ -13,8 +13,8 @@
             NAPIS
         </div>
     </div>
-{% endblock content %}
+{% endblock %}
 
-{% block extra_javascript %}
-    {% static "blog/posts_list/posts_list.bunle.js" %}
-{% endblock extra_javascript %}
+{% block javascript %}
+    <script src="{% static "blog/posts_list/posts_list.bunle.js" %}"></script>
+{% endblock %}
