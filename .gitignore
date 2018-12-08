@@ -1,5 +1,6 @@
 *.temp
 *.pyc
+*.log
 #databases
 /databases/postgresql_main_apps
 #fitness club

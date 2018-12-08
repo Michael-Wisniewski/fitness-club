@@ -6,22 +6,18 @@
             <script src="{% static "base_templates/html5shiv.js" %}></script>
         <![endif]-->
         <meta charset="UTF-8">
+        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
         <title>{% block title %}Fitness Club{% endblock %}</title>
-        <link href="{% static "base_templates/bootstrap/bootstrap.min.css" %}" rel="stylesheet" type="text/css">
-        {% block css %}{% endblock %}
+        {% block css %}
+            <link href="{% static "base_templates/frontendBase.bundle.css" %}" rel="stylesheet" type="text/css">
+        {% endblock %}
     </head>
     <body>
         <div class="container-fluid">
-            {% block content %} {% endblock %}
+            {% block content %}{% endblock %}
         </div>
-        <script src="{% static "base_templates/bootstrap/bootstrap.min.js" %}"></script>
-        {% block javascript %}{% endblock %}
+        {% block javascript %}
+            <script src="{% static "base_templates/frontendBase.bundle.js" %}"></script>
+        {% endblock %}
     </body>
 </html>
-
-
-<!--
-    header, section, footer, aside, nav, main, article, figure {
-    display: block;
-}
--->

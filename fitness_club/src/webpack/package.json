@@ -4,8 +4,8 @@
   "description": "Fitness Club application bundler setup.",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack -d",
-    "prod": "webpack -p"
+    "blog": "webpack -d --config ./webpack_configurations/blog.config.js",
+    "blog_prod": "webpack -p --config ./webpack_configurations/blog.config.js"
   },
   "keywords": [
     "fitness",
@@ -14,14 +14,22 @@
   "author": "Michał Wiśniewski",
   "license": "ISC",
   "devDependencies": {
+    "bootstrap": "^4.1.3",
     "css-loader": "^1.0.1",
-    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "exports-loader": "^0.7.0",
     "jquery": "^3.3.1",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.10.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
     "popper.js": "^1.14.6",
-    "sass-loader": "^7.1.0",
+    "postcss-loader": "^3.0.0",
+    "precss": "^4.0.0",
+    "sass-loader": "^6.0.7",
     "style-loader": "^0.23.1",
-    "webpack": "^4.27.0",
+    "terser-webpack-plugin": "^1.1.0",
+    "webpack": "^4.27.0"
+  },
+  "dependencies": {
     "webpack-cli": "^3.1.2"
   }
 }
