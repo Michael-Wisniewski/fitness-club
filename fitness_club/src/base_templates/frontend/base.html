@@ -7,15 +7,16 @@
         <![endif]-->
         <meta charset="UTF-8">
         <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
-        <title>{% block title %}Fitness Club{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Welcome to Fitness Club{% endblock %}</title>
         {% block css %}
             <link href="{% static "base_templates/frontendBase.bundle.css" %}" rel="stylesheet" type="text/css">
         {% endblock %}
     </head>
     <body>
-        <div class="container-fluid">
-            {% block content %}{% endblock %}
-        </div>
+        {% include "frontend/partials/navbar.html" %}
+        {% block content %}{% endblock %}
+        
         {% block javascript %}
             <script src="{% static "base_templates/frontendBase.bundle.js" %}"></script>
         {% endblock %}

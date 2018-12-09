@@ -6,8 +6,7 @@ const webpack = require("webpack");
 
 module.exports = {
     entry: {
-        'base_templates/frontendBase': './src/base_templates/frontend.js',
-        'blog/posts_list/posts_list': './src/blog/posts_list/posts_list.js'
+        'base_templates/frontendBase': './src/base_templates/frontend.js'
     },
     output: {
         path: staticRoot,
