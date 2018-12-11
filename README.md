@@ -22,6 +22,7 @@
 ![](./docs/readme/shields/webpack.svg)
 
 ![](./docs/readme/shields/docker.svg)
+![](./docs/readme/shields/dockercompose.svg)
 
 
 
