@@ -17,10 +17,9 @@
 
 ![](./docs/readme/shields/javascript.svg)
 ![](./docs/readme/shields/vue.svg)
-
+![](./docs/readme/shields/vuex.svg)
 
 ![](./docs/readme/shields/webpack.svg)
-
 
 ![](./docs/readme/shields/docker.svg)
 
