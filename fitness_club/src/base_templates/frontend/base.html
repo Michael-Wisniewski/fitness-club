@@ -16,7 +16,7 @@
     <body>
         {% include "frontend/partials/navbar.html" %}
         {% block content %}{% endblock %}
-        
+        {% include "frontend/partials/footer.html" %}
         {% block javascript %}
             <script src="{% static "base_templates/frontendBase.bundle.js" %}"></script>
         {% endblock %}

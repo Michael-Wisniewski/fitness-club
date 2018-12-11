@@ -4,7 +4,7 @@
   "description": "Fitness Club application bundler setup.",
   "main": "index.js",
   "scripts": {
-    "blog": "webpack -d --config ./webpack_configurations/blog.config.js",
+    "blog": "webpack -d -w --config ./webpack_configurations/blog.config.js",
     "blog_prod": "webpack -p --config ./webpack_configurations/blog.config.js"
   },
   "keywords": [

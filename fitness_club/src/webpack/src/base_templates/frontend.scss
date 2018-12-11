@@ -1,10 +1,102 @@
 @import "~bootstrap/scss/bootstrap";
-/*@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
-@import "~bootstrap/scss/root";
-@import "~bootstrap/scss/grid";
-*/
+
+$sourcePath: 'http://fitness.pl/static/base_templates';
+
+$primary: #1cf1f1;
+$secondary: #fff;
+$third: #212121; 
+$fourth: #2f2f2f;
+$fifth: #e9e9e9;
+
 header, section, footer, aside, nav, main, article, figure {
     display: block;
 }
+.table-container {
+    display: table;
+}
+.table-container > .table-row {
+    display: table-row;
+}
+.table-container > .table-row > .table-cell {
+    display: table-cell;
+}
+
+#header-top {
+    $transparent-bg-color: transparentize($third, 0.40);
+    border-bottom: {
+        width: 1px;
+        style: solid;
+        color: $transparent-bg-color;
+    }
+    #navbar-container {
+        width: 100%;
+        .navbar-toggler {
+            
+            border: {
+                width: 1px;
+                style: solid;
+                color: $primary;
+            }
+            .navbar-toggler-icon {
+                background-image: url($sourcePath+'/icons/hamburger.svg');
+            }
+        }
+        .navbar-nav {
+            .nav-item {
+                .nav-link {
+                    color: $secondary;
+                    text-transform: uppercase;
+                    letter-spacing: 2px;
+                    padding: 1em 0.5em;
+                    margin: 0em 0.5em;
+                    font: {
+                        weight: 600;
+                        size: 0.9em;
+                    }
+                    &:hover {
+                        color: $primary;
+                    }
+                }
+                &.active .nav-link {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    #login-container {
+        width: 288px;
+        .dropdown {
+            .btn {
+                border-color: $primary;
+                color: $secondary;
+                background-color: transparent;
+                &:focus {
+                    box-shadow: 0 0 0 0.1rem transparentize($primary, 0.82);
+                }
+            }
+           .dropdown-menu {
+                background-color: $transparent-bg-color;
+                .dropdown-item {
+                    color: $secondary;
+                    &:hover {
+                        background: none;
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+body { background-color: rgb(67, 86, 92)}
+
+
+
