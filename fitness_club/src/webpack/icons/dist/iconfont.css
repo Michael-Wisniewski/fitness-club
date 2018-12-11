@@ -1,0 +1,22 @@
+@font-face {
+	font-family: "iconfont";
+	src: url("iconfont.woff?8816d81e8b24fcaae538ef9fa2f05d99") format("woff");
+}
+
+.icon {
+	line-height: 1;
+}
+
+.icon:before {
+	font-family: iconfont !important;
+	font-style: normal;
+	font-weight: normal !important;
+	vertical-align: top;
+}
+
+.icon-bars:before {
+	content: "\f101";
+}
+.icon-hamburger:before {
+	content: "\f102";
+}

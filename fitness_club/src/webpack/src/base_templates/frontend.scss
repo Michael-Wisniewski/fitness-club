@@ -1,6 +1,5 @@
+@import "../../icons/dist/iconfont.css";
 @import "~bootstrap/scss/bootstrap";
-
-$sourcePath: 'http://fitness.pl/static/base_templates';
 
 $primary: #1cf1f1;
 $secondary: #fff;
@@ -31,14 +30,14 @@ header, section, footer, aside, nav, main, article, figure {
     #navbar-container {
         width: 100%;
         .navbar-toggler {
-            
             border: {
                 width: 1px;
                 style: solid;
                 color: $primary;
             }
-            .navbar-toggler-icon {
-                background-image: url($sourcePath+'/icons/hamburger.svg');
+            .icon {
+                color: $secondary;
+                font-size: 1.75rem;
             }
         }
         .navbar-nav {
@@ -65,6 +64,7 @@ header, section, footer, aside, nav, main, article, figure {
     }
     #login-container {
         width: 288px;
+        vertical-align: middle;
         .dropdown {
             .btn {
                 border-color: $primary;

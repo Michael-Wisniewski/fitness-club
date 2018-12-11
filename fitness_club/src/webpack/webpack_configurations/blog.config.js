@@ -48,6 +48,17 @@ module.exports = {
                     'postcss-loader',
                     'sass-loader'
                 ]
+            },
+            {
+                test: /\.(svg|eot|ttf|woff|woff2)?$/, 
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        name: 'frontEndBase.bundle.[ext]',
+                        outputPath: 'base_templates/',
+                        publicPath: '/static/base_templates/'
+                    }
+                }] 
             }
         ]
     },
