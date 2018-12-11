@@ -2,6 +2,8 @@
 
 
 ![](./docs/readme/shields/nginx.svg)
+![](./docs/readme/shields/postgresql.svg)
+![](./docs/readme/shields/redis.svg)
 ![](./docs/readme/shields/python.svg)
 ![](./docs/readme/shields/django.svg)
 ![](./docs/readme/shields/vue.svg)
