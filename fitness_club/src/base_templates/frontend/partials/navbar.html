@@ -8,14 +8,14 @@
 					</button>
 					<div class="collapse navbar-collapse" id="collapsible-navbar">
 						<ul class="navbar-nav">
-							<li class="nav-item active">
-								<a class="nav-link" href="#">Link</a>
+							<li class="nav-item {% if section == 'home' %}active{% endif %}">
+								<a href="{% url "landing_page" %}" class="nav-link">Home</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Link</a>
+								<a href="#" class="nav-link">Link</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="#">Link</a>
+								<a href="#" class="nav-link">Link</a>
 							</li>    
 						</ul>
 					</div>  
