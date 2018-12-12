@@ -8,7 +8,7 @@
 2. Introduction
 3. Simplified use cases diagram
 4. Application’s architecture and programming environment
-⋅⋅*4.1 Virtual enviroment  
+⋅⋅* 4.1 Virtual enviroment  
 ⋅⋅⋅4.2 Servers  
 ⋅⋅⋅4.3 App Backend  
 ⋅⋅⋅4.4 App Frontend  
