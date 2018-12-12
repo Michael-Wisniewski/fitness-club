@@ -18,6 +18,9 @@
 
 ### 1. Application stack overview
 <p align="center">
+    <img src="./docs/readme/shields/nginx.svg">
+</p>
+
     ![](./docs/readme/shields/nginx.svg)
     ![](./docs/readme/shields/uwsgi.svg)
 
@@ -40,7 +43,7 @@
 
     ![](./docs/readme/shields/docker.svg)
     ![](./docs/readme/shields/dockercompose.svg)
-</p>
+
 ### 2. Introduction
 **"Fitness Club"** is a web application which  in a complex way supports running a modern fitness center. It provides many tools both in terms of improving customer service and marketing activities.
 
