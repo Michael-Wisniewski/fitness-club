@@ -19,25 +19,18 @@
 ### 1. Application stack overview
 <p align="center">
     <img src="./docs/readme/shields/nginx.svg">
-    <img src="./docs/readme/shields/uwsgi.svg">
-
+    <img src="./docs/readme/shields/uwsgi.svg">    
     <img src="./docs/readme/shields/postgresql.svg">
-    <img src="./docs/readme/shields/redis.svg">
-
-    <img src="./docs/readme/shields/solr.svg">
-
+    <img src="./docs/readme/shields/redis.svg">   
+    <img src="./docs/readme/shields/solr.svg">    
     <img src="./docs/readme/shields/python.svg">
-    <img src="./docs/readme/shields/django.svg">
-
+    <img src="./docs/readme/shields/django.svg">    
     <img src="./docs/readme/shields/sass.svg">
-    <img src="./docs/readme/shields/bootstrap.svg">
-
+    <img src="./docs/readme/shields/bootstrap.svg">     
     <img src="./docs/readme/shields/javascript.svg">
     <img src="./docs/readme/shields/vue.svg">
-    <img src="./docs/readme/shields/vuex.svg">
-
-    <img src="./docs/readme/shields/webpack.svg">
-
+    <img src="./docs/readme/shields/vuex.svg">     
+    <img src="./docs/readme/shields/webpack.svg">    
     <img src="./docs/readme/shields/docker.svg">
     <img src="./docs/readme/shields/dockercompose.svg">
 </p>
