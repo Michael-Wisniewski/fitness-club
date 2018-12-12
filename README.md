@@ -19,7 +19,7 @@
 ### 1. Application stack overview
 <p align="center">
     <img src="./docs/readme/shields/nginx.svg">
-    <img src="./docs/readme/shields/uwsgi.svg">    
+    <img src="./docs/readme/shields/uwsgi.svg"><br/>    
     <img src="./docs/readme/shields/postgresql.svg">
     <img src="./docs/readme/shields/redis.svg">   
     <img src="./docs/readme/shields/solr.svg">    
