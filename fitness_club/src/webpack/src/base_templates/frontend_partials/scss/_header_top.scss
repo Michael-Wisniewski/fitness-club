@@ -1,27 +1,7 @@
-@import "../../icons/dist/iconfont.css";
-@import "~bootstrap/scss/bootstrap";
-
-$primary: #1cf1f1;
-$secondary: #fff;
-$third: #212121; 
-$fourth: #2f2f2f;
-$fifth: #e9e9e9;
-
-header, section, footer, aside, nav, main, article, figure {
-    display: block;
-}
-.table-container {
-    display: table;
-}
-.table-container > .table-row {
-    display: table-row;
-}
-.table-container > .table-row > .table-cell {
-    display: table-cell;
-}
+$transparent-bg-color: transparentize($third, 0.40);
 
 #header-top {
-    $transparent-bg-color: transparentize($third, 0.40);
+    @include display-table;
     border-bottom: {
         width: 1px;
         style: solid;
@@ -61,6 +41,23 @@ header, section, footer, aside, nav, main, article, figure {
                 }
             }
         }
+        @media (max-width: 767px) {
+            .navbar {
+                padding-left: 0;
+                .navbar-collapse {
+                    position: absolute;
+                    top: 48px;
+                    min-width: 130px;
+                    background-color: $transparent-bg-color;
+                    border: {
+                        width: 1px;
+                        style: solid;
+                        color: transparentize($primary, 0.82);
+                        radius: 0.25rem;
+                    } 
+                }
+            }
+        }
     }
     #login-container {
         width: 288px;
@@ -76,6 +73,7 @@ header, section, footer, aside, nav, main, article, figure {
             }
            .dropdown-menu {
                 background-color: $transparent-bg-color;
+                border-color: transparentize($primary, 0.82);
                 .dropdown-item {
                     color: $secondary;
                     &:hover {
@@ -87,16 +85,26 @@ header, section, footer, aside, nav, main, article, figure {
         }
     }
 }
-
-
-
-
-
-
-
-
-
-body { background-color: rgb(67, 86, 92)}
-
-
-
+/*
+@media (max-width: 767px) {
+    #header-top {
+        #navbar-container {
+            .navbar {
+                padding-left: 0;
+                .navbar-collapse {
+                    position: absolute;
+                    top: 48px;
+                    min-width: 130px;
+                    background-color: $transparent-bg-color;
+                    border: {
+                        width: 1px;
+                        style: solid;
+                        color: transparentize($primary, 0.82);
+                        radius: 0.25rem;
+                    } 
+                }
+            }
+        }
+    }
+}
+*/

@@ -1,3 +1,4 @@
-import './frontend.scss';
+import './frontend_partials/scss/main.scss';
+import './frontend_partials/js/main.js';
 import 'bootstrap/js/dist/dropdown';
 import 'bootstrap/js/dist/collapse';

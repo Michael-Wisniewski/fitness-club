@@ -17,6 +17,8 @@
 6. Detailed list of used technologies
 
 ### 1. Application stack overview
+
+      
 <p align="center">
     <img src="./docs/readme/shields/nginx.svg">
     <img src="./docs/readme/shields/uwsgi.svg"><br/>    
