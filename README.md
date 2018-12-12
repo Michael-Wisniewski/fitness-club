@@ -17,29 +17,30 @@
 6. Detailed list of used technologies
 
 ### 1. Application stack overview
-![](./docs/readme/shields/nginx.svg)
-![](./docs/readme/shields/uwsgi.svg)
+<p align="center">
+    ![](./docs/readme/shields/nginx.svg)
+    ![](./docs/readme/shields/uwsgi.svg)
 
-![](./docs/readme/shields/postgresql.svg)
-![](./docs/readme/shields/redis.svg)
+    ![](./docs/readme/shields/postgresql.svg)
+    ![](./docs/readme/shields/redis.svg)
 
-![](./docs/readme/shields/solr.svg)
+    ![](./docs/readme/shields/solr.svg)
 
-![](./docs/readme/shields/python.svg)
-![](./docs/readme/shields/django.svg)
+    ![](./docs/readme/shields/python.svg)
+    ![](./docs/readme/shields/django.svg)
 
-![](./docs/readme/shields/sass.svg)
-![](./docs/readme/shields/bootstrap.svg)
+    ![](./docs/readme/shields/sass.svg)
+    ![](./docs/readme/shields/bootstrap.svg)
 
-![](./docs/readme/shields/javascript.svg)
-![](./docs/readme/shields/vue.svg)
-![](./docs/readme/shields/vuex.svg)
+    ![](./docs/readme/shields/javascript.svg)
+    ![](./docs/readme/shields/vue.svg)
+    ![](./docs/readme/shields/vuex.svg)
 
-![](./docs/readme/shields/webpack.svg)
+    ![](./docs/readme/shields/webpack.svg)
 
-![](./docs/readme/shields/docker.svg)
-![](./docs/readme/shields/dockercompose.svg)
-
+    ![](./docs/readme/shields/docker.svg)
+    ![](./docs/readme/shields/dockercompose.svg)
+</p>
 ### 2. Introduction
 **"Fitness Club"** is a web application which  in a complex way supports running a modern fitness center. It provides many tools both in terms of improving customer service and marketing activities.
 
