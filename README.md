@@ -1,7 +1,7 @@
-#Fitness Club
+# Fitness Club
 <span style="color: red;">**Caution!**</span> This code was created to be a attachment for a job application. It is not suitable for commercial purposes. If you find something interesting in it, please do not hesitate to reuse.
 <br/><br/>
-###Application stack overview
+### Application stack overview
 ![](./docs/readme/shields/nginx.svg)
 ![](./docs/readme/shields/uwsgi.svg)
 
@@ -25,17 +25,17 @@
 ![](./docs/readme/shields/docker.svg)
 ![](./docs/readme/shields/dockercompose.svg)
 
-###Introduction
+### Introduction
 **"Fitness Club"** is a web application which  in a complex way supports running a modern fitness center. It provides many tools both in terms of improving customer service and marketing activities.
 <br/><br/>
 
-###Simplified use cases diagram
+### Simplified use cases diagram
 ![](./docs/readme/diagrams/use_cases.svg)
 
-###Application’s architecture and programming environment
+### Application’s architecture and programming environment
 ![](./docs/readme/diagrams/system_architecture.svg)
-###Virtual enviroment
+### Virtual enviroment
 
-###Servers
+### Servers
 
-###Backend
+### Backend
