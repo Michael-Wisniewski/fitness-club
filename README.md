@@ -19,41 +19,40 @@
 ### 1. Application stack overview
 <p align="center">
     <img src="./docs/readme/shields/nginx.svg">
+    <img src="./docs/readme/shields/uwsgi.svg">
+
+    <img src="./docs/readme/shields/postgresql.svg">
+    <img src="./docs/readme/shields/redis.svg">
+
+    <img src="./docs/readme/shields/solr.svg">
+
+    <img src="./docs/readme/shields/python.svg">
+    <img src="./docs/readme/shields/django.svg">
+
+    <img src="./docs/readme/shields/sass.svg">
+    <img src="./docs/readme/shields/bootstrap.svg">
+
+    <img src="./docs/readme/shields/javascript.svg">
+    <img src="./docs/readme/shields/vue.svg">
+    <img src="./docs/readme/shields/vuex.svg">
+
+    <img src="./docs/readme/shields/webpack.svg">
+
+    <img src="./docs/readme/shields/docker.svg">
+    <img src="./docs/readme/shields/dockercompose.svg">
 </p>
 
-    ![](./docs/readme/shields/nginx.svg)
-    ![](./docs/readme/shields/uwsgi.svg)
-
-    ![](./docs/readme/shields/postgresql.svg)
-    ![](./docs/readme/shields/redis.svg)
-
-    ![](./docs/readme/shields/solr.svg)
-
-    ![](./docs/readme/shields/python.svg)
-    ![](./docs/readme/shields/django.svg)
-
-    ![](./docs/readme/shields/sass.svg)
-    ![](./docs/readme/shields/bootstrap.svg)
-
-    ![](./docs/readme/shields/javascript.svg)
-    ![](./docs/readme/shields/vue.svg)
-    ![](./docs/readme/shields/vuex.svg)
-
-    ![](./docs/readme/shields/webpack.svg)
-
-    ![](./docs/readme/shields/docker.svg)
-    ![](./docs/readme/shields/dockercompose.svg)
 
 ### 2. Introduction
 **"Fitness Club"** is a web application which  in a complex way supports running a modern fitness center. It provides many tools both in terms of improving customer service and marketing activities.
 
 
 ### 3. Simplified use cases diagram
-![](./docs/readme/diagrams/use_cases.svg)
+<img src="./docs/readme/diagrams/use_cases.svg">
 
 
 ### 4. Application’s architecture and programming environment
-![](./docs/readme/diagrams/system_architecture.svg)
+<img src="./docs/readme/diagrams/system_architecture.svg">
 #### 4.1 Virtual enviroment
 
 #### 4.2 Servers
