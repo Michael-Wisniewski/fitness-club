@@ -4,10 +4,10 @@
   "description": "Fitness Club application bundler setup.",
   "main": "index.js",
   "scripts": {
-    "blog": "node ./icons/convert_svg && webpack -d -w --config ./webpack_configurations/blog.config.js",
-    "blog_prod": "webpack -p --config ./webpack_configurations/blog.config.js",
-    "svg": "node ./icons/convert_svg && webpack -d --config ./webpack_configurations/blog.config.js",
-    "css": "webpack -d --config ./webpack_configurations/blog.config.js"
+    "frontend": "node ./icons/convert_svg && webpack -d -w --config ./webpack_configurations/frontend.config.js",
+    "frontend_prod": "webpack -p --config ./webpack_configurations/frontend.config.js",
+    "svg": "node ./icons/convert_svg && webpack -d --config ./webpack_configurations/frontend.config.js",
+    "css": "webpack -d --config ./webpack_configurations/frontend.config.js"
   },
   "keywords": [
     "fitness",

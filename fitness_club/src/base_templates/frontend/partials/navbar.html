@@ -11,12 +11,9 @@
 							<li class="nav-item {% if section == 'home' %}active{% endif %}">
 								<a href="{% url "landing_page" %}" class="nav-link">Home</a>
 							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link">Link</a>
-							</li>
-							<li class="nav-item">
-								<a href="#" class="nav-link">Link</a>
-							</li>    
+							<li class="nav-item {% if section == 'blog' %}active{% endif %}">
+								<a href="{% url "blog:posts_list" %}" class="nav-link">Blog</a>
+							</li> 
 						</ul>
 					</div>  
 				</nav>

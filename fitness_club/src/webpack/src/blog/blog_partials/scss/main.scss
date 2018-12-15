@@ -1,0 +1,11 @@
+@import '../../../base_templates/frontend_partials/scss/main.scss';
+
+$vertical-spacing: 25px;
+ 
+#blog {
+    @import '_content';
+    @import '_right_bar';
+    margin: {
+        top: $vertical-spacing; 
+    }
+}

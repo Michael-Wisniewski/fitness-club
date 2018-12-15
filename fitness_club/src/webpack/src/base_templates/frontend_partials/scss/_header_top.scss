@@ -2,6 +2,10 @@ $transparent-bg-color: transparentize($third, 0.40);
 
 #header-top {
     @include display-table;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background-color: #a7a7a7cc;
     border-bottom: {
         width: 1px;
         style: solid;

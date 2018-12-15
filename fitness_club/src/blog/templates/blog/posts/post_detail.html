@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% load staticfiles %}
+
+{% block title %}{{ post }}{% endblock %}
+
+{% block blog_content %}
+    <div class="post-container">
+        <h2 class="title">{{ post }}</h2>
+        <img src="{% static "blog/image.png" %}" class="post-image" alt="No photo"/>
+        <p class="date text-muted">
+                Posted on {{ post.publish|date:"M d, Y" }} by <a href="#">{{ post.author }}</a>
+        </p>
+        <p class="body">
+                {{ post.body|linebreaks }}
+        </p>
+    </div>
+{% endblock %}

@@ -1,0 +1,51 @@
+content {
+    .post-card {
+        margin-bottom: $vertical-spacing;
+        .card-img {
+            border-bottom: {
+                left-radius: unset;
+                right-radius: unset;
+            }
+        }
+        .card-body {
+            .btn-primary {
+                background-color: $primary;
+                border-color: $primary;
+                .icon {
+                    line-height: 1.4em;
+                }
+                &:focus {
+                    box-shadow: 0 0 0 0.1rem transparentize($fourth, 0.82);
+                }
+            }
+        }
+        .card-footer {
+            a {
+                color: $primary;
+            }
+        }
+    }
+    .post-container {
+        .title {
+            width: 100%;
+            border-bottom: {
+                width: 1px;
+                style: solid;
+                color: $fourth;
+            }
+        }
+        .post-image {
+            width: 100%;
+            height: auto;
+        }
+        .date {
+            font-size: 0.7em;
+            a {
+                color: $primary;
+            }
+        }
+        .body {
+            font-size: 1em;
+        }
+    }
+}

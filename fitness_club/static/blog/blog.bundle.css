@@ -6426,3 +6426,34 @@ a.text-dark:hover, a.text-dark:focus {
 header, section, footer, aside, nav, main, article, figure {
   display: block; }
 
+#blog {
+  margin-top: 25px; }
+  #blog content .post-card {
+    margin-bottom: 25px; }
+    #blog content .post-card .card-img {
+      border-bottom-left-radius: unset;
+      border-bottom-right-radius: unset; }
+    #blog content .post-card .card-body .btn-primary {
+      background-color: #1cf1f1;
+      border-color: #1cf1f1; }
+      #blog content .post-card .card-body .btn-primary .icon {
+        line-height: 1.4em; }
+      #blog content .post-card .card-body .btn-primary:focus {
+        box-shadow: 0 0 0 0.1rem rgba(47, 47, 47, 0.18); }
+    #blog content .post-card .card-footer a {
+      color: #1cf1f1; }
+  #blog content .post-container .title {
+    width: 100%;
+    border-bottom-width: 1px;
+    border-bottom-style: solid;
+    border-bottom-color: #2f2f2f; }
+  #blog content .post-container .post-image {
+    width: 100%;
+    height: auto; }
+  #blog content .post-container .date {
+    font-size: 0.7em; }
+    #blog content .post-container .date a {
+      color: #1cf1f1; }
+  #blog content .post-container .body {
+    font-size: 1em; }
+
