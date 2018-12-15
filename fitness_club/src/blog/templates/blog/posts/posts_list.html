@@ -4,43 +4,53 @@
 {% block title %}Blog Main Site{% endblock title %}
 
 {% block blog_content %}
-    {% for post in posts %}
-        <div class="card post-card">
-            <img src="{% static "blog/image.png" %}" class="card-img" alt="No image"/>
-            <div class="card-body">
-                <h4 class="card-title">{{ post.title }}</h4>
-                <p class="card-text">{{ post.body|truncatewords:20|linebreaks }}</p>
-                <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More
-                    <i class="icon icon-long-arrow-alt-right"></i>
-                </a>
+    <div class="posts-list">
+        {% for post in posts %}
+            <div class="card post-card">
+                <img src="{% static "blog/image.png" %}" class="card-img" alt="No image"/>
+                <div class="card-body">
+                    <h4 class="card-title">{{ post.title }}</h4>
+                    <p class="card-text">{{ post.body|truncatewords:20|linebreaks }}</p>
+                    <a href="{{ post.get_absolute_url }}" class="btn btn-primary">Read More
+                        <i class="icon icon-long-arrow-alt-right"></i>
+                    </a>
+                </div>
+                <div class="card-footer text-muted">
+                    Posted on {{ post.publish|date:"M d, Y" }} by <a href="#">{{ post.author }}</a>
+                </div>
             </div>
-            <div class="card-footer text-muted">
-                Posted on {{ post.publish|date:"M d, Y" }} by <a href="#">{{ post.author }}</a>
-            </div>
-        </div>
-    {% empty %}
-        <h3 class>Sorry :(</h3>
-        <h4>No posts have benn published yet.</h1>
-    {% endfor %}
-    {% if is_paginated %}
-        <ul class="pagination justify-content-center">
-            {% if not posts.has_previous %}
-            <li class="page-item {% if not posts.has_previous %}disabled{% endif %}">
-                <a class="page-link" href="/?Ppage={% posts.previous_page_number %}">Previous</a>
-            </li>
-
-            {{% for counter in posts.paginator.page_range %}
-                {{ counter }}
-            {% endfor %}
-
-            <li class="page-item "><a class="page-link" href="javascript:void(0);">1</a></li>
-            
-            <li class="page-item {% if not posts.has_next %}disabled{% endif %}">
-                <a class="page-link" href="/?Ppage={% posts.next_page_number %}">Next</a>
-            </li>
-        </ul>    
-    {% endif %}
+        {% empty %}
+            <h3 class>Sorry :(</h3>
+            <h4>No posts have benn published yet.</h1>
+        {% endfor %}
+        {% if is_paginated %}
+            <ul class="pagination justify-content-center">
+                {% if page_obj.has_previous %}
+                    <li class="page-item">
+                        <a class="page-link" href="./?page={{ page_obj.previous_page_number }}">Previous</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Previous</a>
+                    </li>
+                {% endif %}
+                {% for counter in page_obj.paginator.page_range %}
+                    <li class="page-item {% if counter == page_obj.number %}active{% endif %}">
+                        <a class="page-link" href="./?page={{ counter }}">
+                            {{ counter }}
+                        </a>
+                    </li>
+                {% endfor %}            
+                {% if page_obj.has_next %}
+                    <li class="page-item">
+                        <a class="page-link" href="./?page={{ page_obj.next_page_number }}">Next</a>
+                    </li>
+                {% else %}
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                {% endif %}
+            </ul>    
+        {% endif %}
+    </div>
 {% endblock %}
-
-disabled
-active

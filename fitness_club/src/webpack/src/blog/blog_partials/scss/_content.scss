@@ -1,31 +1,48 @@
 content {
-    .post-card {
-        margin-bottom: $vertical-spacing;
-        .card-img {
-            border-bottom: {
-                left-radius: unset;
-                right-radius: unset;
-            }
-        }
-        .card-body {
-            .btn-primary {
-                background-color: $primary;
-                border-color: $primary;
-                .icon {
-                    line-height: 1.4em;
-                }
-                &:focus {
-                    box-shadow: 0 0 0 0.1rem transparentize($fourth, 0.82);
+    .posts-list {
+        .post-card {
+            margin-bottom: $vertical-spacing;
+            .card-img {
+                border-bottom: {
+                    left-radius: unset;
+                    right-radius: unset;
                 }
             }
+            .card-body {
+                .btn-primary {
+                    background-color: $primary;
+                    border-color: $primary;
+                    .icon {
+                        line-height: 1.4em;
+                    }
+                    &:focus {
+                        box-shadow: 0 0 0 0.1rem transparentize($fourth, 0.82);
+                    }
+                }
+            }
+            .card-footer {
+                a {
+                    color: $primary;
+                }
+            }
         }
-        .card-footer {
-            a {
-                color: $primary;
+        .pagination {
+            .page-item {
+                .page-link {
+                    color: $primary;
+                }
+                &.disabled .page-link {
+                    color: #6c757d;
+                }
+                &.active .page-link {
+                    color: $secondary;
+                    background-color: $primary;    
+                    border-color: $primary;
+                }
             }
         }
     }
-    .post-container {
+    .post-details {
         .title {
             width: 100%;
             border-bottom: {

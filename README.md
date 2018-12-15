@@ -60,4 +60,10 @@
 
 ### 5. Description of functionalities and programming notes
 
+    Blog
+    klient - 
+        -czytać posty 
+        -zachecać znajomych do przeczytania posta za pomocą wiadomości     email
+        -komentować posty
+
 ### 6. Detailed list of used technologies

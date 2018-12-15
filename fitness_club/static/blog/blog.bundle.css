@@ -6428,32 +6428,40 @@ header, section, footer, aside, nav, main, article, figure {
 
 #blog {
   margin-top: 25px; }
-  #blog content .post-card {
+  #blog content .posts-list .post-card {
     margin-bottom: 25px; }
-    #blog content .post-card .card-img {
+    #blog content .posts-list .post-card .card-img {
       border-bottom-left-radius: unset;
       border-bottom-right-radius: unset; }
-    #blog content .post-card .card-body .btn-primary {
+    #blog content .posts-list .post-card .card-body .btn-primary {
       background-color: #1cf1f1;
       border-color: #1cf1f1; }
-      #blog content .post-card .card-body .btn-primary .icon {
+      #blog content .posts-list .post-card .card-body .btn-primary .icon {
         line-height: 1.4em; }
-      #blog content .post-card .card-body .btn-primary:focus {
+      #blog content .posts-list .post-card .card-body .btn-primary:focus {
         box-shadow: 0 0 0 0.1rem rgba(47, 47, 47, 0.18); }
-    #blog content .post-card .card-footer a {
+    #blog content .posts-list .post-card .card-footer a {
       color: #1cf1f1; }
-  #blog content .post-container .title {
+  #blog content .posts-list .pagination .page-item .page-link {
+    color: #1cf1f1; }
+  #blog content .posts-list .pagination .page-item.disabled .page-link {
+    color: #6c757d; }
+  #blog content .posts-list .pagination .page-item.active .page-link {
+    color: #fff;
+    background-color: #1cf1f1;
+    border-color: #1cf1f1; }
+  #blog content .post-details .title {
     width: 100%;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #2f2f2f; }
-  #blog content .post-container .post-image {
+  #blog content .post-details .post-image {
     width: 100%;
     height: auto; }
-  #blog content .post-container .date {
+  #blog content .post-details .date {
     font-size: 0.7em; }
-    #blog content .post-container .date a {
+    #blog content .post-details .date a {
       color: #1cf1f1; }
-  #blog content .post-container .body {
+  #blog content .post-details .body {
     font-size: 1em; }
 
