@@ -1,23 +1,11 @@
 content {
-    .posts-list {
+    #posts-list {
         .post-card {
             margin-bottom: $vertical-spacing;
             .card-img {
                 border-bottom: {
                     left-radius: unset;
                     right-radius: unset;
-                }
-            }
-            .card-body {
-                .btn-primary {
-                    background-color: $primary;
-                    border-color: $primary;
-                    .icon {
-                        line-height: 1.4em;
-                    }
-                    &:focus {
-                        box-shadow: 0 0 0 0.1rem transparentize($fourth, 0.82);
-                    }
                 }
             }
             .card-footer {
@@ -42,7 +30,7 @@ content {
             }
         }
     }
-    .post-details {
+    #post-details {
         .title {
             width: 100%;
             border-bottom: {
@@ -63,6 +51,19 @@ content {
         }
         .body {
             font-size: 1em;
+        }
+    }
+    #share-confirmation {
+        margin-top: 50px;
+        .card {
+            .card-header {
+                background-color: $confirmationColor;
+                color: $secondary;
+            }
+            .card-body {
+                padding: 5rem 1.25rem;
+                background-color: lighten($fourth, 75);
+            }
         }
     }
 }

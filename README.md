@@ -60,10 +60,16 @@
 
 ### 5. Description of functionalities and programming notes
 
+    Landing Page
+    css/js only two bootstrap okrojony
+
     Blog
     klient - 
         -czytać posty 
         -zachecać znajomych do przeczytania posta za pomocą wiadomości     email
         -komentować posty
+
+    All views are class based
+    crispy_froms package is used to generate forms
 
 ### 6. Detailed list of used technologies

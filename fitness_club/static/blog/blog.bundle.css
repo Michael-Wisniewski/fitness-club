@@ -20,6 +20,9 @@
 .icon-long-arrow-alt-right:before {
 	content: "\F102";
 }
+.icon-paper-plane:before {
+	content: "\F103";
+}
 
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
@@ -6426,42 +6429,58 @@ a.text-dark:hover, a.text-dark:focus {
 header, section, footer, aside, nav, main, article, figure {
   display: block; }
 
+a button.btn.btn-primary, a button.btn.btn-primary:hover, a button.btn.btn-primary:active {
+  color: #fff;
+  background-color: #1cf1f1;
+  border-color: #1cf1f1; }
+
+a button.btn.btn-primary:focus {
+  box-shadow: 0 0 0 0.1rem rgba(47, 47, 47, 0.18) !important;
+  background-color: #1cf1f1 !important;
+  border-color: #1cf1f1 !important; }
+
+a button.btn .icon {
+  margin-left: 7px;
+  line-height: 1.1em;
+  font-size: 1.1em; }
+
 #blog {
   margin-top: 25px; }
-  #blog content .posts-list .post-card {
+  #blog content #posts-list .post-card {
     margin-bottom: 25px; }
-    #blog content .posts-list .post-card .card-img {
+    #blog content #posts-list .post-card .card-img {
       border-bottom-left-radius: unset;
       border-bottom-right-radius: unset; }
-    #blog content .posts-list .post-card .card-body .btn-primary {
-      background-color: #1cf1f1;
-      border-color: #1cf1f1; }
-      #blog content .posts-list .post-card .card-body .btn-primary .icon {
-        line-height: 1.4em; }
-      #blog content .posts-list .post-card .card-body .btn-primary:focus {
-        box-shadow: 0 0 0 0.1rem rgba(47, 47, 47, 0.18); }
-    #blog content .posts-list .post-card .card-footer a {
+    #blog content #posts-list .post-card .card-footer a {
       color: #1cf1f1; }
-  #blog content .posts-list .pagination .page-item .page-link {
+  #blog content #posts-list .pagination .page-item .page-link {
     color: #1cf1f1; }
-  #blog content .posts-list .pagination .page-item.disabled .page-link {
+  #blog content #posts-list .pagination .page-item.disabled .page-link {
     color: #6c757d; }
-  #blog content .posts-list .pagination .page-item.active .page-link {
+  #blog content #posts-list .pagination .page-item.active .page-link {
     color: #fff;
     background-color: #1cf1f1;
     border-color: #1cf1f1; }
-  #blog content .post-details .title {
+  #blog content #post-details .title {
     width: 100%;
     border-bottom-width: 1px;
     border-bottom-style: solid;
     border-bottom-color: #2f2f2f; }
-  #blog content .post-details .post-image {
+  #blog content #post-details .post-image {
     width: 100%;
     height: auto; }
-  #blog content .post-details .date {
+  #blog content #post-details .date {
     font-size: 0.7em; }
-    #blog content .post-details .date a {
+    #blog content #post-details .date a {
       color: #1cf1f1; }
-  #blog content .post-details .body {
+  #blog content #post-details .body {
     font-size: 1em; }
+  #blog content #share-confirmation {
+    margin-top: 50px; }
+    #blog content #share-confirmation .card .card-header {
+      background-color: #33da00;
+      color: #fff; }
+    #blog content #share-confirmation .card .card-body {
+      padding: 5rem 1.25rem;
+      background-color: #eeeeee; }
 

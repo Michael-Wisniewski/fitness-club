@@ -38,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'landing_page',
     'blog',
 )
@@ -106,8 +107,16 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'static')
 MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), 'media')
 
 AUTH_USER_MODEL = "account.User"
+
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'blogemailsend@gmail.com'
+EMAIL_HOST_PASSWORD = 'qwerty78qwerty78'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True

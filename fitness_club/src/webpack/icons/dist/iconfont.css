@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "iconfont";
-	src: url("iconfont.woff?bb0f61276832678b115489722df05d83") format("woff");
+	src: url("iconfont.woff?cddb06e55b0be002b02cec0c7e8c9f10") format("woff");
 }
 
 .icon {
@@ -19,4 +19,7 @@
 }
 .icon-long-arrow-alt-right:before {
 	content: "\f102";
+}
+.icon-paper-plane:before {
+	content: "\f103";
 }

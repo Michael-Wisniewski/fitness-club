@@ -4,7 +4,7 @@
 {% block title %}{{ post }}{% endblock %}
 
 {% block blog_content %}
-    <div class="post-details">
+    <div id="post-details">
         <h2 class="title">{{ post }}</h2>
         <img src="{% static "blog/image.png" %}" class="post-image" alt="No photo"/>
         <p class="date text-muted">
@@ -13,5 +13,9 @@
         <p class="body">
                 {{ post.body|linebreaks }}
         </p>
+        <a href="{% url "blog:post_share" post.id %}">
+            <button class="btn-share btn btn-primary">Share post<i class="icon icon-paper-plane"></i></button>    
+        </a>
     </div>
+    
 {% endblock %}
