@@ -28,6 +28,7 @@ services:
     networks:
       - nginx_to_fitness_club
       - fitness_club_to_postgresql
+      - uwsgi_to_mailhog
 
   server:
     #image: server:v0.1
@@ -43,9 +44,18 @@ services:
     depends_on:
       - fitness_club
 
+  mailhog:
+    image: diyan/mailhog
+    networks:
+      - uwsgi_to_mailhog
+    ports:
+      - 8025:8025
+
 
 networks:
   nginx_to_fitness_club:
     driver: bridge
   fitness_club_to_postgresql:
+    driver: bridge
+  uwsgi_to_mailhog:
     driver: bridge
