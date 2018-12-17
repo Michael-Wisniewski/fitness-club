@@ -1,11 +1,14 @@
 {% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
 
 {% block title %}Share post{% endblock %}
 
 {% block blog_content %}
-    <form action="." method="post">
-    {{ form.as_p }}
-    {% csrf_token %}
-    <input type="submit" value="Send message">
-    </form>
+    <div class="row">
+        <div class="col-8 mx-auto form-container">
+            <form action="." method="post">
+                {% crispy form %} 
+            </form>
+        </div>
+    </div>
 {% endblock %}

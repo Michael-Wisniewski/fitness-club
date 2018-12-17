@@ -70,7 +70,7 @@
         -komentować posty
 
     All views are class based
-    crispy_froms package is used to generate forms
-    Mailhog is used for email testing (port 8025)
+    Custom crispy fields are used during forms generation
+    Mailhog is used for email testing (localhost:8025)
 
 ### 6. Detailed list of used technologies

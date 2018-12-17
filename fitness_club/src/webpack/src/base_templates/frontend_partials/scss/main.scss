@@ -5,12 +5,16 @@
 
 @import "_header_top";
 
+// Do wywalenia
+body {
+    margin-top: 125px;
+}
 
 header, section, footer, aside, nav, main, article, figure {
     display: block;
 }
 
-a button.btn {
+a button.btn, a.btn, input.btn {
     &.btn-primary {
         &, &:hover, &:active {
             color: $secondary;
@@ -23,10 +27,41 @@ a button.btn {
             border-color: $primary !important;
         } 
     }
+    &.btn-secondary {
+        background-color: #bababa;
+        border-color: #bababa;
+        &:focus {
+            box-shadow: 0 0 0 0.1rem transparentize($fourth, 0.82) !important;
+            background-color: #bababa !important;
+        border-color: #bababa !important;
+        }
+    }
     .icon {
         margin-left: 7px;
         line-height: 1.1em;
         font-size: 1.1em;
+    }
+}
+.form-container {
+    border: {
+        width: 1px;
+        style: solid;
+        color: #ced4da;
+        radius: 4px;
+    }
+    background-color: lighten($fourth, 75);
+    .form-buttons {
+        margin: 20px 0px 12px 0px;
+    }
+    input.form-control:focus, textarea:focus {
+        border-color: $primary;
+        box-shadow: 0 0 0 0.2rem transparentize($primary, 0.82);
+    }
+    .recomended-post-title {
+        background-color: $primary;
+        color: lighten($fourth, 30);
+        padding: 0.3em 0em;
+        margin-bottom: 20px;
     }
 }
 

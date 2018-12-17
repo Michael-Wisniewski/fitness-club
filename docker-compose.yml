@@ -46,6 +46,7 @@ services:
 
   mailhog:
     image: diyan/mailhog
+    container_name: Mailhog
     networks:
       - uwsgi_to_mailhog
     ports:
