@@ -1,9 +1,14 @@
 {% extends "blog/base.html" %}
-{% load staticfiles %}
+{% load staticfiles crispy_forms_tags %}
 
 {% block title %}{{ post }}{% endblock %}
 
 {% block blog_content %}
+    {% if new_comment %}
+        <div id="new_comment">
+            <h3>Your comment has been added.</h3>
+        </div>
+    {% endif %}
     <div id="post-details">
         <h2 class="title">{{ post }}</h2>
         <img src="{% static "blog/image.png" %}" class="post-image" alt="No photo"/>
@@ -17,5 +22,31 @@
             <button class="btn-share btn btn-primary">Share post<i class="icon icon-paper-plane"></i></button>    
         </a>
     </div>
-    
+    {% with comments.count as total_comments %}
+        <div id="comments-count">
+            <h3>
+                {{ total_comments }} comment{{ total_comments| pluralize:"s"}}
+            </h3>
+        </div>
+    {% endwith %}
+    <div id="comments-container">
+        {% for comment in comments %}
+            <div class="comment">
+                <div class="comment-header">
+                    Comment <span>{{ forloop.counter }}</span> 
+                    added by <span>{{ comment.name }} {{ comment.created }}</span>
+                </div>
+                <div clss="comment-body">
+                    {{ comment.body | linebreaks }}
+                </div>
+            </div>
+        {% empty %}
+            <h5>No one has commented this post yet. Be the fitrs!</h5>
+        {% endfor %}
+    </div>
+    <div class="col-11 mx-auto form-container">
+        <form action="." method="post">
+            {% crispy form %}
+        </form>
+    </div>
 {% endblock %}

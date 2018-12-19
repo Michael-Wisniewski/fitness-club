@@ -74,3 +74,14 @@
     Mailhog is used for email testing (localhost:8025)
 
 ### 6. Detailed list of used technologies
+
+
+Nginx, Uwsgi
+PostgreSQL, Redis
+Apache Solr
+Python,Pip,  Django, Crispy Forms,
+Html5, Css3, Sass, Bootstrap
+JavaScript, Vue, Vuex
+Node js, Npm, Webpack (Css and Js optimizers, svg converter)
+Docker, Docker-Compose
+Mailhog

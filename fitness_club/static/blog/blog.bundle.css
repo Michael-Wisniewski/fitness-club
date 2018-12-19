@@ -6456,11 +6456,14 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
   font-size: 1.1em; }
 
 .form-container {
+  margin-bottom: 25px;
   border-width: 1px;
   border-style: solid;
   border-color: #ced4da;
   border-radius: 4px;
   background-color: #eeeeee; }
+  .form-container form {
+    margin-top: 20px; }
   .form-container .form-buttons {
     margin: 20px 0px 12px 0px; }
   .form-container input.form-control:focus, .form-container textarea:focus {
@@ -6511,4 +6514,25 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
     #blog content #share-confirmation .card .card-body {
       padding: 5rem 1.25rem;
       background-color: #eeeeee; }
+  #blog content #new_comment {
+    background-color: #33da00;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 25px; }
+    #blog content #new_comment h3 {
+      margin-bottom: 0px; }
+  #blog content #comments-count {
+    margin: 40px 0px 20px 0px; }
+  #blog content #comments-container {
+    margin-bottom: 25px; }
+    #blog content #comments-container .comment {
+      background-color: #eeeeee;
+      padding: 10px; }
+      #blog content #comments-container .comment:nth-child(2n) {
+        background-color: transparent; }
+      #blog content #comments-container .comment .comment-header {
+        font-size: 0.7em; }
+        #blog content #comments-container .comment .comment-header span {
+          color: #1cf1f1; }
 

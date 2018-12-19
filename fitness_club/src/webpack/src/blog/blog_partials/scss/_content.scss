@@ -66,4 +66,36 @@ content {
             }
         }
     }
+    #new_comment {
+        background-color: $confirmationColor;
+        color: $secondary;
+        padding: 10px;
+        border-radius: 4px;
+        margin-bottom: $vertical-spacing;
+        h3 {
+            margin-bottom: 0px;
+        }
+    }
+    #comments-count {
+        margin: 40px 0px 20px 0px;
+    }
+    #comments-container {
+        margin-bottom: $vertical-spacing;
+        .comment {
+            background-color: lighten($fourth, 75);
+            padding: 10px;
+            &:nth-child(2n) {
+                background-color: transparent;
+            }
+            .comment-header {
+                font-size: 0.7em;
+                span {
+                    color: $primary;
+                }
+            }
+            .comment-body {
+
+            }
+        }
+    }
 }

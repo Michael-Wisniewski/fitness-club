@@ -6456,11 +6456,14 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
   font-size: 1.1em; }
 
 .form-container {
+  margin-bottom: 25px;
   border-width: 1px;
   border-style: solid;
   border-color: #ced4da;
   border-radius: 4px;
   background-color: #eeeeee; }
+  .form-container form {
+    margin-top: 20px; }
   .form-container .form-buttons {
     margin: 20px 0px 12px 0px; }
   .form-container input.form-control:focus, .form-container textarea:focus {
