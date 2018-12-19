@@ -5,12 +5,22 @@
 
 {% block blog_content %}
     <div id="posts-list">
+        {% if tag %}
+            {% if posts.count %}
+                <h3>Posts tagged {{ tag }}:</h3><hr/>
+            {% else %}
+                <h3>There are no posts tagged : {{ tag }}</h3>
+            {% endif %}
+        {% endif %}
         {% for post in posts %}
             <div class="card post-card">
                 <img src="{% static "blog/image.png" %}" class="card-img" alt="No image"/>
                 <div class="card-body">
                     <h4 class="card-title">{{ post.title }}</h4>
-                    <p class="card-text">{{ post.body|truncatewords:20|linebreaks }}</p>
+                    {% if post.tags.all.count %}
+                        <p class="card-tags">Tags: <span>{{ post.tags.all|join:"</span>, <span>" }}</span></p>
+                    {% endif%}
+                    <p class="card-text card-tags">{{ post.body|truncatewords:20|linebreaks }}</p>
                     <a href="{{ post.get_absolute_url }}">
                         <button class="btn btn-primary">
                             Read More<i class="icon icon-long-arrow-alt-right"></i>
@@ -21,10 +31,11 @@
                     Posted on {{ post.publish|date:"M d, Y" }} by <a href="#">{{ post.author }}</a>
                 </div>
             </div>
-        {% empty %}
+        {% endfor %}
+        {% if not posts.count and not tag %}
             <h3 class>Sorry :(</h3>
             <h4>No posts have benn published yet.</h1>
-        {% endfor %}
+        {% endif %}
         {% if is_paginated %}
             <ul class="pagination justify-content-center">
                 {% if page_obj.has_previous %}

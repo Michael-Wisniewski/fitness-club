@@ -6482,6 +6482,12 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
     #blog content #posts-list .post-card .card-img {
       border-bottom-left-radius: unset;
       border-bottom-right-radius: unset; }
+    #blog content #posts-list .post-card .card-title {
+      margin-bottom: 0px; }
+    #blog content #posts-list .post-card .card-tags {
+      font-size: 0.7rem; }
+      #blog content #posts-list .post-card .card-tags span {
+        color: #1cf1f1; }
     #blog content #posts-list .post-card .card-footer a {
       color: #1cf1f1; }
   #blog content #posts-list .pagination .page-item .page-link {
@@ -6506,6 +6512,8 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
       color: #1cf1f1; }
   #blog content #post-details .body {
     font-size: 1em; }
+  #blog content #post-share form {
+    margin-top: 0px; }
   #blog content #share-confirmation {
     margin-top: 50px; }
     #blog content #share-confirmation .card .card-header {

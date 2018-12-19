@@ -8,6 +8,15 @@ content {
                     right-radius: unset;
                 }
             }
+            .card-title {
+                margin-bottom: 0px;
+            }
+            .card-tags {
+                font-size: 0.7rem;
+                span {
+                    color: $primary;
+                }
+            }
             .card-footer {
                 a {
                     color: $primary;
@@ -52,6 +61,9 @@ content {
         .body {
             font-size: 1em;
         }
+    }
+    #post-share form {
+        margin-top: 0px;
     }
     #share-confirmation {
         margin-top: 50px;

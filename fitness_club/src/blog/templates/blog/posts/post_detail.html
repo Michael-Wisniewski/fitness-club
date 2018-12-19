@@ -25,7 +25,7 @@
     {% with comments.count as total_comments %}
         <div id="comments-count">
             <h3>
-                {{ total_comments }} comment{{ total_comments| pluralize:"s"}}
+                {{ total_comments }} comment{{ total_comments|pluralize:"s"}}
             </h3>
         </div>
     {% endwith %}
@@ -37,14 +37,14 @@
                     added by <span>{{ comment.name }} {{ comment.created }}</span>
                 </div>
                 <div clss="comment-body">
-                    {{ comment.body | linebreaks }}
+                    {{ comment.body|linebreaks }}
                 </div>
             </div>
         {% empty %}
             <h5>No one has commented this post yet. Be the fitrs!</h5>
         {% endfor %}
     </div>
-    <div class="col-11 mx-auto form-container">
+    <div class="col-10 mx-auto form-container">
         <form action="." method="post">
             {% crispy form %}
         </form>
