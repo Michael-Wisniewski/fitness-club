@@ -12,19 +12,18 @@ class PostListView(Section, ListView):
     queryset = Post.published.all()
     context_object_name = 'posts'
     paginate_by = 3
+    tag = ''
 
     def get_queryset(self, **kwargs):
         posts = super(PostListView, self).get_queryset(**kwargs)
         if 'tag_slug' in self.kwargs:
-            tag = get_object_or_404(Tag, slug=self.kwargs['tag_slug'])
-            posts = posts.filter(tags__in=[tag])
+            self.tag = get_object_or_404(Tag, slug=self.kwargs['tag_slug'])
+            posts = posts.filter(tags__in=[self.tag])
         return posts
 
     def get_context_data(self, **kwargs):
         context = super(PostListView, self).get_context_data(**kwargs)
-        if 'tag_slug' in self.kwargs:
-            tag = get_object_or_404(Tag, slug=self.kwargs['tag_slug'])
-            context['tag'] = tag
+        context['tag'] = self.tag
         return context
 
 class PostDetailView(Section, FormMixin, DetailView):

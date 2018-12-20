@@ -17,10 +17,21 @@
                 <img src="{% static "blog/image.png" %}" class="card-img" alt="No image"/>
                 <div class="card-body">
                     <h4 class="card-title">{{ post.title }}</h4>
-                    {% if post.tags.all.count %}
-                        <p class="card-tags">Tags: <span>{{ post.tags.all|join:"</span>, <span>" }}</span></p>
-                    {% endif%}
-                    <p class="card-text card-tags">{{ post.body|truncatewords:20|linebreaks }}</p>
+                    {% with post.tags.all as tags %}
+                        {% if tags %}
+                            <p class="card-tags">Tags: 
+                                {% for tag in tags %}
+                                    <span>
+                                        <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                           {{ tag.name }} 
+                                        </a>
+                                    </span>
+                                    {% if not forloop.last %},{% endif %}
+                                {% endfor %}
+                            </p>
+                        {% endif %}
+                    {% endwith %}
+                    <p class="card-text">{{ post.body|truncatewords:20|linebreaks }}</p>
                     <a href="{{ post.get_absolute_url }}">
                         <button class="btn btn-primary">
                             Read More<i class="icon icon-long-arrow-alt-right"></i>

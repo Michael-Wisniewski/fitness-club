@@ -68,6 +68,7 @@
         -czytać posty 
         -zachecać znajomych do przeczytania posta za pomocą wiadomości     email
         -komentować posty
+        - wyszukiwać po tagu
 
     All views are class based
     Custom crispy fields are used during forms generation
@@ -79,7 +80,7 @@
 Nginx, Uwsgi
 PostgreSQL, Redis
 Apache Solr
-Python,Pip,  Django, Crispy Forms,
+Python,Pip,  Django, Crispy Forms, Taggit
 Html5, Css3, Sass, Bootstrap
 JavaScript, Vue, Vuex
 Node js, Npm, Webpack (Css and Js optimizers, svg converter)
