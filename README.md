@@ -69,6 +69,7 @@
         -zachecać znajomych do przeczytania posta za pomocą wiadomości     email
         -komentować posty
         - wyszukiwać po tagu
+        - wyszukać podobne posty
 
     All views are class based
     Custom crispy fields are used during forms generation

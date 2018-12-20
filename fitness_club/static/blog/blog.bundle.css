@@ -6486,7 +6486,7 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
       margin-bottom: 0px; }
     #blog content #posts-list .post-card .card-tags {
       font-size: 0.7rem; }
-      #blog content #posts-list .post-card .card-tags span a {
+      #blog content #posts-list .post-card .card-tags a {
         color: #1cf1f1; }
     #blog content #posts-list .post-card .card-footer a {
       color: #1cf1f1; }
@@ -6512,6 +6512,12 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
       color: #1cf1f1; }
   #blog content #post-details .body {
     font-size: 1em; }
+  #blog content #post-details .similar-posts {
+    margin: 20px 0px 0px 0px;
+    font-size: 0.8em;
+    border-top: 1px solid; }
+    #blog content #post-details .similar-posts a {
+      color: #1cf1f1; }
   #blog content #post-share form {
     margin-top: 0px; }
   #blog content #share-confirmation {
@@ -6542,5 +6548,22 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
       #blog content #comments-container .comment .comment-header {
         font-size: 0.7em; }
         #blog content #comments-container .comment .comment-header span {
+          color: #1cf1f1; }
+  #blog aside .card {
+    margin-bottom: 25px; }
+    #blog aside .card .card-title {
+      background-color: #eeeeee;
+      padding: 5px 10px;
+      margin-bottom: 0px; }
+    #blog aside .card .card-body {
+      padding: 10px; }
+      #blog aside .card .card-body .total-posts span {
+        color: #1cf1f1;
+        font-weight: bold;
+        font-size: 1.15em; }
+      #blog aside .card .card-body .posts-lits ul {
+        margin-bottom: 0px;
+        padding-left: 12px; }
+        #blog aside .card .card-body .posts-lits ul a {
           color: #1cf1f1; }
 

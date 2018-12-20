@@ -6,6 +6,7 @@ from django.shortcuts import get_object_or_404, HttpResponseRedirect
 from .models import Post, Comment
 from .forms import EmailPostForm, CommentForm
 from taggit.models import Tag
+from django.db.models import Count
 
 class PostListView(Section, ListView):
     template_name = 'blog/posts/posts_list.html'
@@ -45,6 +46,12 @@ class PostDetailView(Section, FormMixin, DetailView):
         context['comments'] = context['object'].comments.filter(active=True)
         context['form'] = self.get_form()
         context['new_comment'] = self.request.GET.get('new_comment', False)
+        post_tags_ids = self.object.tags.values_list('id', flat=True)
+        similar_posts = Post.published.filter(tags__in=post_tags_ids)\
+                                            .exclude(id=self.object.id)
+        similar_posts = similar_posts.annotate(same_tags=Count('tags'))\
+                                            .order_by('-same_tags', '-publish')[:4]
+        context['similar_posts'] = similar_posts                                      
         return context
 
     def post(self, request, *args, **kwargs):

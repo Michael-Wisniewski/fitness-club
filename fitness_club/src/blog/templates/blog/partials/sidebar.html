@@ -1,0 +1,31 @@
+{% load blog_tags %}
+<div class="card">
+    <div class="card-title">
+        Fitness Club Blog
+    </div>
+    <div class="card-body">
+        <div class="total-posts">
+            {% total_posts %}   
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-title">
+        Latest posts
+    </div>
+    <div class="card-body">
+        <div class="posts-lits">
+            {% show_latest_posts %}
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-title">
+        Most commented posts
+    </div>
+    <div class="card-body">
+        <div class="posts-lits">
+            {% show_most_commented_posts %}
+        </div>
+    </div>
+</div>
