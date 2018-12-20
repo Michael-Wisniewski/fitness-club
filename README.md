@@ -74,6 +74,8 @@
     All views are class based
     Custom crispy fields are used during forms generation
     Mailhog is used for email testing (localhost:8025)
+    Django Sitemap framework is used to generate sitemaps
+
 
 ### 6. Detailed list of used technologies
 
@@ -81,7 +83,7 @@
 Nginx, Uwsgi
 PostgreSQL, Redis
 Apache Solr
-Python,Pip,  Django, Crispy Forms, Taggit
+Python,Pip,  Django, Crispy Forms, Taggit, Sitemap
 Html5, Css3, Sass, Bootstrap
 JavaScript, Vue, Vuex
 Node js, Npm, Webpack (Css and Js optimizers, svg converter)
