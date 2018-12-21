@@ -52,7 +52,7 @@ services:
     ports:
      - "8983:8983"
     volumes:
-      - /databases/solr:/opt/solr/server/solr/blog/data
+      - ./databases/solr:/opt/solr/server/solr/blog/data
     networks:
       - fitness_club_to_solr
 
