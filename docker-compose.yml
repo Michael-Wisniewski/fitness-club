@@ -29,6 +29,7 @@ services:
     networks:
       - nginx_to_fitness_club
       - fitness_club_to_postgresql
+      - fitness_club_to_solr
       - uwsgi_to_mailhog
 
   server:
@@ -46,17 +47,13 @@ services:
       - fitness_club
 
   solr:
-    image: solr:7.6.0-alpine
+    build: ./docker/solr
     ports:
      - "8983:8983"
     volumes:
-      - data:/opt/solr/server/solr/mycores
-    entrypoint:
-      - docker-entrypoint.sh
-      - solr-precreate
-      - mycore
-volumes:
-  data:
+      - /databases/solr/data:/opt/solr/server/solr/blog/data
+    networks:
+      - fitness_club_to_solr
 
   mailhog:
     image: diyan/mailhog
@@ -66,11 +63,12 @@ volumes:
     ports:
       - 8025:8025
 
-
 networks:
   nginx_to_fitness_club:
     driver: bridge
   fitness_club_to_postgresql:
+    driver: bridge
+  fitness_club_to_solr:
     driver: bridge
   uwsgi_to_mailhog:
     driver: bridge
