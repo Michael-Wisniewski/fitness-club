@@ -5,3 +5,4 @@ pytz==2018.4
 django-crispy-forms==1.7.2
 django-taggit==0.17.1
 Markdown==2.6.2
+beautifulsoup4==4.6.3

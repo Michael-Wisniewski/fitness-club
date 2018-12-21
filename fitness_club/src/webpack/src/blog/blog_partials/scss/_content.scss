@@ -123,6 +123,16 @@ aside {
             background-color: lighten($fourth, 75);
             padding: 5px 10px;
             margin-bottom: 0px;
+            a {
+                color: $primary;
+                text-decoration: none;
+                float: right;
+                font-weight: bold;
+                .icon {
+                    margin-left: 3px;
+                    line-height: 1.2em;
+                }
+            }
         }
         .card-body {
             padding: 10px;

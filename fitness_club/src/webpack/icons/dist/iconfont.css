@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "iconfont";
-	src: url("iconfont.woff?cddb06e55b0be002b02cec0c7e8c9f10") format("woff");
+	src: url("iconfont.woff?906f95eefd86f3fa0fd19a5f55e2697b") format("woff");
 }
 
 .icon {
@@ -22,4 +22,7 @@
 }
 .icon-paper-plane:before {
 	content: "\f103";
+}
+.icon-rss:before {
+	content: "\f104";
 }

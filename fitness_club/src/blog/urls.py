@@ -1,5 +1,6 @@
 from django.conf.urls import url
 from . import views
+from .feeds import LatestPostsFeed
 
 module_name = 'blog'
 
@@ -19,4 +20,8 @@ urlpatterns = [
     url(r'^(?P<pk>\d+)/share/sended/$',
             views.PostShareSendedView.as_view(section=module_name),
             name='post_share_sended'),
+    url(r'^feed/$', 
+            LatestPostsFeed(),
+            name='post_feed'),
 ]
+        

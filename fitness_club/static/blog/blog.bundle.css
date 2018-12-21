@@ -23,6 +23,9 @@
 .icon-paper-plane:before {
 	content: "\F103";
 }
+.icon-rss:before {
+	content: "\F104";
+}
 
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
@@ -6555,6 +6558,14 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
       background-color: #eeeeee;
       padding: 5px 10px;
       margin-bottom: 0px; }
+      #blog aside .card .card-title a {
+        color: #1cf1f1;
+        text-decoration: none;
+        float: right;
+        font-weight: bold; }
+        #blog aside .card .card-title a .icon {
+          margin-left: 3px;
+          line-height: 1.2em; }
     #blog aside .card .card-body {
       padding: 10px; }
       #blog aside .card .card-body .total-posts span {

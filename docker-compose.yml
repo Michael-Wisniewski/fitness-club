@@ -25,6 +25,7 @@ services:
       - ./docker/db_postgresql/conf/db_conf_env
     depends_on:
       - db_postgresql
+      - solr
     networks:
       - nginx_to_fitness_club
       - fitness_club_to_postgresql
@@ -43,6 +44,19 @@ services:
       - nginx_to_fitness_club
     depends_on:
       - fitness_club
+
+  solr:
+    image: solr:7.6.0-alpine
+    ports:
+     - "8983:8983"
+    volumes:
+      - data:/opt/solr/server/solr/mycores
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - mycore
+volumes:
+  data:
 
   mailhog:
     image: diyan/mailhog
