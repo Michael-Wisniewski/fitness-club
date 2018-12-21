@@ -48,10 +48,11 @@ services:
 
   solr:
     build: ./docker/solr
+    container_name: solr
     ports:
      - "8983:8983"
     volumes:
-      - /databases/solr/data:/opt/solr/server/solr/blog/data
+      - /databases/solr:/opt/solr/server/solr/blog/data
     networks:
       - fitness_club_to_solr
 

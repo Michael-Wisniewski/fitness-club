@@ -1,6 +1,6 @@
 FROM solr:7.6.0-alpine
 WORKDIR /opt/solr/server/solr/
-ADD blog /opt/solr/server/solr/blog
+ADD ./conf/blog /opt/solr/server/solr/blog
 USER root
 RUN chown -R solr /opt/solr/server/solr
 USER solr
