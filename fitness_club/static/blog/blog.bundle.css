@@ -6577,4 +6577,7 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
         padding-left: 12px; }
         #blog aside .card .card-body .posts-lits ul a {
           color: #1cf1f1; }
+    #blog aside .card #search-form input:focus {
+      border-color: #1cf1f1;
+      box-shadow: none; }
 

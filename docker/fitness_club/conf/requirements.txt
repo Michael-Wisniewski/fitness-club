@@ -6,3 +6,5 @@ django-crispy-forms==1.7.2
 django-taggit==0.17.1
 Markdown==2.6.2
 beautifulsoup4==4.6.3
+django-haystack==2.4.0
+pysolr==3.3.2

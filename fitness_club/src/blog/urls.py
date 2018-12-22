@@ -23,5 +23,8 @@ urlpatterns = [
     url(r'^feed/$', 
             LatestPostsFeed(),
             name='post_feed'),
+    url(r'^search/$',
+            views.PostSearchView.as_view(section=module_name),
+            name='posts_search')
 ]
         

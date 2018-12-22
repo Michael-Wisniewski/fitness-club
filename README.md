@@ -84,7 +84,7 @@
 Nginx, Uwsgi
 PostgreSQL, Redis
 Apache Solr
-Python,Pip,  Django, Crispy Forms, Taggit, Sitemap, Feed
+Python,Pip,  Django, Crispy Forms, Taggit, Sitemap, Feed, Haystack
 Html5, Css3, Sass, Bootstrap
 JavaScript, Vue, Vuex
 Node js, Npm, Webpack (Css and Js optimizers, svg converter)
