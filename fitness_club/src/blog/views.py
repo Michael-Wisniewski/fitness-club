@@ -103,7 +103,7 @@ class PostShareSendedView(Section, SearchPosts, DetailView):
 class PostSearchView(Section, ListView):
     template_name = 'blog/posts/post_search.html'
     context_object_name = 'posts'
-    paginate_by = 3
+    paginate_by = 2
     query = ''
     form = ''
 
@@ -119,9 +119,9 @@ class PostSearchView(Section, ListView):
                 posts = SearchQuerySet().models(Post)\
                         .filter(content=cd['query']).load_all()
                 print('##############3')
-                print(cd['query'])
-        print(SearchQuerySet().models(Post)\
-                        .filter(content=cd['query']).load_all())
+                print(SearchQuerySet().models(Post))
+                print('##############3')
+
         return posts
 
     def get_context_data(self, *args, **kwargs):

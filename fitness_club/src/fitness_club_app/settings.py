@@ -132,6 +132,6 @@ EMAIL_USE_TLS = False
 HAYSTACK_CONNECTIONS = {
     'default': {
         'ENGINE': 'haystack.backends.solr_backend.SolrEngine',
-        'URL': 'http://solr:8983/solr/blog'
+        'URL': 'http://solr:8983/solr/core0'
     }
 }

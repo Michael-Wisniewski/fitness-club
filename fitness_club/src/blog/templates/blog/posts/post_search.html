@@ -1,4 +1,15 @@
 {{ query }}
+
+
+<form action="." method="get">
+
+
 {{ form }}
-{{ posts }}
-sfd
+<input type="submit" value="GO"/>
+</form>
+
+
+{% for post in posts %}
+{{ post.object }}
+
+{% endfor %}
