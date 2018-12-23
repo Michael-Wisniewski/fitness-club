@@ -69,4 +69,19 @@ class CommentForm(forms.ModelForm):
         )
 
 class SearchForm(forms.Form):
-    query = forms.CharField()
+    query = forms.CharField(required=False)
+
+    def __init__(self,*args,  **kwargs):
+        super(SearchForm, self).__init__(*args, **kwargs)
+        self.helper = FormHelper()
+        self.helper.form_show_labels = False
+        self.helper.layout = Layout(
+            Div(
+                Field('query'),
+                Div(
+                    Submit('submit', 'Go!', css_class="btn btn-primary"),
+                    css_class="input-group-append"
+                ),
+                css_class="input-group"
+            )
+        )

@@ -103,30 +103,39 @@ class PostShareSendedView(Section, SearchPosts, DetailView):
 class PostSearchView(Section, ListView):
     template_name = 'blog/posts/post_search.html'
     context_object_name = 'posts'
-    paginate_by = 2
-    query = ''
-    form = ''
+    paginate_by = 5
+    results_quantity = 0
+    form = SearchForm()
 
     def get_queryset(self):
         posts = []
-        self.form = SearchForm()
 
         if 'query' in self.request.GET:
-            self.form = SearchForm(self.request.GET)
+            form = SearchForm(self.request.GET)
         
-            if self.form.is_valid():
-                cd = self.form.cleaned_data
-                posts = SearchQuerySet().models(Post)\
-                        .filter(content=cd['query']).load_all()
-                print('##############3')
-                print(SearchQuerySet().models(Post))
-                print('##############3')
+            if form.is_valid():
+                cd = form.cleaned_data
+                sqs_total = SearchQuerySet().models(Post)\
+                            .filter(content=cd['query']).load_all()
+                query_str = cd['query']
+                bold_query_str = '<span style="color:#f11cd8">'\
+                                    +query_str\
+                                  +'</span>'
+
+                for sqs in sqs_total:
+                    post = sqs.object
+                    post.title = post.title.replace(query_str, bold_query_str)
+                    post.body = post.body.replace(query_str, bold_query_str)
+                    posts.append(post)
+        
+        self.results_quantity = len(posts)                    
 
         return posts
 
     def get_context_data(self, *args, **kwargs):
         context = super(PostSearchView, self).get_context_data(**kwargs)
         context['form'] = self.form
-        context['query'] = self.query
+        context['query'] = self.request.GET.get('query', None)
         context['hide_search_bar'] = True
+        context['results_quantity'] = self.results_quantity
         return context

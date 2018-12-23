@@ -26,6 +26,9 @@
 .icon-rss:before {
 	content: "\F104";
 }
+.icon-search:before {
+	content: "\F105";
+}
 
 /*!
  * Bootstrap v4.1.3 (https://getbootstrap.com/)
