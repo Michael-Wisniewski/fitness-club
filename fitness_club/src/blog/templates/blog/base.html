@@ -6,14 +6,19 @@
 {% endblock %}
 
 {% block content %}
-<div id="blog" class="container">
-    <div class="row">
-        <content class="col-md-8">
-                {% block blog_content %}{% endblock %} 
-        </content>
-        <aside class="col-md-4">
-            {% include "blog/partials/sidebar.html" %}
-        </aside>
+<div class="jumbotron-header" style="background-image:url('http://fitness.pl/media/blog/header.jpg')">
+    <div class="title">Blog Fitness Club</div>
+</div>
+<div id="blog">
+    <div class="container">
+        <div class="row">
+            <content class="col-md-8">
+                    {% block blog_content %}{% endblock %} 
+            </content>
+            <aside class="col-md-4">
+                {% include "blog/partials/sidebar.html" %}
+            </aside>
+        </div>
     </div>
 </div>
 {% endblock %}

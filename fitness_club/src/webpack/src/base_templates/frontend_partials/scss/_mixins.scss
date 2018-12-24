@@ -9,3 +9,25 @@
         display: table-cell;
     }
 }
+
+@mixin jumbotron {    
+    html, body{
+        width:100%;
+        height:100%;
+    }
+    .jumbotron-header {  
+        width:100%;
+        height:40%;  
+        background-position: center center;
+        background-size:cover;
+        background-repeat: no-repeat;
+        .title {
+            position: absolute;
+            left: 0;
+            top: 20%;
+            width: 100%;
+            text-align: center;
+            color: #000;
+        }
+    }
+}

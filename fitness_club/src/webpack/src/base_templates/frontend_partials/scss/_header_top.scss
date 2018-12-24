@@ -89,26 +89,3 @@ $transparent-bg-color: transparentize($third, 0.40);
         }
     }
 }
-/*
-@media (max-width: 767px) {
-    #header-top {
-        #navbar-container {
-            .navbar {
-                padding-left: 0;
-                .navbar-collapse {
-                    position: absolute;
-                    top: 48px;
-                    min-width: 130px;
-                    background-color: $transparent-bg-color;
-                    border: {
-                        width: 1px;
-                        style: solid;
-                        color: transparentize($primary, 0.82);
-                        radius: 0.25rem;
-                    } 
-                }
-            }
-        }
-    }
-}
-*/
