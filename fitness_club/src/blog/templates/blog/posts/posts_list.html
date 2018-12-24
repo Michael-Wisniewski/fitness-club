@@ -15,7 +15,9 @@
         {% endif %}
         {% for post in posts %}
             <div class="card post-card">
-                <img src="{% static "blog/image.png" %}" class="card-img" alt="No image"/>
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" class="post-image" alt="No photo"/>
+                {% endif %}
                 <div class="card-body">
                     <h4 class="card-title">{{ post.title }}</h4>
                     {% with post.tags.all as tags %}

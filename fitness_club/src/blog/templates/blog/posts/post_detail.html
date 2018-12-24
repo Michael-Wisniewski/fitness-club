@@ -12,7 +12,9 @@
     {% endif %}
     <div id="post-details">
         <h2 class="title">{{ post }}</h2>
-        <img src="{% static "blog/image.png" %}" class="post-image" alt="No photo"/>
+        {% if post.image %}
+            <img src="{{ post.image.url }}" class="post-image" alt="No photo"/>
+        {% endif %}
         <p class="date text-muted">
                 Posted on {{ post.publish|date:"M d, Y" }} by <a href="#">{{ post.author }}</a>
         </p>

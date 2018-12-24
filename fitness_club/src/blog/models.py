@@ -10,6 +10,17 @@ class PublishedManager(models.Manager):
         return super(PublishedManager, self)\
                      .get_queryset().filter(status='published')
 
+def blog_directory_path(instance, filename):
+    
+    for char in ((" ", "_"), (".", "_")):
+        clean_title = instance.title.replace(*char)
+    
+    output_filename = 'blog/'
+    output_filename += clean_title
+    output_filename += '_' + str(instance.id)
+    output_filename += '.' + filename.split(".")[-1]
+    return output_filename
+
 class Post(models.Model):
     STATUS = (('draft', 'Draft'),
               ('published', 'Published'))
@@ -27,6 +38,8 @@ class Post(models.Model):
     status = models.CharField(max_length=10,
                               choices=STATUS,
                               default='draft')
+    image = models.ImageField(upload_to=blog_directory_path,
+                              blank=True)
     
     tags = TaggableManager()
     objects = models.Manager()

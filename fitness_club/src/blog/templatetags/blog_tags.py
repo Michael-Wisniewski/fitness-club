@@ -31,6 +31,10 @@ def markdown_format(text):
     return mark_safe(markdown.markdown(text))
 
 @register.inclusion_tag('blog/tags_templates/blog_content_shortcut.html')
-def blog_content_shortcut(count=3):
-    posts = {'post1': 'cos tam', 'post2': 'cos tam'}
-    return {'posts': posts}
+def blog_content_shortcut():
+    archive_posts = []
+    posts_query = Post.published.all()[:13]
+    posts = posts_query[:3]
+    archive_posts = posts_query[3:13]
+
+    return {'posts': posts, 'archive_posts': archive_posts}

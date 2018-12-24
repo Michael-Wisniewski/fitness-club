@@ -23,11 +23,14 @@
 .icon-paper-plane:before {
 	content: "\F103";
 }
-.icon-rss:before {
+.icon-play-circle:before {
 	content: "\F104";
 }
-.icon-search:before {
+.icon-rss:before {
 	content: "\F105";
+}
+.icon-search:before {
+	content: "\F106";
 }
 
 /*!
@@ -6455,26 +6458,8 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
     padding: 0.3em 0em;
     margin-bottom: 20px; }
 
-html, body {
-  width: 100%;
-  height: 100%; }
-
-.jumbotron-header {
-  width: 100%;
-  height: 40%;
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-  .jumbotron-header .title {
-    position: absolute;
-    left: 0;
-    top: 20%;
-    width: 100%;
-    text-align: center;
-    color: #000; }
-
 #blog {
-  margin-top: 25px; }
+  margin-top: 95px; }
   #blog content .pagination .page-item .page-link {
     color: #1cf1f1; }
   #blog content .pagination .page-item.disabled .page-link {
@@ -6483,6 +6468,9 @@ html, body {
     color: #fff;
     background-color: #1cf1f1;
     border-color: #1cf1f1; }
+  #blog content .post-card img, #blog content #post-details img {
+    width: 100%;
+    height: auto; }
   #blog content #posts-list .post-card {
     margin-bottom: 25px; }
     #blog content #posts-list .post-card .card-img {
@@ -6491,7 +6479,7 @@ html, body {
     #blog content #posts-list .post-card .card-title {
       margin-bottom: 0px; }
     #blog content #posts-list .post-card .card-tags {
-      font-size: 0.7rem; }
+      font-size: 0.8rem; }
       #blog content #posts-list .post-card .card-tags a {
         color: #1cf1f1; }
     #blog content #posts-list .post-card .card-footer a {
@@ -6505,7 +6493,7 @@ html, body {
     width: 100%;
     height: auto; }
   #blog content #post-details .date {
-    font-size: 0.7em; }
+    font-size: 0.8em; }
     #blog content #post-details .date a {
       color: #1cf1f1; }
   #blog content #post-details .body {

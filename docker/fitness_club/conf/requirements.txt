@@ -8,3 +8,4 @@ Markdown==2.6.2
 beautifulsoup4==4.6.3
 django-haystack==2.4.0
 pysolr==3.3.3
+Pillow==2.9.0

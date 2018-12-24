@@ -1,7 +1,63 @@
-<ul>
-    {% for post in posts %}
-        <li>
-            {{ post }}
-        </li>
-    {% endfor %}
-</ul>
+{% load blog_tags %}
+
+<div id="blog"> 
+    <div class="container content-container">
+        <div class="row">
+            <div class="col header">
+                News & Events
+            </div>
+        </div>
+        <div class="row content">
+            <div id="blog-left-column" class="col-md-4">
+                <h4>Our Archives</h4>
+                <div class="archives">
+                    <table>
+                        {% for archive_post in archive_posts %}
+                            <tr>
+                                <td>
+                                    <i class="icon icon-play-circle"></i>
+                                </td>
+                                <td>
+                                    <a href="{{ archive_post.get_absolute_url }}">
+                                        {{ archive_post }}
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
+            </div>
+            <div id="blog-right-column" class="col-md-8 order-first order-md-2">
+                {% for post in posts %}
+                    <a href="{{ post.get_absolute_url }}">
+                        <div class="post-shortcut row">
+                            {% if forloop.counter|divisibleby:2 == 0 %}
+                                    <div class="post-image col-4">
+                                            <img src="{{ post.image.url }}" alt="no picture" class="rounded-circle">
+                                    </div>
+                                    <div class="post-body col-8">
+                                        <h5>{{ post.title }}</h5>
+                                        <p class="post-date">
+                                            {{ post.publish|date:"m/d/Y" }}
+                                        </p>
+                                        {{ post.body|markdown|truncatewords_html:30 }} 
+                                    </div>
+                            {% else %}
+                                <div class="post-body col-8">
+                                    <h5>{{ post.title }}</h5>
+                                    <p class="post-date">
+                                        {{ post.publish|date:"m/d/Y" }}
+                                    </p>
+                                    {{ post.body|markdown|truncatewords_html:30 }} 
+                                </div>
+                                <div class="post-image col-4">
+                                        <img src="{{ post.image.url }}" alt="no picture" class="rounded-circle">
+                                </div>
+                            {% endif %}
+                        </div>
+                    </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,6 +1,16 @@
 {% extends "frontend/home.html" %}
-{% load blog_tags %}
+{% load staticfiles blog_tags %}
+
+{% block css %}
+    <link href="{% static "landing_page/landing_page.bundle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
 
 {% block content %}
-    {% blog_content_shortcut %}
+    <div id="landing_page">
+        {% blog_content_shortcut %}
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "landing_page/landing_page.bundle.js" %}"></script>
 {% endblock %}
