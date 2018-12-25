@@ -7,7 +7,7 @@ header, section, footer, aside, nav, main, article, figure {
 
 #main {
     margin-top: 56px;
-    #sidebar {
+    sidebar {
         @media (max-width: 992px) {
             display:inline-block;
             width:0px;
