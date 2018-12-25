@@ -14,7 +14,7 @@ services:
       - 5432:5432
   
   fitness_club:
-    image: fitness_club:v0.6
+    image: fitness_club:v0.7
     #build: ./docker/fitness_club/
     volumes:
       - ./fitness_club/src:/fitness_club/src
@@ -33,7 +33,6 @@ services:
       - uwsgi_to_mailhog
 
   server:
-    #image: server:v0.1
     build: ./docker/server/
     volumes:
       - ./fitness_club/static:/fitness_club/static

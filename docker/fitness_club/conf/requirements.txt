@@ -9,3 +9,4 @@ beautifulsoup4==4.6.3
 django-haystack==2.4.0
 pysolr==3.3.3
 Pillow==2.9.0
+django-hosts==2.0

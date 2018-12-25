@@ -27,10 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
 # Application definition
 
 INSTALLED_APPS = (
+    'django_hosts',
     'account',
     'django.contrib.admin',
     'django.contrib.auth',
@@ -49,6 +49,7 @@ INSTALLED_APPS = (
 )
 
 MIDDLEWARE_CLASSES = (
+    'django_hosts.middleware.HostsRequestMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -57,9 +58,12 @@ MIDDLEWARE_CLASSES = (
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'django.middleware.security.SecurityMiddleware',
+    'django_hosts.middleware.HostsResponseMiddleware',
 )
 
 ROOT_URLCONF = 'fitness_club_app.urls'
+ROOT_HOSTCONF = 'fitness_club_app.hosts'
+DEFAULT_HOST = 'frontend'
 
 TEMPLATES = [
     {
