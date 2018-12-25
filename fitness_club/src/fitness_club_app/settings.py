@@ -26,6 +26,7 @@ SECRET_KEY = 'kdaee$1l0hfxen(5c*oe7rm(2dvio4w583yk3n&izz-%=!(s8n'
 DEBUG = True
 
 ALLOWED_HOSTS = []
+PREPEND_WWW = False
 
 # Application definition
 
@@ -46,6 +47,7 @@ INSTALLED_APPS = (
     'custom_crispy_forms',
     'landing_page',
     'blog',
+    'landing_page_backend',
 )
 
 MIDDLEWARE_CLASSES = (

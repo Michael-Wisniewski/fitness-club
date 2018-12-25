@@ -1,0 +1,36 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!--[if lt IE 9]>
+            <script src="{% static "base_templates/html5shiv.js" %}></script>
+        <![endif]-->
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Fitness Club Dashboard{% endblock %}</title>
+        {% block css %}
+            <link href="{% static "base_templates/backendBase.bundle.css" %}" rel="stylesheet" type="text/css">
+        {% endblock %}
+    </head>
+    <body>
+        {% include "backend/partials/navbar.html" %}
+        <div id="main" class="container-fluid">
+            <div class="row">
+                <div id="sidebar" class="col-lg-2 bg-light" role="navigation">            
+                    <ul class="nav flex-column">
+                        <li class="nav-item {% if section == 'landing_page_backend' %}active{% endif %}">
+                            <a class="nav-link" href="{% url "landing_page_backend" %}">Overview</a>
+                        </li>
+                    </ul>         
+                </div>
+                <div class="col-12 col-lg-10">
+                    {% block content %}{% endblock %}
+                </div>
+            </div>
+        </div>
+        {% block javascript %}
+            <script src="{% static "base_templates/backendBase.bundle.js" %}"></script>
+        {% endblock %}
+    </body>
+</html>

@@ -6,6 +6,8 @@
   "scripts": {
     "frontend": "node ./icons/convert_svg && webpack -d -w --config ./webpack_configurations/frontend.config.js",
     "frontend_prod": "webpack -p --config ./webpack_configurations/frontend.config.js",
+    "backend": "node ./icons/convert_svg && webpack -d -w --config ./webpack_configurations/backend.config.js",
+    "backend_prod": "webpack -p --config ./webpack_configurations/backend.config.js",
     "svg": "node ./icons/convert_svg && webpack -d --config ./webpack_configurations/frontend.config.js",
     "css": "webpack -d --config ./webpack_configurations/frontend.config.js"
   },

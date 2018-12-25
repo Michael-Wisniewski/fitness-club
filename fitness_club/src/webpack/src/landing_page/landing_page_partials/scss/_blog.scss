@@ -46,6 +46,8 @@
                     width: 100%;
                     -webkit-transition: .5s all;
                     -moz-transition: .5s all;
+                    -o-transition: .5s all;
+                    -ms-transition: .5s all;
                     transition: .5s all;
                     box-shadow: 0 0 0 0.1rem transparentize($primary, 0.72); 
                 }

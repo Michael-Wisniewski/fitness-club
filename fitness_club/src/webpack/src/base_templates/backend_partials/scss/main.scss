@@ -1,0 +1,37 @@
+@import "../../../../icons/dist/iconfont.css";
+@import "~bootstrap/scss/bootstrap";
+
+header, section, footer, aside, nav, main, article, figure {
+    display: block;
+}
+
+#main {
+    margin-top: 56px;
+    #sidebar {
+        @media (max-width: 992px) {
+            display:inline-block;
+            width:0px;
+            position: absolute;
+            top: 56px;
+            left: 0;
+            z-index: 1;
+            overflow: hidden;
+            -webkit-transition: .5s all;
+            -moz-transition: .5s all;
+            -o-transition: .5s all;
+            -ms-transition: .5s all;
+            transition: .5s all;
+            padding: 0;
+            &.show {
+                width: 200px;
+            }
+
+        }
+        li.active {
+            a {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
