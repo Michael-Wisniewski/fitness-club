@@ -70,15 +70,23 @@
         -komentować posty
         - wyszukiwać po tagu
         - wyszukać podobne posty
+    Pracownik
+        -
 
     All views are class based
     Custom crispy fields are used during forms generation
     Mailhog is used for email testing (localhost:8025)
     Django Sitemap framework is used to generate sitemaps
-    Feed framework is userd to provide Rich Site Summary
+    Feed framework is used to provide Rich Site Summary
 
 
 ### 6. Detailed list of used technologies
+
+    fitness.pl 
+
+    panel.fitness.pl
+
+    admin.fitness.pl (dodac tylko dla admina)
 
 
 Nginx, Uwsgi

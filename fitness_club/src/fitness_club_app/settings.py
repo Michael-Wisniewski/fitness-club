@@ -66,6 +66,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'fitness_club_app.urls'
 ROOT_HOSTCONF = 'fitness_club_app.hosts'
 DEFAULT_HOST = 'frontend'
+PARENT_HOST = 'fitness.pl'
 
 TEMPLATES = [
     {
@@ -142,3 +143,9 @@ HAYSTACK_CONNECTIONS = {
         'URL': 'http://solr:8983/solr/core0'
     }
 }
+
+
+AUTHENTICATION_BACKENDS = (
+    'django.contrib.auth.backends.ModelBackend',
+    'account.authentication.EmailAuthBackend',
+)

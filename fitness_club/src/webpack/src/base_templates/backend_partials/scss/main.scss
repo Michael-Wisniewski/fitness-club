@@ -1,5 +1,6 @@
 @import "../../../../icons/dist/iconfont.css";
 @import "~bootstrap/scss/bootstrap";
+@import "_navbar";
 
 header, section, footer, aside, nav, main, article, figure {
     display: block;
@@ -8,6 +9,7 @@ header, section, footer, aside, nav, main, article, figure {
 #main {
     margin-top: 56px;
     sidebar {
+        padding-top: 15px;
         @media (max-width: 992px) {
             display:inline-block;
             width:0px;
@@ -25,12 +27,17 @@ header, section, footer, aside, nav, main, article, figure {
             &.show {
                 width: 200px;
             }
-
         }
         li.active {
             a {
                 font-weight: bold;
             }
+        }
+    }
+    content {
+        padding: 15px;
+        .content-wrapper {
+            padding: 15px;
         }
     }
 }

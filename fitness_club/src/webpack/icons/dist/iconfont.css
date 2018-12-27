@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "iconfont";
-	src: url("iconfont.woff?e776c3fd37d6092ded49f72cdfd9521b") format("woff");
+	src: url("iconfont.woff?b44182c95e342d0899eabd4c4e0502b6") format("woff");
 }
 
 .icon {
@@ -17,18 +17,21 @@
 .icon-bars:before {
 	content: "\f101";
 }
-.icon-long-arrow-alt-right:before {
+.icon-logout:before {
 	content: "\f102";
 }
-.icon-paper-plane:before {
+.icon-long-arrow-alt-right:before {
 	content: "\f103";
 }
-.icon-play-circle:before {
+.icon-paper-plane:before {
 	content: "\f104";
 }
-.icon-rss:before {
+.icon-play-circle:before {
 	content: "\f105";
 }
-.icon-search:before {
+.icon-rss:before {
 	content: "\f106";
+}
+.icon-search:before {
+	content: "\f107";
 }

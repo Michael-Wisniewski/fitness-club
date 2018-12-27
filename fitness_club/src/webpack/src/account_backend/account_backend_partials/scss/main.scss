@@ -1,0 +1,24 @@
+@import "../../../../icons/dist/iconfont.css";
+@import "~bootstrap/scss/bootstrap";
+
+body {
+    height: 100vh;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    #form-container {
+        border-radius: 5px;
+        padding-bottom: 1em;
+    }
+    #form-title {
+        font-size: 2em;
+        margin-top: 1em;
+    }
+    .form-group.row {
+        display: inline;
+    }
+    .button {
+        margin-top: 1em;
+    }
+}
