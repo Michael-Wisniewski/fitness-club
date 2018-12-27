@@ -9,6 +9,12 @@ class EmployeeLoginView(FormView):
     form_class = EmployeeLoginForm
     response_message = ''
 
+    def dispatch(self, *args, **kwargs):
+        if self.request.user.is_authenticated():
+            return HttpResponseRedirect(reverse('landing_page_backend', host='backend'))
+        else:
+            return super(EmployeeLoginView, self).dispatch(*args, **kwargs)
+
     def post(self, request):
         form = EmployeeLoginForm(self.request.POST)
         succesLoginFlag = False
