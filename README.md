@@ -35,6 +35,7 @@
     <img src="./docs/readme/shields/webpack.svg"><br/>    
     <img src="./docs/readme/shields/docker.svg">
     <img src="./docs/readme/shields/dockercompose.svg">
+    dodac rest
 </p>
 
 
@@ -92,9 +93,9 @@
 Nginx, Uwsgi
 PostgreSQL, Redis
 Apache Solr
-Python, Pip,  Django, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts
+Python, Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, 
 Html5, Css3, Sass, Bootstrap
-JavaScript, Vue, Vuex
+JavaScript, Vue, Vuex, Data Tables,
 Node js, Npm, Webpack (Css and Js optimizers, svg converter)
 Docker, Docker-Compose
 Mailhog

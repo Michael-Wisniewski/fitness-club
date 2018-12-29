@@ -1,4 +1,4 @@
-@import "../../../../icons/dist/iconfont.css";
+@import "../../../../icons/dist/iconfont.css"; 
 @import "~bootstrap/scss/bootstrap";
 @import "_navbar";
 
@@ -18,11 +18,11 @@ header, section, footer, aside, nav, main, article, figure {
             left: 0;
             z-index: 1;
             overflow: hidden;
-            -webkit-transition: .5s all;
-            -moz-transition: .5s all;
-            -o-transition: .5s all;
-            -ms-transition: .5s all;
-            transition: .5s all;
+            -webkit-transition: .3s all;
+            -moz-transition: .3s all;
+            -o-transition: .3s all;
+            -ms-transition: .3s all;
+            transition: .3s all;
             padding: 0;
             &.show {
                 width: 200px;
@@ -42,3 +42,8 @@ header, section, footer, aside, nav, main, article, figure {
     }
 }
 
+.btn-edit {
+    color: #ffffff;
+    background-color: #af34ed;
+    border-color: #af34ed;
+}

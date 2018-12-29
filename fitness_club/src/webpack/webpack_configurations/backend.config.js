@@ -8,7 +8,8 @@ module.exports = {
     entry: {
         'base_templates/backendBase': './src/base_templates/backend.js',
         'landing_page_backend/landing_page_backend': './src/landing_page_backend/landing_page_backend.js',
-        'account_backend/account_backend': './src/account_backend/account_backend.js'
+        'account_backend/account_backend': './src/account_backend/account_backend.js',
+        'blog_backend/posts_list': './src/blog_backend_posts_list/posts_list.js'
     },
     output: {
         path: staticRoot,
@@ -52,7 +53,7 @@ module.exports = {
                 ]
             },
             {
-                test: /\.(svg|eot|ttf|woff|woff2)?$/, 
+                test: /\.(svg|png|eot|ttf|woff|woff2)?$/, 
                 use: [{
                     loader: 'file-loader',
                     options: {

@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
     'django.contrib.sites',
     'django.contrib.sitemaps',
     'taggit',
@@ -48,6 +49,7 @@ INSTALLED_APPS = (
     'landing_page',
     'blog',
     'landing_page_backend',
+    'blog_backend',
 )
 
 MIDDLEWARE_CLASSES = (

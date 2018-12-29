@@ -17,20 +17,23 @@
 .icon-bars:before {
 	content: "\F101";
 }
-.icon-long-arrow-alt-right:before {
+.icon-logout:before {
 	content: "\F102";
 }
-.icon-paper-plane:before {
+.icon-long-arrow-alt-right:before {
 	content: "\F103";
 }
-.icon-play-circle:before {
+.icon-paper-plane:before {
 	content: "\F104";
 }
-.icon-rss:before {
+.icon-play-circle:before {
 	content: "\F105";
 }
-.icon-search:before {
+.icon-rss:before {
 	content: "\F106";
+}
+.icon-search:before {
+	content: "\F107";
 }
 
 /*!
@@ -6499,6 +6502,8 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
           width: 100%;
           -webkit-transition: .5s all;
           -moz-transition: .5s all;
+          -o-transition: .5s all;
+          -ms-transition: .5s all;
           transition: .5s all;
           box-shadow: 0 0 0 0.1rem rgba(28, 241, 241, 0.28); }
         #landing_page #blog #blog-right-column a .post-shortcut .post-body h5 {
