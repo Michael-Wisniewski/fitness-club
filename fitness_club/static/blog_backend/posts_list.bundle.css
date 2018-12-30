@@ -6842,6 +6842,10 @@ header, section, footer, aside, nav, main, article, figure {
   background-color: #af34ed;
   border-color: #af34ed; }
 
+.buttonHolder {
+  text-align: center;
+  margin-top: 3em; }
+
 table.dataTable thead > tr > th.sorting_asc, table.dataTable thead > tr > th.sorting_desc, table.dataTable thead > tr > th.sorting,
 table.dataTable thead > tr > td.sorting_asc,
 table.dataTable thead > tr > td.sorting_desc,

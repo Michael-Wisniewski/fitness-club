@@ -33,7 +33,9 @@
                         <div class="post-shortcut row">
                             {% if forloop.counter|divisibleby:2 == 0 %}
                                     <div class="post-image col-4">
+                                        {% if post.image %}
                                             <img src="{{ post.image.url }}" alt="no picture" class="rounded-circle">
+                                        {% endif %}
                                     </div>
                                     <div class="post-body col-8">
                                         <h5>{{ post.title }}</h5>
@@ -51,7 +53,9 @@
                                     {{ post.body|markdown|truncatewords_html:30 }} 
                                 </div>
                                 <div class="post-image col-4">
+                                    {% if post.image %}
                                         <img src="{{ post.image.url }}" alt="no picture" class="rounded-circle">
+                                    {% endif %}
                                 </div>
                             {% endif %}
                         </div>

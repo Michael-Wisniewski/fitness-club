@@ -47,9 +47,9 @@ INSTALLED_APPS = (
     'crispy_forms',
     'custom_crispy_forms',
     'landing_page',
+    'blog_backend',
     'blog',
     'landing_page_backend',
-    'blog_backend',
 )
 
 MIDDLEWARE_CLASSES = (

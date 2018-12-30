@@ -9,7 +9,8 @@ module.exports = {
         'base_templates/backendBase': './src/base_templates/backend.js',
         'landing_page_backend/landing_page_backend': './src/landing_page_backend/landing_page_backend.js',
         'account_backend/account_backend': './src/account_backend/account_backend.js',
-        'blog_backend/posts_list': './src/blog_backend_posts_list/posts_list.js'
+        'blog_backend/posts_list': './src/blog_backend_posts_list/posts_list.js',
+        'blog_backend/post_edit': './src/blog_backend_post_edit/post_edit.js'
     },
     output: {
         path: staticRoot,

@@ -5,6 +5,9 @@ from django.views.generic import View, TemplateView, View, UpdateView
 from blog.models import Post
 from preserialize.serialize import serialize
 from django.http import JsonResponse
+from .forms import PostForm
+from django.core.urlresolvers import reverse_lazy
+from django.shortcuts import HttpResponseRedirect
 
 class PostsListView(Section, EmployeeLoginRequired, TemplateView):
     template_name = 'blog_backend/posts_list.html'
@@ -32,4 +35,6 @@ class PostsListData(EmployeeLoginRequired, AjaxRequired, View):
 class PostEditView(Section, EmployeeLoginRequired, UpdateView):
     template_name = 'blog_backend/post_edit.html'
     model = Post
-    fields = ['title', ]
+    form_class = PostForm
+    initial = {'cancel_url': reverse_lazy('blog_backend:posts_list')}
+    success_url = reverse_lazy('blog_backend:posts_list')

@@ -1,5 +1,5 @@
 from django.shortcuts import HttpResponseRedirect
-from django_hosts import reverse
+from django_hosts.resolvers import reverse
 
 class EmployeeLoginRequired():
 

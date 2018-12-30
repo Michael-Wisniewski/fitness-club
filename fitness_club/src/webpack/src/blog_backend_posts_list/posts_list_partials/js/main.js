@@ -8,7 +8,7 @@ var renderAuthor = function(data, type, row) {
 };
 
 var renderEditButton = function(data, type, row) {
-    var button = '<a href="' + urls['post_edit_blind'] + data + '">'+
+    var button = '<a href="' + urls['post_edit_blind'] + data + '/">'+
                      '<button class="btn btn-edit">Edit</button>'+
                  '</a>';
     return button;
