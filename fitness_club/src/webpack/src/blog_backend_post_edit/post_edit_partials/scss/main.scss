@@ -1,2 +1,4 @@
 @import '../../../base_templates/backend_partials/scss/main.scss';
-
+@import '~pc-bootstrap4-datetimepicker/build/css/bootstrap-datetimepicker.min.css';
+$fa-font-path: "~font-awesome/fonts/";
+@import "~font-awesome/scss/font-awesome";

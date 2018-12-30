@@ -95,7 +95,7 @@ PostgreSQL, Redis
 Apache Solr
 Python, Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, 
 Html5, Css3, Sass, Bootstrap
-JavaScript, Vue, Vuex, Data Tables,
+JavaScript, Vue, Vuex, Data Tables, Date Time Picker
 Node js, Npm, Webpack (Css and Js optimizers, svg converter)
 Docker, Docker-Compose
 Mailhog

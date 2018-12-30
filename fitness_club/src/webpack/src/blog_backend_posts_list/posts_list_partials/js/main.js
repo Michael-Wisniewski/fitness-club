@@ -52,7 +52,7 @@ var config = {
             "className": 'text-center'
         }
     ],
-    "order": [[ 1, 'asc' ]]
+    "order": [[ 3, 'desc' ]]
 };
 
 $(document).ready(function() {
