@@ -74,6 +74,7 @@
     Pracownik
         -
 
+    Added RWD and scrolling to CropperJS plugin
     All views are class based
     Custom crispy fields are used during forms generation
     Mailhog is used for email testing (localhost:8025)
@@ -95,7 +96,7 @@ PostgreSQL, Redis
 Apache Solr
 Python, Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, 
 Html5, Css3, Sass, Bootstrap
-JavaScript, Vue, Vuex, Data Tables, Date Time Picker
+JavaScript, Vue, Vuex, Data Tables, DateTime Picker, CropperJs
 Node js, Npm, Webpack (Css and Js optimizers, svg converter)
 Docker, Docker-Compose
 Mailhog

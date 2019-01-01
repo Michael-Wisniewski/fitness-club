@@ -2,6 +2,7 @@ from django import forms
 from crispy_forms.helper import FormHelper
 from crispy_forms.layout import Layout, Field, ButtonHolder, Submit, HTML, Button, Div
 from blog.models import Post
+from account.models import User
 
 class PostForm(forms.ModelForm):
     class Meta: 
@@ -11,6 +12,8 @@ class PostForm(forms.ModelForm):
     def __init__(self, **kwargs):
         super(PostForm, self).__init__(**kwargs)
         cancel_url = kwargs['initial']['cancel_url']
+        self.fields['author'].queryset = User.objects.filter(is_active=True, is_employee=True)
+        self.fields['author'].empty_label = None
         self.helper = FormHelper()
         self.helper.form_class = 'form-horizontal'
         self.helper.label_class = 'col-lg-3'
