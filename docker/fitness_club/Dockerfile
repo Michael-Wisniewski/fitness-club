@@ -14,6 +14,7 @@ RUN apk update && \
 RUN apk add --update --no-cache \
         python3 \
         python3-dev \
+        jpeg-dev \
         build-base \
         linux-headers \
         pcre-dev \

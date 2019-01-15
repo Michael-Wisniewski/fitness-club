@@ -17,6 +17,7 @@ $(document).ready(function(){
     var image_to_crop_el = document.getElementById('image-to-crop');
     var $crop_button = $('#crop-button');
     var cropper;
+    var imageCroppedFlag = false;
     var conf = {
         aspectRatio: 1 / 0.666666667,
         scalable: false,
@@ -107,12 +108,19 @@ $(document).ready(function(){
 
     $crop_button.on('click', function(e){
         e.stopPropagation();
-        var img_data =  cropper.getCroppedCanvas().toDataURL();
-        console.log(imgurl);
+        var data = cropper.getData(true);
+        $('#id_x').val(data['x']);
+        $('#id_y').val(data['y']);
+        $('#id_width').val(data['width']);
+        $('#id_height').val(data['height']);
+        imageCroppedFlag = true;
+        $modal.modal('hide');
     });
 
     $modal.on('hidden.bs.modal', function (e) {
-        $input_field.val('');
+        if(!imageCroppedFlag){
+            $input_field.val('');
+        }
     })
 
 });
