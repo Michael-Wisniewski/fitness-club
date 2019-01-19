@@ -56,7 +56,7 @@ class PostForm(forms.ModelForm):
         w = cd['width']
         h = cd['height']
 
-        if x is not None and y is not None and w is not None and h is not None:
+        if (x and y and w and h) is not None:
             image = Image.open(post.image)
             cropped_image = image.crop((x, y, w+x, h+y))
             resized_image = cropped_image.resize((750, 500), Image.ANTIALIAS)

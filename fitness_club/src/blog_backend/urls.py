@@ -15,5 +15,14 @@ urlpatterns = [
             name='post_edit_blind'),
     url(r'^post_edit/(?P<pk>\d+)/$',
             views.PostEditView.as_view(section=module_name),
-            name='post_edit'), 
+            name='post_edit'),
+    url(r'^post_delete/$',
+            views.PostDeleteView.as_view(section=module_name),
+            name='post_delete_blind'),
+    url(r'^post_delete/(?P<pk>\d+)/$',
+            views.PostDeleteView.as_view(section=module_name),
+            name='post_delete_blind'),
+    url(r'^post_create/$',
+            views.PostCreateView.as_view(section=module_name),
+            name='post_create')
 ]

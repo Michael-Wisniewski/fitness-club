@@ -14,6 +14,13 @@ var renderEditButton = function(data, type, row) {
     return button;
 };
 
+var renderDeleteButton = function(data, type, row) {
+    var button = '<a href="' + urls['post_delete_blind']+ data + '/">'+
+                    '<button class="btn btn-danger">Delete</button>'+
+                '</a>';
+    return button;
+}
+
 var config = {
     "ajax": {
         url: urls['posts_list_data'],
@@ -49,6 +56,14 @@ var config = {
             "orderable": false,
             "searchable": false,
             "render": renderEditButton,
+            "className": 'text-center'
+        },
+        {
+            "targets": 6,
+            "data": "id",
+            "orderable": false,
+            "searchable": false,
+            "render": renderDeleteButton,
             "className": 'text-center'
         }
     ],
