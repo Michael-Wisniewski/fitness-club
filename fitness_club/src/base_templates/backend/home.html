@@ -25,6 +25,9 @@
                         <li class="nav-item {% if section == 'blog_backend' %}active{% endif %}">
                             <a class="nav-link" href="{% url "blog_backend:posts_list" %}">Blog</a>
                         </li>
+                        <li class="nav-item {% if section == 'slider_backend' %}active{% endif %}">
+                            <a class="nav-link" href="{% url "slider_backend:slides_list" %}">Slides</a>
+                        </li>
                     </ul>         
                 </sidebar>
                 <content class="col-12 col-lg-10">

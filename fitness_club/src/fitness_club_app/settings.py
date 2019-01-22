@@ -50,6 +50,7 @@ INSTALLED_APPS = (
     'blog_backend',
     'blog',
     'landing_page_backend',
+    'slider_backend'
 )
 
 MIDDLEWARE_CLASSES = (
