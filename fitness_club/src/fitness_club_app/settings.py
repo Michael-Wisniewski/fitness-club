@@ -44,6 +44,7 @@ INSTALLED_APPS = (
     'django.contrib.sitemaps',
     'taggit',
     'haystack',
+    'sorl.thumbnail',
     'crispy_forms',
     'custom_crispy_forms',
     'landing_page',

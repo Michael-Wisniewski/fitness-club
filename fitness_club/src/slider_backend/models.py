@@ -3,14 +3,8 @@ from django.core.exceptions import ValidationError
 from django.core.validators import MaxValueValidator
 
 def slider_directory_path(instance, filename):
-
-    for char in ((" ", "_"), (".", " ")):
-        clean_title = instance.title.replace(*char)
-
     output_filename = 'slider/'
-    output_filename += clean_title
-    output_filename += '_' + str(instance.id)
-    output_filename += '.' + filename.split(".")[-1]
+    output_filename += filename
     return output_filename
 
 def validate_nonzero(value):

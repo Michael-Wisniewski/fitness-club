@@ -13,3 +13,4 @@ django-hosts==2.0
 django-auth-mixins==1.0.1
 django-preserialize==1.2.1
 djangorestframework==3.4.7
+sorl-thumbnail==12.3

@@ -1,0 +1,36 @@
+{% extends "backend/home.html" %}
+{% load staticfiles %}
+
+{% block css %}
+    <link href="{% static "slider_backend/slides_list.bundle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div id="slides_list" class="row">
+        <div class="col-lg-8 mx-auto mt-4 text-center">
+            {% if not slides %}
+                <h4>There are not any slides added.</h4>
+            {% else %}
+                <h7 class="text-info">Grad and scroll element to change slides order.</h7>
+                <ul id="sortable">
+                    {% for slide in slides %}
+                        <li>
+                            <img src="{{ slide.image.url }}" alt="No photo"/>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+        {% if slides.count < 10 %}
+            <div class="col-12 text-center mt-5">
+                <a href="{% url "slider_backend:slide_create" %}">
+                    <button class="btn btn-success">Add Slide</button>
+                </a>
+            </div>
+        {% endif %}
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "slider_backend/slides_list.bundle.js" %}"></script>
+{% endblock %}
