@@ -18,3 +18,6 @@ class SliderPicture(models.Model):
                               blank=False)
     order = models.PositiveIntegerField(default=1,
                                         validators=[MaxValueValidator(10), validate_nonzero])
+
+    class Meta:
+        ordering = ('order',)                

@@ -1,5 +1,5 @@
 {% extends "backend/home.html" %}
-{% load staticfiles %}
+{% load staticfiles thumbnail %}
 
 {% block css %}
     <link href="{% static "slider_backend/slides_list.bundle.css" %}" rel="stylesheet" type="text/css">
@@ -11,13 +11,35 @@
             {% if not slides %}
                 <h4>There are not any slides added.</h4>
             {% else %}
-                <h7 class="text-info">Grad and scroll element to change slides order.</h7>
-                <ul id="sortable">
+                <h7 class="text-info">Grad and move element to change slides order.</h7>
+                <ul id="sortable_ul">
                     {% for slide in slides %}
-                        <li>
-                            <img src="{{ slide.image.url }}" alt="No photo"/>
+                        <li slide_id="{{ slide.id }}">
+                            {% thumbnail slide.image "180x120" crop="100%" as im %}
+                            <img src="{{ im.url }}" alt="No photo"/>
+                            {% endthumbnail %}
                         </li>
                     {% endfor %}
+
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Order</th>
+                                <th>Picture</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                            <td>1</td>
+                            <td>pic</td>
+                            <td>delete</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
                 </ul>
             {% endif %}
         </div>
@@ -29,8 +51,30 @@
             </div>
         {% endif %}
     </div>
+    <div id="savingModal" class="modal">
+        <div class="modal-content align-items-center">
+            <p>Saving changes..</p>
+            <div class="loader"></div>
+        </div>
+    </div>
 {% endblock %}
 
 {% block javascript %}
     <script src="{% static "slider_backend/slides_list.bundle.js" %}"></script>
+    <script>
+        var csrftoken = $.cookie('csrftoken')
+        function csrfSafeMethod(method) {
+            return (/^(POST)$/.test(method))
+        }
+        $.ajaxSetup({
+            beforeSend: function(xhr, settings) {
+                if (csrfSafeMethod(settings.type) && !this.crossDomain) {
+                    xhr.setRequestHeader("X-CSRFToken", csrftoken)
+                }
+            }
+        })
+        window.urls = {
+            slides_order: '{% url 'slider_backend:slides_order' %}'
+        }
+    </script>
 {% endblock %}

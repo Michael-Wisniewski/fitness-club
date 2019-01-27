@@ -9,5 +9,8 @@ urlpatterns = [
             name='slides_list'),
     url(r'^slide_create/$',
             views.SlideCreateView.as_view(section=module_name),
-            name='slide_create')
+            name='slide_create'),
+    url(r'^slides_order/$',
+            views.UpdateSlidesOrder.as_view(),
+            name='slides_order')
 ]
