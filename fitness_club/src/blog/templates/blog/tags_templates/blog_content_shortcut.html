@@ -1,4 +1,5 @@
 {% load blog_tags %}
+{% load thumbnail %}
 
 <div id="blog"> 
     <div class="container content-container">
@@ -34,7 +35,9 @@
                             {% if forloop.counter|divisibleby:2 == 0 %}
                                     <div class="post-image col-4">
                                         {% if post.image %}
-                                            <img src="{{ post.image.url }}" alt="no picture" class="rounded-circle">
+                                            {% thumbnail post.image "250x167" crop="100%" as im %}
+                                                <img src="{{ im.url }}" alt="no picture" class="rounded-circle">
+                                            {% endthumbnail %}
                                         {% endif %}
                                     </div>
                                     <div class="post-body col-8">
@@ -54,7 +57,9 @@
                                 </div>
                                 <div class="post-image col-4">
                                     {% if post.image %}
-                                        <img src="{{ post.image.url }}" alt="no picture" class="rounded-circle">
+                                        {% thumbnail post.image "250x167" crop="100%" as im %}
+                                            <img src="{{ im.url }}" alt="no picture" class="rounded-circle">
+                                        {% endthumbnail %}
                                     {% endif %}
                                 </div>
                             {% endif %}

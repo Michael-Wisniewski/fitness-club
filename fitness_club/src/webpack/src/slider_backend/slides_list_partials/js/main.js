@@ -23,6 +23,10 @@ var updateSlidesOrder = function(event, ui) {
             },
             success: function(data) {
                 if(data.operation_status == 'OK') {
+                    var $list_items = $sortable_ul.find('li');
+                    $list_items.each(function(index){
+                        $(this).find('.number').text(index+1);
+                    });
                     $modal.removeClass('show');
                 }
                 else {

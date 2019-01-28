@@ -12,5 +12,8 @@ urlpatterns = [
             name='slide_create'),
     url(r'^slides_order/$',
             views.UpdateSlidesOrder.as_view(),
-            name='slides_order')
+            name='slides_order'),
+    url(r'^slide_delete/(?P<pk>\d+)/$',
+            views.SlideDeleteView.as_view(section=module_name),
+            name='slide_delete')
 ]

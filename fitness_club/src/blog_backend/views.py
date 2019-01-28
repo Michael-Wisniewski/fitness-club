@@ -56,8 +56,4 @@ class PostCreateView(Section, EmployeeLoginRequired, CreateView):
     form_class = PostForm
     initial = {'cancel_url': reverse_lazy('blog_backend:posts_list')}
     success_url = reverse_lazy('blog_backend:posts_list')
-
-
-
-
     

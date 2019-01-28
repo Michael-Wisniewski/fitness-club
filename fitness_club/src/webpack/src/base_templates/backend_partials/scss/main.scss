@@ -12,6 +12,7 @@ header, section, footer, aside, nav, main, article, figure {
         padding-top: 15px;
         @media (max-width: 992px) {
             display:inline-block;
+            height: calc(100vh - 56px);
             width:0px;
             position: absolute;
             top: 56px;
@@ -38,6 +39,7 @@ header, section, footer, aside, nav, main, article, figure {
         padding: 15px;
         .content-wrapper {
             padding: 15px;
+            height: calc(100vh - 86px);
         }
     }
 }

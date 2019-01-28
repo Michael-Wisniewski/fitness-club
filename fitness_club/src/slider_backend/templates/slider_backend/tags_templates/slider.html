@@ -1,1 +1,15 @@
 w slider
+
+
+
+
+<div data-zs-src='[ "http://fitness.pl/media/cache/6f/b6/6fb6997552c185b39c37e47761e63dc0.jpg"]'>
+        <p>Sample inner content</p>
+</div>
+
+
+
+{% for slide in slides %}
+                        {{ slide.image.url }}
+                        {% if not forloop.last %}, {% endif %}
+                    {% endfor %}

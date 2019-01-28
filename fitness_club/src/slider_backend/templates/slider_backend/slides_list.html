@@ -11,40 +11,26 @@
             {% if not slides %}
                 <h4>There are not any slides added.</h4>
             {% else %}
-                <h7 class="text-info">Grad and move element to change slides order.</h7>
+                <h7 class="text-info">Grab and move element to change slides order.</h7>
                 <ul id="sortable_ul">
                     {% for slide in slides %}
                         <li slide_id="{{ slide.id }}">
+                            <div class="header">
+                                <span class="number">{{ forloop.counter }}</span>
+                                <a href="{% url 'slider_backend:slide_delete' slide.id %}">
+                                    <span class="delete">X</span>
+                                </a>
+                            </div>
                             {% thumbnail slide.image "180x120" crop="100%" as im %}
                             <img src="{{ im.url }}" alt="No photo"/>
                             {% endthumbnail %}
                         </li>
                     {% endfor %}
-
-
-                    <table>
-                        <thead>
-                            <tr>
-                                <th>Order</th>
-                                <th>Picture</th>
-                                <th>Action</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                            <td>1</td>
-                            <td>pic</td>
-                            <td>delete</td>
-                            </tr>
-                        </tbody>
-                    </table>
-
-
                 </ul>
             {% endif %}
         </div>
         {% if slides.count < 10 %}
-            <div class="col-12 text-center mt-5">
+            <div class="col-12 text-center mt-3">
                 <a href="{% url "slider_backend:slide_create" %}">
                     <button class="btn btn-success">Add Slide</button>
                 </a>

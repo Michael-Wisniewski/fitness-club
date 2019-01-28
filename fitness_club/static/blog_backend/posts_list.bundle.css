@@ -6816,6 +6816,7 @@ header, section, footer, aside, nav, main, article, figure {
     @media (max-width: 992px) {
       #main sidebar {
         display: inline-block;
+        height: calc(100vh - 56px);
         width: 0px;
         position: absolute;
         top: 56px;
@@ -6835,7 +6836,8 @@ header, section, footer, aside, nav, main, article, figure {
   #main content {
     padding: 15px; }
     #main content .content-wrapper {
-      padding: 15px; }
+      padding: 15px;
+      height: calc(100vh - 86px); }
 
 .btn-edit {
   color: #ffffff;

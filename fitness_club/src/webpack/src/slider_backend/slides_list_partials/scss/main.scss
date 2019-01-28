@@ -2,11 +2,42 @@
 @import '~jquery-ui/themes/base/all.css';
 
 #sortable_ul {
-    margin-top: 20px;
+    margin: 20px auto;
     list-style: none;
     padding: 0px;
+    width: 184px;
     li {
         margin: 5px 0px;
+        border: {
+            width: 2px;
+            color: #007bff;
+            style: solid;
+            radius: 0.25rem;
+        }
+        .header {
+            background-color: #007bff;
+            overflow: auto;
+            span {
+                color: #ffffff;
+                font: {
+                    size: 20px;
+                    weight: bold;
+                }
+            }
+            .number {
+                float: left;
+                margin-left: 10px;
+            }
+            .delete {
+                background-color: #dc3545;
+                float: right;
+                margin-right: 2px;
+                line-height: 15px;
+                padding: 4px;
+                border-radius: 5px;
+                margin-top: 2px;
+            }
+        }
     }
 }
 

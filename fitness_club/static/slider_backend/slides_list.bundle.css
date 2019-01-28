@@ -7913,6 +7913,7 @@ header, section, footer, aside, nav, main, article, figure {
     @media (max-width: 992px) {
       #main sidebar {
         display: inline-block;
+        height: calc(100vh - 56px);
         width: 0px;
         position: absolute;
         top: 56px;
@@ -7932,7 +7933,8 @@ header, section, footer, aside, nav, main, article, figure {
   #main content {
     padding: 15px; }
     #main content .content-wrapper {
-      padding: 15px; }
+      padding: 15px;
+      height: calc(100vh - 86px); }
 
 .btn-edit {
   color: #ffffff;
@@ -7944,11 +7946,34 @@ header, section, footer, aside, nav, main, article, figure {
   margin-top: 3em; }
 
 #sortable_ul {
-  margin-top: 20px;
+  margin: 20px auto;
   list-style: none;
-  padding: 0px; }
+  padding: 0px;
+  width: 184px; }
   #sortable_ul li {
-    margin: 5px 0px; }
+    margin: 5px 0px;
+    border-width: 2px;
+    border-color: #007bff;
+    border-style: solid;
+    border-radius: 0.25rem; }
+    #sortable_ul li .header {
+      background-color: #007bff;
+      overflow: auto; }
+      #sortable_ul li .header span {
+        color: #ffffff;
+        font-size: 20px;
+        font-weight: bold; }
+      #sortable_ul li .header .number {
+        float: left;
+        margin-left: 10px; }
+      #sortable_ul li .header .delete {
+        background-color: #dc3545;
+        float: right;
+        margin-right: 2px;
+        line-height: 15px;
+        padding: 4px;
+        border-radius: 5px;
+        margin-top: 2px; }
 
 .modal {
   display: none;
