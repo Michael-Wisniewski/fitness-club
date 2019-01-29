@@ -1,8 +1,7 @@
 @import '../../../base_templates/frontend_partials/scss/main.scss';
-@import '../../../slider/zoomslider.css';
 
-#landing_page {
-    margin-top: 200px; 
+#landing_page { 
+    @import '_slider.scss';
     @import '_blog.scss';
     
     .content-container {

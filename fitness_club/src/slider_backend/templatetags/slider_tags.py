@@ -6,4 +6,5 @@ register = template.Library()
 @register.inclusion_tag('slider_backend/tags_templates/slider.html')
 def slider_shortcut():
     slides = SliderPicture.objects.all()
-    return {'slides': slides}
+    slides_range = range(slides.count())
+    return {'slides': slides, 'slides_range': slides_range}

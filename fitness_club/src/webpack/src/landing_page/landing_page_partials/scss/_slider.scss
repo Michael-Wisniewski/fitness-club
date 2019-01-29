@@ -1,0 +1,94 @@
+#slider {
+    @-webkit-keyframes zoom {
+        from {
+          -webkit-transform: scale(1.2, 1.2);
+        }
+        to {
+          -webkit-transform: scale(1, 1);
+        }
+    }
+    @keyframes zoom {
+        from {
+            transform: scale(1.2, 1.2);
+        }
+        to {
+            transform: scale(1, 1);
+        }
+    }
+    height: 100vh;
+    width: 100%;
+    overflow:hidden;
+    .carousel-inner {
+        width:100%;
+        height: auto;
+        .carousel-item > img {
+            width:100%;
+            -webkit-animation: zoom 5s;
+            animation: zoom 5s;
+        }
+    }
+    .carousel-indicators li {
+        background-color: $secondary;
+        &.active {
+            background-color: $primary;
+        }
+    }
+    .control {
+        z-index: 10;
+        .icon {
+            font-size: 2em;
+            color: $primary;
+            }
+    } 
+    #carousel-header {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        color: $secondary;
+        text-align: center;
+        .content {
+            h3 {
+                font-size: 5em;
+                letter-spacing: 2px;
+                padding: 0;
+                font-weight: bold;
+                span {
+                    color: $primary;
+                }
+            }
+            .border {
+                background: $secondary;
+                height: 4px;
+                width: 25%;
+                margin: 1em auto;
+            }
+            p {
+                font-size: 2em;
+            }
+        }
+    }
+    @media(max-width: 1100px) {
+        & {
+            height: 100%;
+            #carousel-header {
+                .content {
+                    padding: 0 46px;
+                    h3 {
+                        font-size: 3em;
+                        margin-bottom: 0;
+                    }
+                    .border {
+                        margin: 0.25em auto;
+                    }
+                    p {
+                        font-size: 1em;
+                    }
+                }
+            }
+        }
+    }
+}

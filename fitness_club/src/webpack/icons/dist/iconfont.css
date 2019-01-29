@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "iconfont";
-	src: url("iconfont.woff?b44182c95e342d0899eabd4c4e0502b6") format("woff");
+	src: url("iconfont.woff?32c1294f9ec44201ff3ebe28a79b2e14") format("woff");
 }
 
 .icon {
@@ -14,24 +14,30 @@
 	vertical-align: top;
 }
 
-.icon-bars:before {
+.icon-angle-double-left:before {
 	content: "\f101";
 }
-.icon-logout:before {
+.icon-angle-double-right:before {
 	content: "\f102";
 }
-.icon-long-arrow-alt-right:before {
+.icon-bars:before {
 	content: "\f103";
 }
-.icon-paper-plane:before {
+.icon-logout:before {
 	content: "\f104";
 }
-.icon-play-circle:before {
+.icon-long-arrow-alt-right:before {
 	content: "\f105";
 }
-.icon-rss:before {
+.icon-paper-plane:before {
 	content: "\f106";
 }
-.icon-search:before {
+.icon-play-circle:before {
 	content: "\f107";
+}
+.icon-rss:before {
+	content: "\f108";
+}
+.icon-search:before {
+	content: "\f109";
 }
