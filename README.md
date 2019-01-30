@@ -94,7 +94,7 @@
 Nginx, Uwsgi
 PostgreSQL, Redis
 Apache Solr
-Python, Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, sorl-thumbnail,
+Python, Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, sorl-thumbnail, Django-Betterforms
 Html5, Css3, Sass, Bootstrap
 JavaScript, Vue, Vuex, Data Tables, DateTime Picker, CropperJs, jQuery-ui
 Node js, Npm, Webpack (Css and Js optimizers, svg converter)

@@ -1,0 +1,23 @@
+{% extends "backend/home.html" %}
+{% load staticfiles crispy_forms_tags %}
+
+{% block css %}
+    <link href="{% static "employees_backend/employees_backend.bundle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div id="employee_create">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <form action="." method="post">
+                    {% crispy form %}
+                </form>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "employees_backend/employees_backend.bundle.js" %}"></script>
+{% endblock %}
+

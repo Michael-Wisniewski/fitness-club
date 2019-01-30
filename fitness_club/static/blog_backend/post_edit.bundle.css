@@ -14,26 +14,32 @@
 	vertical-align: top;
 }
 
-.icon-bars:before {
+.icon-angle-double-left:before {
 	content: "\F101";
 }
-.icon-logout:before {
+.icon-angle-double-right:before {
 	content: "\F102";
 }
-.icon-long-arrow-alt-right:before {
+.icon-bars:before {
 	content: "\F103";
 }
-.icon-paper-plane:before {
+.icon-logout:before {
 	content: "\F104";
 }
-.icon-play-circle:before {
+.icon-long-arrow-alt-right:before {
 	content: "\F105";
 }
-.icon-rss:before {
+.icon-paper-plane:before {
 	content: "\F106";
 }
-.icon-search:before {
+.icon-play-circle:before {
 	content: "\F107";
+}
+.icon-rss:before {
+	content: "\F108";
+}
+.icon-search:before {
+	content: "\F109";
 }
 
 /*!
@@ -6403,7 +6409,7 @@ header, section, footer, aside, nav, main, article, figure {
     padding: 15px; }
     #main content .content-wrapper {
       padding: 15px;
-      height: calc(100vh - 86px); }
+      min-height: calc(100vh - 86px); }
 
 .btn-edit {
   color: #ffffff;

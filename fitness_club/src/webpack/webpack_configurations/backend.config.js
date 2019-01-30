@@ -11,7 +11,8 @@ module.exports = {
         'account_backend/account_backend': './src/account_backend/account_backend.js',
         'blog_backend/posts_list': './src/blog_backend_posts_list/posts_list.js',
         'blog_backend/post_edit': './src/blog_backend_post_edit/post_edit.js',
-        'slider_backend/slides_list': './src/slider_backend/slides_list.js'
+        'slider_backend/slides_list': './src/slider_backend/slides_list.js',
+        'employees_backend/employees_backend': './src/employees_backend/employees_backend.js'
     },
     output: {
         path: staticRoot,

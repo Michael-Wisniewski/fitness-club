@@ -14,5 +14,8 @@ urlpatterns = [
             app_name='blog_backend')),
     url(r'^slider_backend/', include('slider_backend.urls',
             namespace='slider_backend',
-            app_name='slider_backend'))
+            app_name='slider_backend')),
+    url(r'^employees/', include('employees_backend.urls',
+            namespace='employees_backend',
+            app_name='employees_backend'))
 ]

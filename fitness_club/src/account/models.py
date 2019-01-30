@@ -8,3 +8,15 @@ class User(AbstractUser):
     def __str__(self):
         fullname = '{} {}'.format(self.first_name, self.last_name)
         return fullname
+
+class EmployeeProfile(models.Model):
+    user = models.OneToOneField(User, 
+                                on_delete=models.CASCADE,
+                                related_name='profile')
+    picture = models.ImageField(upload_to='employees/',
+                                blank=True)
+    miniature = models.ImageField(upload_to='employees/',
+                                blank=True)
+    description = models.TextField(max_length=500,
+                                   null=True,
+                                   blank=True)
