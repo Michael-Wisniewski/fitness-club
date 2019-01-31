@@ -23,23 +23,29 @@
 .icon-bars:before {
 	content: "\F103";
 }
-.icon-logout:before {
+.icon-corner:before {
 	content: "\F104";
 }
-.icon-long-arrow-alt-right:before {
+.icon-info:before {
 	content: "\F105";
 }
-.icon-paper-plane:before {
+.icon-logout:before {
 	content: "\F106";
 }
-.icon-play-circle:before {
+.icon-long-arrow-alt-right:before {
 	content: "\F107";
 }
-.icon-rss:before {
+.icon-paper-plane:before {
 	content: "\F108";
 }
-.icon-search:before {
+.icon-play-circle:before {
 	content: "\F109";
+}
+.icon-rss:before {
+	content: "\F10A";
+}
+.icon-search:before {
+	content: "\F10B";
 }
 
 /*!
@@ -6602,6 +6608,108 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
         margin-top: 3em;
         text-align: center;
         padding: 0; } }
+
+#landing_page #employees .container {
+  margin-top: 2em; }
+
+#landing_page #employees .employees-wrapper {
+  margin: 0 auto 80px auto;
+  max-width: 960px; }
+  #landing_page #employees .employees-wrapper ul {
+    list-style: none;
+    padding: 0; }
+    #landing_page #employees .employees-wrapper ul li {
+      width: 260px;
+      height: 400px;
+      margin: 30px;
+      float: left;
+      perspective: 1000px; }
+      #landing_page #employees .employees-wrapper ul li .cube {
+        width: 260px;
+        height: 400px;
+        transform-style: preserve-3d;
+        transform: translateZ(-130px);
+        transition: transform 350ms; }
+        #landing_page #employees .employees-wrapper ul li .cube:hover {
+          transform: rotateY(-78deg) translateZ(20px); }
+          #landing_page #employees .employees-wrapper ul li .cube:hover .main-picture {
+            box-shadow: inset 300px 0px 40px rgba(255, 255, 255, 0.8); }
+        #landing_page #employees .employees-wrapper ul li .cube::after {
+          content: '';
+          width: 260px;
+          height: 260px;
+          position: absolute;
+          bottom: 0;
+          box-shadow: 0 30px 50px rgba(0, 0, 0, 0.3);
+          transform-origin: 100% 100%;
+          transform: rotateX(90deg) translateY(130px);
+          transition: box-shadow 350ms; }
+        #landing_page #employees .employees-wrapper ul li .cube:hover::after {
+          box-shadow: 20px -5px 50px rgba(0, 0, 0, 0.3); }
+        #landing_page #employees .employees-wrapper ul li .cube .main-picture, #landing_page #employees .employees-wrapper ul li .cube .details, #landing_page #employees .employees-wrapper ul li .cube .details header {
+          transition: box-shadow 350ms; }
+        #landing_page #employees .employees-wrapper ul li .cube .main-picture, #landing_page #employees .employees-wrapper ul li .cube .details {
+          position: absolute;
+          width: 260px;
+          height: 400px;
+          background-color: #fff;
+          backface-visibility: hidden; }
+        #landing_page #employees .employees-wrapper ul li .cube .main-picture {
+          transform: translateZ(130px);
+          background-size: cover;
+          background-repeat: no-repeat;
+          box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0); }
+          #landing_page #employees .employees-wrapper ul li .cube .main-picture .icon-corner {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 48px;
+            color: #1cf1f1; }
+          #landing_page #employees .employees-wrapper ul li .cube .main-picture .icon-info {
+            position: absolute;
+            top: 4px;
+            right: 8px;
+            font-size: 20px;
+            color: #fff; }
+        #landing_page #employees .employees-wrapper ul li .cube .details {
+          transform: rotateY(90deg) translateZ(130px);
+          border: 1px solid #B8B5B5;
+          font-size: 0.75em; }
+          #landing_page #employees .employees-wrapper ul li .cube .details img {
+            height: 172px;
+            max-width: 258px; }
+          #landing_page #employees .employees-wrapper ul li .cube .details header {
+            position: absolute;
+            top: 0px;
+            color: #FFF;
+            padding: 7px 10px;
+            font-weight: bold;
+            height: 195px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            text-shadow: 0px 1px 1px black; }
+            #landing_page #employees .employees-wrapper ul li .cube .details header h1 {
+              margin: 0 0 2px;
+              font-size: 1.4em; }
+          #landing_page #employees .employees-wrapper ul li .cube .details p {
+            height: 170px;
+            padding: 1.2em 1.4em 1.1em 1.4em;
+            margin: 2px 0 0;
+            font-weight: 700;
+            color: #212121;
+            line-height: 1.4em;
+            border-top-width: 10px;
+            border-top-style: solid;
+            border-top-color: #1cf1f1; }
+          #landing_page #employees .employees-wrapper ul li .cube .details .read_more {
+            text-align: center; }
+            #landing_page #employees .employees-wrapper ul li .cube .details .read_more a {
+              background-color: #1cf1f1;
+              color: #fff;
+              text-decoration: none;
+              font-size: 1.5em;
+              padding: 0.25em;
+              display: inline-block; }
 
 #landing_page .content-container {
   padding-top: 2em;

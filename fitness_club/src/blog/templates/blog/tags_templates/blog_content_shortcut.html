@@ -33,20 +33,20 @@
                     <a href="{{ post.get_absolute_url }}">
                         <div class="post-shortcut row">
                             {% if forloop.counter|divisibleby:2 == 0 %}
-                                    <div class="post-image col-4">
-                                        {% if post.image %}
-                                            {% thumbnail post.image "250x167" crop="100%" as im %}
-                                                <img src="{{ im.url }}" alt="no picture" class="rounded-circle">
-                                            {% endthumbnail %}
-                                        {% endif %}
-                                    </div>
-                                    <div class="post-body col-8">
-                                        <h5>{{ post.title }}</h5>
-                                        <p class="post-date">
-                                            {{ post.publish|date:"m/d/Y" }}
-                                        </p>
-                                        {{ post.body|markdown|truncatewords_html:30 }} 
-                                    </div>
+                                <div class="post-image col-4">
+                                    {% if post.image %}
+                                        {% thumbnail post.image "250x167" crop="100%" as im %}
+                                            <img src="{{ im.url }}" alt="no picture" class="rounded-circle">
+                                        {% endthumbnail %}
+                                    {% endif %}
+                                </div>
+                                <div class="post-body col-8">
+                                    <h5>{{ post.title }}</h5>
+                                    <p class="post-date">
+                                        {{ post.publish|date:"m/d/Y" }}
+                                    </p>
+                                    {{ post.body|markdown|truncatewords_html:30 }} 
+                                </div>
                             {% else %}
                                 <div class="post-body col-8">
                                     <h5>{{ post.title }}</h5>

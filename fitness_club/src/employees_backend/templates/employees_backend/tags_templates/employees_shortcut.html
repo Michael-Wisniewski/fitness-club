@@ -1,0 +1,43 @@
+{% load thumbnail %}
+
+<div id="employees">
+    <div class="container content-container">
+        <div class="row">
+            <div class="col header">
+                Our Trainers
+            </div>
+        </div>
+        <div class="row content">
+            <div class="employees-wrapper">
+                <ul>
+                    {% for employee in employees %}
+                        <li>
+                            <div class="cube">
+                                <div class="main-picture">
+                                    <img src="{{ employee.profile.picture.url }}" alt="No photo">
+                                    <i class="icon icon-corner"></i>
+                                    <i class="icon icon-info"></i>
+                                </div>
+                                <div class="details">
+                                    <img src="{{ employee.profile.miniature.url }}" alt="No photo">
+                                    <header>
+                                    <h1>{{ employee }}</h1>
+                                    <span class="year">
+                                        {{ employee.email }}
+                                    </span>
+                                    </header>
+                                    <p>
+                                    {{ employee.profile.description|truncatechars:230 }}
+                                    </p>
+                                    <div class="read_more">
+                                        <a href="#{{ forloop.counter }}">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

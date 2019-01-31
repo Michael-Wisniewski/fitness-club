@@ -23,23 +23,29 @@
 .icon-bars:before {
 	content: "\F103";
 }
-.icon-logout:before {
+.icon-corner:before {
 	content: "\F104";
 }
-.icon-long-arrow-alt-right:before {
+.icon-info:before {
 	content: "\F105";
 }
-.icon-paper-plane:before {
+.icon-logout:before {
 	content: "\F106";
 }
-.icon-play-circle:before {
+.icon-long-arrow-alt-right:before {
 	content: "\F107";
 }
-.icon-rss:before {
+.icon-paper-plane:before {
 	content: "\F108";
 }
-.icon-search:before {
+.icon-play-circle:before {
 	content: "\F109";
+}
+.icon-rss:before {
+	content: "\F10A";
+}
+.icon-search:before {
+	content: "\F10B";
 }
 
 /*!

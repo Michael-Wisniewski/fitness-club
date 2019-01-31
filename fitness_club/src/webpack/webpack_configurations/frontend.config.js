@@ -8,7 +8,8 @@ module.exports = {
     entry: {
         'base_templates/frontendBase': './src/base_templates/frontend.js',
         'blog/blog': './src/blog/blog.js',
-        'landing_page/landing_page': './src/landing_page/landing_page.js'
+        'landing_page/landing_page': './src/landing_page/landing_page.js',
+        'employees/employees': './src/employees/employees.js'
     },
     output: {
         path: staticRoot,

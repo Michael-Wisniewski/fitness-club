@@ -39,7 +39,8 @@ class EmployeeForm(MultiModelForm):
         if commit:
             user = objects['user']
             user.is_employee = True
-            user.set_password(user.password)
+            if 'password' in self.cleaned_data['user']:
+                user.set_password(user.password)
             user.save()
             profile = objects['profile']
             profile.user = user

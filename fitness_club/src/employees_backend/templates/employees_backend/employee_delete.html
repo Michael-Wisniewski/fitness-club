@@ -1,0 +1,21 @@
+{% extends "backend/home.html" %}
+{% load blog_tags %}
+
+{% block content %}
+    <div id="post-delete">
+        <form action="." method="post" class="col-lg-8 mx-auto text-center">
+            {% csrf_token %}
+            <h3 class="text-primary">Are you sure you want to delete user?</h3>
+            <h4>Username: {{ object.username }}</h4>
+            {% if object.first_name and object.last_name %}
+                <h4>Full name: {{ object }}</h4>
+            {% endif %}
+            {% if object.email %}
+                <h4>Email: {{ object.email }}</h4>
+            {% endif %}
+            <p>
+                <input class="btn btn-danger" type="submit" value="Delete">
+            </p>
+        </form>
+    </div>
+{% endblock %}
