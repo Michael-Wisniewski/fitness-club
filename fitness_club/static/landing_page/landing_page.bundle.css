@@ -6544,6 +6544,24 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
       margin: 1em auto; }
     #landing_page #slider #carousel-header .content p {
       font-size: 2em; }
+  #landing_page #slider .carousel-fade .carousel-item {
+    opacity: 0;
+    transition-duration: .6s;
+    transition-property: opacity; }
+  #landing_page #slider .carousel-fade .carousel-item.active,
+  #landing_page #slider .carousel-fade .carousel-item-next.carousel-item-left,
+  #landing_page #slider .carousel-fade .carousel-item-prev.carousel-item-right {
+    opacity: 1; }
+  #landing_page #slider .carousel-fade .active.carousel-item-left,
+  #landing_page #slider .carousel-fade .active.carousel-item-right {
+    opacity: 0; }
+  #landing_page #slider .carousel-fade .carousel-item-next,
+  #landing_page #slider .carousel-fade .carousel-item-prev,
+  #landing_page #slider .carousel-fade .carousel-item.active,
+  #landing_page #slider .carousel-fade .active.carousel-item-left,
+  #landing_page #slider .carousel-fade .active.carousel-item-prev {
+    transform: translateX(0);
+    transform: translate3d(0, 0, 0); }
   @media (max-width: 1100px) {
     #landing_page #slider {
       height: 100%; }
