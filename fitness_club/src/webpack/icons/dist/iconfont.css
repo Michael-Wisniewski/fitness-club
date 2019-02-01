@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "iconfont";
-	src: url("iconfont.woff?1406615775b5212e834ae9043645a8c3") format("woff");
+	src: url("iconfont.woff?1d892299ccad270a1c201edba61927c9") format("woff");
 }
 
 .icon {
@@ -26,24 +26,39 @@
 .icon-corner:before {
 	content: "\f104";
 }
-.icon-info:before {
+.icon-facebook:before {
 	content: "\f105";
 }
-.icon-logout:before {
+.icon-gmail:before {
 	content: "\f106";
 }
-.icon-long-arrow-alt-right:before {
+.icon-info:before {
 	content: "\f107";
 }
-.icon-paper-plane:before {
+.icon-instagram:before {
 	content: "\f108";
 }
-.icon-play-circle:before {
+.icon-logout:before {
 	content: "\f109";
 }
-.icon-rss:before {
+.icon-long-arrow-alt-right:before {
 	content: "\f10a";
 }
-.icon-search:before {
+.icon-paper-plane:before {
 	content: "\f10b";
+}
+.icon-pinterest:before {
+	content: "\f10c";
+}
+.icon-play-circle:before {
+	content: "\f10d";
+}
+.icon-rss:before {
+	content: "\f10e";
+}
+.icon-search:before {
+	content: "\f10f";
+}
+.icon-twitter:before {
+	content: "\f110";
 }

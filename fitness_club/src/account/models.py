@@ -17,6 +17,6 @@ class EmployeeProfile(models.Model):
                                 blank=True)
     miniature = models.ImageField(upload_to='employees/',
                                 blank=True)
-    description = models.TextField(max_length=500,
+    description = models.TextField(max_length=2000,
                                    null=True,
                                    blank=True)

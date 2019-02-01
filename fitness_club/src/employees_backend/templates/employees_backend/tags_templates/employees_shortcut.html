@@ -30,7 +30,9 @@
                                     {{ employee.profile.description|truncatechars:230 }}
                                     </p>
                                     <div class="read_more">
-                                        <a href="#{{ forloop.counter }}">Read more</a>
+                                        <a href="{% url "employees:employees_list" %}#employee-nr-{{ forloop.counter }}">
+                                            Read more
+                                        </a>
                                     </div>
                                 </div>
                             </div>

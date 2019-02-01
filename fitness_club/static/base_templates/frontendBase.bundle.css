@@ -26,26 +26,41 @@
 .icon-corner:before {
 	content: "\F104";
 }
-.icon-info:before {
+.icon-facebook:before {
 	content: "\F105";
 }
-.icon-logout:before {
+.icon-gmail:before {
 	content: "\F106";
 }
-.icon-long-arrow-alt-right:before {
+.icon-info:before {
 	content: "\F107";
 }
-.icon-paper-plane:before {
+.icon-instagram:before {
 	content: "\F108";
 }
-.icon-play-circle:before {
+.icon-logout:before {
 	content: "\F109";
 }
-.icon-rss:before {
+.icon-long-arrow-alt-right:before {
 	content: "\F10A";
 }
-.icon-search:before {
+.icon-paper-plane:before {
 	content: "\F10B";
+}
+.icon-pinterest:before {
+	content: "\F10C";
+}
+.icon-play-circle:before {
+	content: "\F10D";
+}
+.icon-rss:before {
+	content: "\F10E";
+}
+.icon-search:before {
+	content: "\F10F";
+}
+.icon-twitter:before {
+	content: "\F110";
 }
 
 /*!
@@ -6365,7 +6380,7 @@ a.text-dark:hover, a.text-dark:focus {
 #header-top {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 15;
   background-color: #a7a7a7cc;
   border-bottom-width: 1px;
   border-bottom-style: solid;

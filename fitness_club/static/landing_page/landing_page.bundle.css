@@ -26,26 +26,41 @@
 .icon-corner:before {
 	content: "\F104";
 }
-.icon-info:before {
+.icon-facebook:before {
 	content: "\F105";
 }
-.icon-logout:before {
+.icon-gmail:before {
 	content: "\F106";
 }
-.icon-long-arrow-alt-right:before {
+.icon-info:before {
 	content: "\F107";
 }
-.icon-paper-plane:before {
+.icon-instagram:before {
 	content: "\F108";
 }
-.icon-play-circle:before {
+.icon-logout:before {
 	content: "\F109";
 }
-.icon-rss:before {
+.icon-long-arrow-alt-right:before {
 	content: "\F10A";
 }
-.icon-search:before {
+.icon-paper-plane:before {
 	content: "\F10B";
+}
+.icon-pinterest:before {
+	content: "\F10C";
+}
+.icon-play-circle:before {
+	content: "\F10D";
+}
+.icon-rss:before {
+	content: "\F10E";
+}
+.icon-search:before {
+	content: "\F10F";
+}
+.icon-twitter:before {
+	content: "\F110";
 }
 
 /*!
@@ -6365,7 +6380,7 @@ a.text-dark:hover, a.text-dark:focus {
 #header-top {
   position: fixed;
   top: 0;
-  z-index: 1;
+  z-index: 15;
   background-color: #a7a7a7cc;
   border-bottom-width: 1px;
   border-bottom-style: solid;
@@ -6614,15 +6629,19 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
 
 #landing_page #employees .employees-wrapper {
   margin: 0 auto 80px auto;
-  max-width: 960px; }
+  max-width: 1000px; }
   #landing_page #employees .employees-wrapper ul {
     list-style: none;
-    padding: 0; }
+    padding: 0;
+    width: 100%;
+    overflow: auto;
+    text-align: center; }
     #landing_page #employees .employees-wrapper ul li {
+      text-align: left;
+      display: inline-block;
       width: 260px;
       height: 400px;
-      margin: 30px;
-      float: left;
+      margin: 30px 35px;
       perspective: 1000px; }
       #landing_page #employees .employees-wrapper ul li .cube {
         width: 260px;
@@ -6656,8 +6675,6 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
           backface-visibility: hidden; }
         #landing_page #employees .employees-wrapper ul li .cube .main-picture {
           transform: translateZ(130px);
-          background-size: cover;
-          background-repeat: no-repeat;
           box-shadow: inset 0px 0px 40px rgba(255, 255, 255, 0); }
           #landing_page #employees .employees-wrapper ul li .cube .main-picture .icon-corner {
             position: absolute;
@@ -6685,8 +6702,6 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
             padding: 7px 10px;
             font-weight: bold;
             height: 195px;
-            background-size: contain;
-            background-repeat: no-repeat;
             text-shadow: 0px 1px 1px black; }
             #landing_page #employees .employees-wrapper ul li .cube .details header h1 {
               margin: 0 0 2px;

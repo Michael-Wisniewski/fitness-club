@@ -30,5 +30,55 @@
             font-size: 2em;
         }
    }
+   #employees-list {
+       .container-wrapper {
+            padding: 30px 0px;
+            &:nth-child(2) {
+                background-color: $fifth;
+            }
+        }
+        .employee-picture {
+            text-align: center;
+            img {
+                box-shadow: 7px 7px 7px #ccc;
+                -webkit-box-shadow: 7px 7px 7px #ccc;
+                -moz-box-shadow: 7px 7px 7px #ccc;
+            }
+        }
+        .employee-details {
+            .name {
+                width: 100%;
+                border-bottom: {
+                    width: 1px;
+                    style: solid;
+                    color: #2f2f2f;
+                }
+            }
+            .description {
+                img {
+                    float: left;
+                    margin-right: 16px;
+                    box-shadow: 4px 4px 4px #ccc;
+                    -webkit-box-shadow: 4px 4px 4px #ccc;
+                    -moz-box-shadow: 4px 4px 4px #ccc;
+                }
+            }
+        }
+        .contact {
+            margin: 50px auto 0 auto;
+            border-top: {
+                width: 1px;
+                style: solid;
+                color: $primary;
+            }
+            .icon {
+                color: $primary;
+                font-size: 2em;
+                margin: 0 10px;
+                margin-top: 0.6em;
+                display: inline-block;
+            }
+        }
+   }
 }
 
