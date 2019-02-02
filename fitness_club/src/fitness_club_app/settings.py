@@ -54,7 +54,8 @@ INSTALLED_APPS = (
     'landing_page_backend',
     'slider_backend',
     'employees_backend',
-    'employees'
+    'employees',
+    'footer_backend'
 )
 
 MIDDLEWARE_CLASSES = (

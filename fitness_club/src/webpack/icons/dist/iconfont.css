@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "iconfont";
-	src: url("iconfont.woff?1d892299ccad270a1c201edba61927c9") format("woff");
+	src: url("iconfont.woff?b7ddd277c3546599a8c6c38db9aaafb1") format("woff");
 }
 
 .icon {
@@ -20,45 +20,57 @@
 .icon-angle-double-right:before {
 	content: "\f102";
 }
-.icon-bars:before {
+.icon-angle-right:before {
 	content: "\f103";
 }
-.icon-corner:before {
+.icon-bars:before {
 	content: "\f104";
 }
-.icon-facebook:before {
+.icon-corner:before {
 	content: "\f105";
 }
-.icon-gmail:before {
+.icon-facebook:before {
 	content: "\f106";
 }
-.icon-info:before {
+.icon-gmail:before {
 	content: "\f107";
 }
-.icon-instagram:before {
+.icon-info:before {
 	content: "\f108";
 }
-.icon-logout:before {
+.icon-instagram:before {
 	content: "\f109";
 }
-.icon-long-arrow-alt-right:before {
+.icon-logout:before {
 	content: "\f10a";
 }
-.icon-paper-plane:before {
+.icon-long-arrow-alt-right:before {
 	content: "\f10b";
 }
-.icon-pinterest:before {
+.icon-mail:before {
 	content: "\f10c";
 }
-.icon-play-circle:before {
+.icon-map-marked:before {
 	content: "\f10d";
 }
-.icon-rss:before {
+.icon-paper-plane:before {
 	content: "\f10e";
 }
-.icon-search:before {
+.icon-phone:before {
 	content: "\f10f";
 }
-.icon-twitter:before {
+.icon-pinterest:before {
 	content: "\f110";
+}
+.icon-play-circle:before {
+	content: "\f111";
+}
+.icon-rss:before {
+	content: "\f112";
+}
+.icon-search:before {
+	content: "\f113";
+}
+.icon-twitter:before {
+	content: "\f114";
 }

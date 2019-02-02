@@ -20,47 +20,59 @@
 .icon-angle-double-right:before {
 	content: "\F102";
 }
-.icon-bars:before {
+.icon-angle-right:before {
 	content: "\F103";
 }
-.icon-corner:before {
+.icon-bars:before {
 	content: "\F104";
 }
-.icon-facebook:before {
+.icon-corner:before {
 	content: "\F105";
 }
-.icon-gmail:before {
+.icon-facebook:before {
 	content: "\F106";
 }
-.icon-info:before {
+.icon-gmail:before {
 	content: "\F107";
 }
-.icon-instagram:before {
+.icon-info:before {
 	content: "\F108";
 }
-.icon-logout:before {
+.icon-instagram:before {
 	content: "\F109";
 }
-.icon-long-arrow-alt-right:before {
+.icon-logout:before {
 	content: "\F10A";
 }
-.icon-paper-plane:before {
+.icon-long-arrow-alt-right:before {
 	content: "\F10B";
 }
-.icon-pinterest:before {
+.icon-mail:before {
 	content: "\F10C";
 }
-.icon-play-circle:before {
+.icon-map-marked:before {
 	content: "\F10D";
 }
-.icon-rss:before {
+.icon-paper-plane:before {
 	content: "\F10E";
 }
-.icon-search:before {
+.icon-phone:before {
 	content: "\F10F";
 }
-.icon-twitter:before {
+.icon-pinterest:before {
 	content: "\F110";
+}
+.icon-play-circle:before {
+	content: "\F111";
+}
+.icon-rss:before {
+	content: "\F112";
+}
+.icon-search:before {
+	content: "\F113";
+}
+.icon-twitter:before {
+	content: "\F114";
 }
 
 /*!
@@ -6441,6 +6453,45 @@ a.text-dark:hover, a.text-dark:focus {
         #header-top #login-container .dropdown .dropdown-menu .dropdown-item:hover {
           background: none;
           color: #1cf1f1; }
+
+footer {
+  background-color: #212121;
+  padding-top: 2em; }
+  footer .column {
+    padding: 0 2em 2em 2em; }
+    footer .column h3 {
+      color: #1cf1f1;
+      font-size: 1.2em;
+      padding: 0 0 1em;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #bfbfbf; }
+    footer .column .content {
+      font-size: 14px;
+      color: #bfbfbf;
+      line-height: 2em;
+      margin: 0; }
+      footer .column .content .icon-td {
+        vertical-align: top;
+        padding: 5px 10px 0 0; }
+        footer .column .content .icon-td .icon {
+          font-size: 18px; }
+      footer .column .content ul {
+        list-style: none;
+        margin: 0;
+        padding: 0; }
+        footer .column .content ul li {
+          margin-bottom: 10px; }
+          footer .column .content ul li .icon {
+            color: #1cf1f1;
+            font-size: 20px;
+            padding-top: 4px;
+            line-height: 1.2em;
+            margin-right: 5px; }
+          footer .column .content ul li a {
+            text-decoration: none;
+            color: inherit; }
 
 header, section, footer, aside, nav, main, article, figure {
   display: block; }

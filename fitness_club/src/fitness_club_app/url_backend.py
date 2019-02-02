@@ -17,5 +17,8 @@ urlpatterns = [
             app_name='slider_backend')),
     url(r'^employees/', include('employees_backend.urls',
             namespace='employees_backend',
-            app_name='employees_backend'))
+            app_name='employees_backend')),
+    url(r'^footer/', include('footer_backend.urls',
+            namespace='footer_backend',
+            app_name='footer_backend'))
 ]

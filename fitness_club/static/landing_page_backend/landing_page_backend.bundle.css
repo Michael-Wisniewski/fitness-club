@@ -23,23 +23,44 @@
 .icon-bars:before {
 	content: "\F103";
 }
-.icon-logout:before {
+.icon-corner:before {
 	content: "\F104";
 }
-.icon-long-arrow-alt-right:before {
+.icon-facebook:before {
 	content: "\F105";
 }
-.icon-paper-plane:before {
+.icon-gmail:before {
 	content: "\F106";
 }
-.icon-play-circle:before {
+.icon-info:before {
 	content: "\F107";
 }
-.icon-rss:before {
+.icon-instagram:before {
 	content: "\F108";
 }
-.icon-search:before {
+.icon-logout:before {
 	content: "\F109";
+}
+.icon-long-arrow-alt-right:before {
+	content: "\F10A";
+}
+.icon-paper-plane:before {
+	content: "\F10B";
+}
+.icon-pinterest:before {
+	content: "\F10C";
+}
+.icon-play-circle:before {
+	content: "\F10D";
+}
+.icon-rss:before {
+	content: "\F10E";
+}
+.icon-search:before {
+	content: "\F10F";
+}
+.icon-twitter:before {
+	content: "\F110";
 }
 
 /*!
