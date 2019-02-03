@@ -69,6 +69,7 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery',
+            'window.jQuery': 'jquery',
             Util: 'exports-loader?Util!bootstrap/js/dist/util'
         }),
         new MiniCssExtractPlugin({

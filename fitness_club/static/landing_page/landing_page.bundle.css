@@ -26,53 +26,65 @@
 .icon-bars:before {
 	content: "\F104";
 }
-.icon-corner:before {
+.icon-classes:before {
 	content: "\F105";
 }
-.icon-facebook:before {
+.icon-corner:before {
 	content: "\F106";
 }
-.icon-gmail:before {
+.icon-customers:before {
 	content: "\F107";
 }
-.icon-info:before {
+.icon-facebook:before {
 	content: "\F108";
 }
-.icon-instagram:before {
+.icon-gmail:before {
 	content: "\F109";
 }
-.icon-logout:before {
+.icon-info:before {
 	content: "\F10A";
 }
-.icon-long-arrow-alt-right:before {
+.icon-instagram:before {
 	content: "\F10B";
 }
-.icon-mail:before {
+.icon-logout:before {
 	content: "\F10C";
 }
-.icon-map-marked:before {
+.icon-long-arrow-alt-right:before {
 	content: "\F10D";
 }
-.icon-paper-plane:before {
+.icon-mail:before {
 	content: "\F10E";
 }
-.icon-phone:before {
+.icon-map-marked:before {
 	content: "\F10F";
 }
-.icon-pinterest:before {
+.icon-paper-plane:before {
 	content: "\F110";
 }
-.icon-play-circle:before {
+.icon-phone:before {
 	content: "\F111";
 }
-.icon-rss:before {
+.icon-pinterest:before {
 	content: "\F112";
 }
-.icon-search:before {
+.icon-play-circle:before {
 	content: "\F113";
 }
-.icon-twitter:before {
+.icon-rss:before {
 	content: "\F114";
+}
+.icon-search:before {
+	content: "\F115";
+}
+.icon-trainers:before {
+	content: "\F116";
+}
+.icon-twitter:before {
+	content: "\F117";
+}
+.icon-weight:before {
+	content: "\F118";
 }
 
 /*!
@@ -6794,6 +6806,36 @@ a button.btn .icon, a.btn .icon, input.btn .icon {
               font-size: 1.5em;
               padding: 0.25em;
               display: inline-block; }
+
+#landing_page #counter {
+  text-align: center;
+  background-color: rgba(29, 29, 29, 0.23); }
+  #landing_page #counter .counter-column {
+    min-height: 267px;
+    padding-top: 4em;
+    padding-bottom: 4em; }
+    #landing_page #counter .counter-column .icon-wrapper {
+      width: 80px;
+      height: 80px;
+      background-color: #1cf1f1;
+      border-radius: 80px;
+      margin: 0 auto; }
+      #landing_page #counter .counter-column .icon-wrapper .icon {
+        line-height: 80px;
+        font-size: 32px;
+        color: #fff; }
+    #landing_page #counter .counter-column p {
+      font-size: 4em;
+      font-weight: 700;
+      letter-spacing: 5px;
+      color: #fff;
+      margin: 0.5em 0; }
+    #landing_page #counter .counter-column h4 {
+      font-size: 1.5em;
+      color: #fff;
+      text-transform: uppercase;
+      margin: 0;
+      font-weight: 700; }
 
 #landing_page .content-container {
   padding-top: 2em;

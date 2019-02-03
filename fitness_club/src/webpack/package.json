@@ -26,6 +26,8 @@
     "file-loader": "^2.0.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "jquery-countup": "^1.0.1",
+    "jquery-parallax.js": "^1.5.0",
     "jquery-ui": "^1.12.1",
     "jquery.cookie": "^1.4.1",
     "mini-css-extract-plugin": "^0.5.0",
@@ -38,6 +40,7 @@
     "sass-loader": "^6.0.7",
     "style-loader": "^0.23.1",
     "terser-webpack-plugin": "^1.1.0",
+    "waypoints": "^4.0.1",
     "webfonts-generator": "^0.4.0",
     "webpack": "^4.27.0"
   },

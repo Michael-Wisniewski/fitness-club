@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "iconfont";
-	src: url("iconfont.woff?b7ddd277c3546599a8c6c38db9aaafb1") format("woff");
+	src: url("iconfont.woff?c2f46dc0d0df1e74c56bbb0383e190ab") format("woff");
 }
 
 .icon {
@@ -26,51 +26,63 @@
 .icon-bars:before {
 	content: "\f104";
 }
-.icon-corner:before {
+.icon-classes:before {
 	content: "\f105";
 }
-.icon-facebook:before {
+.icon-corner:before {
 	content: "\f106";
 }
-.icon-gmail:before {
+.icon-customers:before {
 	content: "\f107";
 }
-.icon-info:before {
+.icon-facebook:before {
 	content: "\f108";
 }
-.icon-instagram:before {
+.icon-gmail:before {
 	content: "\f109";
 }
-.icon-logout:before {
+.icon-info:before {
 	content: "\f10a";
 }
-.icon-long-arrow-alt-right:before {
+.icon-instagram:before {
 	content: "\f10b";
 }
-.icon-mail:before {
+.icon-logout:before {
 	content: "\f10c";
 }
-.icon-map-marked:before {
+.icon-long-arrow-alt-right:before {
 	content: "\f10d";
 }
-.icon-paper-plane:before {
+.icon-mail:before {
 	content: "\f10e";
 }
-.icon-phone:before {
+.icon-map-marked:before {
 	content: "\f10f";
 }
-.icon-pinterest:before {
+.icon-paper-plane:before {
 	content: "\f110";
 }
-.icon-play-circle:before {
+.icon-phone:before {
 	content: "\f111";
 }
-.icon-rss:before {
+.icon-pinterest:before {
 	content: "\f112";
 }
-.icon-search:before {
+.icon-play-circle:before {
 	content: "\f113";
 }
-.icon-twitter:before {
+.icon-rss:before {
 	content: "\f114";
+}
+.icon-search:before {
+	content: "\f115";
+}
+.icon-trainers:before {
+	content: "\f116";
+}
+.icon-twitter:before {
+	content: "\f117";
+}
+.icon-weight:before {
+	content: "\f118";
 }
