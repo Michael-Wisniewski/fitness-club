@@ -33,7 +33,7 @@
 ### 2. Introduction
 **"Fitness Club"** is a web application which allows customers to get to know fitness center's offer and events. It provides many tools both in terms of improving customer service and marketing activities.
 
-<img src="./docs/screen.jpg">
+<img src="./docs/readme/screen.jpg">
 
 #### 3. Programming environment and tools
 
