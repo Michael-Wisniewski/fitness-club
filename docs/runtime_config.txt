@@ -1,0 +1,12 @@
+Main site:
+http://localhost/
+
+Administration panel
+http://panel.localhost/
+login: employee
+password: fitness
+
+superuser Django admin
+login: admin
+email: admin@admin.pl
+pass: fitness

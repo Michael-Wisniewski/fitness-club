@@ -29,9 +29,7 @@
     <img src="./docs/readme/shields/django.svg"><br/>    
     <img src="./docs/readme/shields/sass.svg">
     <img src="./docs/readme/shields/bootstrap.svg"><br/>     
-    <img src="./docs/readme/shields/javascript.svg">
-    <img src="./docs/readme/shields/vue.svg">
-    <img src="./docs/readme/shields/vuex.svg"><br/>     
+    <img src="./docs/readme/shields/javascript.svg">     
     <img src="./docs/readme/shields/webpack.svg"><br/>    
     <img src="./docs/readme/shields/docker.svg">
     <img src="./docs/readme/shields/dockercompose.svg">

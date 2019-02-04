@@ -74,7 +74,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'fitness_club_app.urls'
 ROOT_HOSTCONF = 'fitness_club_app.hosts'
 DEFAULT_HOST = 'frontend'
-PARENT_HOST = 'fitness.pl'
+PARENT_HOST = 'localhost'
 
 TEMPLATES = [
     {
