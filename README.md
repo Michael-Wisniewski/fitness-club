@@ -55,8 +55,6 @@
     
     All JS and CSS/SCSS files are bundled using the Webpack. Every site contains only one *.js and *.css files.
 
-    The calendar service module was written, among others using Vuex which serves as a centralized store for Vue components and jQuery plugins.
-
 ### 4. Description of functionalities
 
     Application features grouped by modules.
@@ -76,17 +74,32 @@
         - assigning tags and SEO friendly urls
         - providing sitemap
 
+    Employees
+        - viewing employees pictures
+        - reading employees descriptions
 
+    Employees_backend
+        - creating and removing employees accounts
+        - editing employees data
 
-    Added RWD and scrolling to CropperJS plugin
-    All views are class based
-    Custom crispy fields are used during forms generation
-    Mailhog is used for email testing (localhost:8025)
-    Django Sitemap framework is used to generate sitemaps
-    Feed framework is used to provide Rich Site Summary
+    Footer_backend
+        - editing footer data
 
+    Slider_backend
+        - creating and removing main site slides
+        - changing slides order
+
+    Account
+        - authenticating employees
 
 ### 5. Detailed list of used technologies
+
+
+| Tables        | Are           | Cool  |
+| ------------- |:-------------:| -----:|
+| col 3 is      | right-aligned | $1600 |
+| col 2 is      | centered      |   $12 |
+| zebra stripes | are neat      |    $1 |
 
 Nginx, Uwsgi
 PostgreSQL, Redis
