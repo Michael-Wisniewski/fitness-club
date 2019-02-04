@@ -100,19 +100,13 @@
 | Databases      | PostgreSQL, Redis      |
 | Search engine | Apache Solr      |
 | Python | Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, sorl-thumbnail, Django-Betterforms      |
-| Search engine | Apache Solr      |
-| Search engine | Apache Solr      |
-| Search engine | Apache Solr      |
-| Search engine | Apache Solr      |
-| Search engine | Apache Solr      |
+| Frontend | Html5, Css3, Sass, Bootstrap, JavaScript, Data Tables, DateTime Picker, CropperJs, jQuery-ui, Waypoints, Parallax, CountUp      |
+| Others | Node JS, Npm, Webpack (Css and Js optimizers, svg to woff converter), Docker, Docker-Compose, Mailhog      |
 
 
 Nginx, Uwsgi
 PostgreSQL, Redis
 Apache Solr
 Python, Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, sorl-thumbnail, Django-Betterforms
-Html5, Css3, Sass, Bootstrap
-JavaScript, Vue, Vuex, Data Tables, DateTime Picker, CropperJs, jQuery-ui, Waypoints, Parallax, CountUp
-Node js, Npm, Webpack (Css and Js optimizers, svg to woff converter)
-Docker, Docker-Compose
-Mailhog
+Html5, Css3, Sass, Bootstrap, JavaScript, Data Tables, DateTime Picker, CropperJs, jQuery-ui, Waypoints, Parallax, CountUp
+Node JS, Npm, Webpack (Css and Js optimizers, svg to woff converter), Docker, Docker-Compose, Mailhog
