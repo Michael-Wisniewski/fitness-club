@@ -95,11 +95,16 @@
 ### 5. Detailed list of used technologies
 
 
-| Tables        | Are           | Cool  |
-| ------------- |:-------------:| -----:|
-| col 3 is      | right-aligned | $1600 |
-| col 2 is      | centered      |   $12 |
-| zebra stripes | are neat      |    $1 |
+| Serwers      | Nginx, Uwsgi |
+| Databases      | PostgreSQL, Redis      |
+| Search engine | Apache Solr      |
+| Python | Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, sorl-thumbnail, Django-Betterforms      |
+| Search engine | Apache Solr      |
+| Search engine | Apache Solr      |
+| Search engine | Apache Solr      |
+| Search engine | Apache Solr      |
+| Search engine | Apache Solr      |
+
 
 Nginx, Uwsgi
 PostgreSQL, Redis
