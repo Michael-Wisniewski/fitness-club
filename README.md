@@ -94,7 +94,8 @@
 
 ### 5. Detailed list of used technologies
 
-
+| Type        | Technologies           |
+| ------------- |:-------------:|
 | Serwers      | Nginx, Uwsgi |
 | Databases      | PostgreSQL, Redis      |
 | Search engine | Apache Solr      |
