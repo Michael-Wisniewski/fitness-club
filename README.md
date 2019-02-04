@@ -39,23 +39,17 @@
 ### 2. Introduction
 **"Fitness Club"** is a web application which allows customers to get to know fitness center's offer and events. It provides many tools both in terms of improving customer service and marketing activities.
 
-
-### 3. Simplified use cases diagram
-<img src="./docs/readme/diagrams/use_cases.svg">
-
-
-### 4. Application’s architecture
-<img src="./docs/readme/diagrams/system_architecture.svg">
-
-#### 4.1 Programming environment and tools
+#### 3. Programming environment and tools
 
     Docker and Docker Compose are used to perform the virtualization of the runtime environment.
 
-    Http requests for static files are supported directly by Nginx. Site content created dynamically is delivered using uWsgi.
+    Http requests for static files are supported directly by Nginx. Site content created dynamically is 
+    delivered using uWsgi.
 
     Support of subdomains traffic is supported by Django Hosts (Django library).
 
-    Application's main data are saved in PostgreSQL database. Data used to search through blog posts are saved in noSql format. Other information which can not be gruped are formatted and pleaced in *.txt files.
+    Application's main data are saved in PostgreSQL database. Data used to search through blog posts are 
+    saved in noSql format. Other information which can not be gruped are formatted and pleaced in *.txt files.
 
     Application's backend is based on Python web framework - Django and oter libraries connected to it. 
     
@@ -63,7 +57,7 @@
 
     The calendar service module was written, among others using Vuex which serves as a centralized store for Vue components and jQuery plugins.
 
-### 5. Description of functionalities
+### 4. Description of functionalities
 
     Application features grouped by modules.
 
@@ -92,7 +86,7 @@
     Feed framework is used to provide Rich Site Summary
 
 
-### 6. Detailed list of used technologies
+### 5. Detailed list of used technologies
 
 Nginx, Uwsgi
 PostgreSQL, Redis
