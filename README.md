@@ -6,15 +6,9 @@
 
 1. Application stack overview
 2. Introduction
-3. Simplified use cases diagram
-4. Application’s architecture and programming environment  
-    4.1 Virtual enviroment  
-    4.2 Servers  
-    4.3 App Backend  
-    4.4 App Frontend  
-    4.5 Tools  
-5. Description of functionalities and programming notes
-6. Detailed list of used technologies
+3. Programming environment and tools
+4. Description of functionalities
+5. Detailed list of used technologies
 
 ### 1. Application stack overview
 
@@ -38,6 +32,8 @@
 
 ### 2. Introduction
 **"Fitness Club"** is a web application which allows customers to get to know fitness center's offer and events. It provides many tools both in terms of improving customer service and marketing activities.
+
+<img src="./docs/screen.jpg">
 
 #### 3. Programming environment and tools
 
@@ -102,11 +98,3 @@
 | Python | Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, sorl-thumbnail, Django-Betterforms      |
 | Frontend | Html5, Css3, Sass, Bootstrap, JavaScript, Data Tables, DateTime Picker, CropperJs, jQuery-ui, Waypoints, Parallax, CountUp      |
 | Others | Node JS, Npm, Webpack (Css and Js optimizers, svg to woff converter), Docker, Docker-Compose, Mailhog      |
-
-
-Nginx, Uwsgi
-PostgreSQL, Redis
-Apache Solr
-Python, Pip,  Django, Django REST, Crispy Forms, Taggit, Sitemap, Feed, Haystack, Pillow, Django Hosts, Serializers, sorl-thumbnail, Django-Betterforms
-Html5, Css3, Sass, Bootstrap, JavaScript, Data Tables, DateTime Picker, CropperJs, jQuery-ui, Waypoints, Parallax, CountUp
-Node JS, Npm, Webpack (Css and Js optimizers, svg to woff converter), Docker, Docker-Compose, Mailhog
