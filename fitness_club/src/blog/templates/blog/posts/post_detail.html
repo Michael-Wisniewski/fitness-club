@@ -16,7 +16,7 @@
             <img src="{{ post.image.url }}" class="post-image" alt="No photo"/>
         {% endif %}
         <p class="date text-muted">
-                Posted on {{ post.publish|date:"M d, Y" }} by <a href="#">{{ post.author }}</a>
+                Posted on {{ post.publish|date:"M d, Y" }} by <span>{{ post.author }}</span>
         </p>
         <p class="body">
                 {{ post.body|markdown }}

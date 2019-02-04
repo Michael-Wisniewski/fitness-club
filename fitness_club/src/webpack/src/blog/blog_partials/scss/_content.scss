@@ -60,7 +60,7 @@ content {
         }
         .date {
             font-size: 0.8em;
-            a {
+            span {
                 color: $primary;
             }
         }
@@ -69,7 +69,7 @@ content {
         }
         .similar-posts {
             margin: 20px 0px 0px 0px;
-            font-size: 0.8em;
+            font-size: 1em;
             border-top: 1px solid;
             a {
                 color: $primary;

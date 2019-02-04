@@ -13,7 +13,9 @@ class SlidesListView(Section, EmployeeLoginRequired, TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super(SlidesListView, self).get_context_data(**kwargs)
-        context['slides'] = SliderPicture.objects.all()
+        slides = SliderPicture.objects.all()
+        context['slides'] = slides
+        context['height'] = (slides.count() + 1) * 164
         return context
 
 class SlideCreateView(Section, EmployeeLoginRequired, CreateView):

@@ -5,6 +5,9 @@ $vertical-spacing: 25px;
 #blog {
     @import '_content';
     @import '_right_bar';
-    margin-top: 95px;
+    margin: {
+        top: 95px;
+        bottom: 4em;
+    }
 }
 

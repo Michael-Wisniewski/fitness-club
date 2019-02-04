@@ -12,7 +12,7 @@
                 <h4>There are not any slides added.</h4>
             {% else %}
                 <h7 class="text-info">Grab and move element to change slides order.</h7>
-                <ul id="sortable_ul">
+                <ul id="sortable_ul" style="min-height: {{ height }}px;">
                     {% for slide in slides %}
                         <li slide_id="{{ slide.id }}">
                             <div class="header">
