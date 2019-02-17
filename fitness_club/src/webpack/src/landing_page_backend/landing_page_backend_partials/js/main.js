@@ -1,1 +1,0 @@
-import '../../../base_templates/backend_partials/js/main.js';

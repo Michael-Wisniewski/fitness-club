@@ -1,3 +1,0 @@
-FROM grossws/solr4
-ADD ./conf/ /opt/solr/conf/
-EXPOSE 8983
