@@ -2,7 +2,7 @@
 *.pyc
 *.log
 #databases
-#/databases/postgresql_main_apps
+/databases/postgresql_main_apps
 #/databases/solr
 #fitness club
 #/fitness_club/media
