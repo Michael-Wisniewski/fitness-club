@@ -1,0 +1,40 @@
+<div id="header-top" class="container-fluid">
+	<div class="table-container">
+		<div class="table-row">	
+			<div id="navbar-container" class="table-cell">
+				<nav class="navbar navbar-expand-md">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible-navbar">
+						<i class="icon icon-bars"></i>
+					</button>
+					<div class="collapse navbar-collapse" id="collapsible-navbar">
+						<ul class="navbar-nav">
+							<li class="nav-item {% if section == 'home' %}active{% endif %}">
+								<a href="{% url "landing_page" %}" class="nav-link">Home</a>
+							</li>
+							<li class="nav-item {% if section == 'blog' %}active{% endif %}">
+								<a href="{% url "blog:posts_list" %}" class="nav-link">Blog</a>
+							</li>
+							<li class="nav-item {% if section == 'employees' %}active{% endif %}">
+								<a href="{% url "employees:employees_list" %}" class="nav-link">Trainers</a>
+							</li>
+						</ul>
+					</div>  
+				</nav>
+			</div>
+			<!-- Add during creation of user account -->
+			<!--
+			<div id="login-container" class="table-cell">
+				<div class="dropdown">
+					<button type="button" class="btn dropdown-toggle" data-toggle="dropdown">
+						Hello, Michael
+					</button>
+					<div class="dropdown-menu dropdown-menu-right">
+						<a class="dropdown-item" href="#">Account</a>
+						<a class="dropdown-item" href="#">Logout</a>
+					</div>
+				</div>
+			</div>
+		    -->
+		</div>
+	</div>
+</div>

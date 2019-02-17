@@ -1,0 +1,32 @@
+{% load staticfiles crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!--[if lt IE 9]>
+            <script src="{% static "base_templates/html5shiv.js" %}></script>
+        <![endif]-->
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>FC Dashboard Login</title>
+            <link href="{% static "account_backend/account_backend.bundle.css" %}" rel="stylesheet" type="text/css">
+    </head>
+    <body class="bg-primary">
+        <div class="container">
+            <div class="row">
+                <div id="form-container" class="col-lg-4 mx-auto bg-light">
+                    <div id="form-title" class="text-secondary">
+                        Please Login
+                    </div>
+                    <div class="text-danger text-center">
+                        {{ response_message }}
+                    </div>
+                    <form action="." method="post">
+                        {% crispy form %}
+                    </form>
+                </div>
+            </div>
+        </div>
+        <script src="{% static "account_backend/account_backend.bundle.js" %}"></script>
+    </body>
+</html>

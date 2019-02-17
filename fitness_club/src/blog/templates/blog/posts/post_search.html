@@ -1,0 +1,95 @@
+{% extends "blog/base.html" %}
+{% load blog_tags crispy_forms_tags %}
+
+{% block title %}Search posts{% endblock %}
+
+{% block blog_content %}
+    <div id="post-search">
+        <h2 class="title">Search posts</h2>
+        <div class="media border">
+            <i class="icon icon-search"></i>
+            <div class="media-body">
+                <h4>Enter a search term in the search box</h4>
+                <form action="." method="get">
+                    {% crispy form %}
+                </form>
+            </div>
+        </div>
+        {% if query %}
+            {% if posts %}
+                <div class="response success">
+                    <p id="badge">
+                        <span class="badge badge-primary">
+                            {{ results_quantity }} result{{ results_quantity|pluralize:"s" }}
+                        </span> 
+                    </p>
+                    <p>
+                        Posts which are containing <span>"{{ query }}"</span>.
+                    </p>
+                </div>
+                <div id="posts-container">
+                    {% for post in posts %}
+                        <div class="post">
+                            <div class="title">
+                                {{ post.title|markdown }}
+                            </div>
+                            {% with post.tags.all as tags %}
+                                {% if tags %}
+                                    <div class="tags">
+                                        Tags: 
+                                        {% for tag in tags %}
+                                            <a href="{% url "blog:post_list_by_tag" tag.slug %}">
+                                                {% with tag.name as name %}
+                                                    {% if tag.name == query %}
+                                                        <span class="bold_tag">{{ name }}</span>
+                                                    {% else %}
+                                                        {{ name }}
+                                                    {% endif %}
+                                                {% endwith %} 
+                                            </a>
+                                            {% if not forloop.last %}, {% endif %}
+                                        {% endfor %}
+                                    </div>
+                                {% endif %}
+                            {% endwith %}
+                            <div class="body">
+                                {{ post.body|markdown|truncatewords_html:30 }}<br/>
+                            </div>
+                        </div>
+                    {% endfor %}
+                    {% if is_paginated %}
+                        <ul class="pagination justify-content-center">
+                            {% if page_obj.has_previous %}
+                                <li class="page-item">
+                                    <a class="page-link" href="./?page={{ page_obj.previous_page_number }}&query={{query}}">Previous</a>
+                                </li>
+                            {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#">Previous</a>
+                                </li>
+                            {% endif %}
+                            {% for counter in page_obj.paginator.page_range %}
+                                <li class="page-item {% if counter == page_obj.number %}active{% endif %}">
+                                    <a class="page-link" href="./?page={{ counter }}&query={{query}}">
+                                        {{ counter }}
+                                    </a>
+                                </li>
+                            {% endfor %}            
+                            {% if page_obj.has_next %}
+                                <li class="page-item">
+                                    <a class="page-link" href="./?page={{ page_obj.next_page_number }}&query={{query}}">Next</a>
+                                </li>
+                            {% else %}
+                                <li class="page-item disabled">
+                                    <a class="page-link" href="#">Next</a>
+                                </li>
+                            {% endif %}
+                        </ul>    
+                    {% endif %}
+                </div>
+            {% else %}
+                <div class="response fail">No posts which are containing <span>"{{ query }}"</span> were found.</div>
+            {% endif %}
+        {% endif %}
+    </div>
+{% endblock %}

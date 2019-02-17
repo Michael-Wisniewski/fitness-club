@@ -1,0 +1,9 @@
+*.temp
+*.pyc
+*.log
+#databases
+/databases/postgresql_main_apps
+#/databases/solr
+#fitness club
+#/fitness_club/media
+/fitness_club/src/webpack/node_modules

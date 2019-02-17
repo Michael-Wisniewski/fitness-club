@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!--[if lt IE 9]>
+            <script src="{% static "base_templates/html5shiv.js" %}></script>
+        <![endif]-->
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Welcome to Fitness Club{% endblock %}</title>
+        {% block css %}
+            <link href="{% static "base_templates/frontendBase.bundle.css" %}" rel="stylesheet" type="text/css">
+        {% endblock %}
+    </head>
+    <body>
+        {% include "frontend/partials/navbar.html" %}
+        {% block content %}{% endblock %}
+        {% include "frontend/partials/footer.html" %}
+        {% block javascript %}
+            <script src="{% static "base_templates/frontendBase.bundle.js" %}"></script>
+        {% endblock %}
+    </body>
+</html>

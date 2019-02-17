@@ -1,0 +1,25 @@
+{% extends "frontend/home.html" %}
+{% load staticfiles %}
+
+{% block css %}
+    <link href="{% static "blog/blog.bundle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div id="blog">
+    <div class="container">
+        <div class="row">
+            <content class="col-md-8">
+                    {% block blog_content %}{% endblock %} 
+            </content>
+            <aside class="col-md-4">
+                {% include "blog/partials/sidebar.html" %}
+            </aside>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "blog/blog.bundle.js" %}"></script>
+{% endblock %}

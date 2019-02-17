@@ -1,0 +1,52 @@
+{% extends "employees/base.html" %}
+
+{% block employees_content %}
+    <div id="employees-list">
+        {% for employee in employees %}
+            <div id="employee-nr-{{ forloop.counter }}" class="container-wrapper">
+                <div class="container employee-container">
+                    <div class="row">
+                        {% if forloop.counter|divisibleby:2 == 0 %}
+                            <div class="col-lg-4">
+                                <div class="employee-picture">
+                                    <img src="{{ employee.profile.picture.url }}">
+                                </div>
+                            </div>
+                            <div class="col-lg-8 order-first order-md-2">
+                                <div class="employee-details">
+                                    <h2 class="name">{{ employee }}</h2>
+                                    <p class="description">
+                                        <img src="{{ employee.profile.miniature.url }}">
+                                        {{ employee.profile.description|linebreaksbr }}
+                                    </p>
+                                </div>
+                            </div>
+                        {% else %}
+                            <div class="col-lg-8">
+                                <div class="employee-details">
+                                    <h2 class="name">{{ employee }}</h2>
+                                    <p class="description">
+                                        <img src="{{ employee.profile.miniature.url }}">
+                                        {{ employee.profile.description|linebreaksbr }}
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="col-lg-4">
+                                <div class="employee-picture">
+                                    <img src="{{ employee.profile.picture.url }}">
+                                </div>
+                            </div>
+                        {% endif %}
+                        <div class="col-md-6 mx-auto contact text-center order-3">
+                            <i class="icon icon-gmail"></i>
+                            <i class="icon icon-facebook"></i>
+                            <i class="icon icon-twitter"></i>
+                            <i class="icon icon-instagram"></i>
+                            <i class="icon icon-pinterest"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %} 

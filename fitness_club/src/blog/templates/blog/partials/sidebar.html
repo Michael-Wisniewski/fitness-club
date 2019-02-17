@@ -1,0 +1,49 @@
+{% load blog_tags %}
+<div class="card">
+    <div class="card-title">
+        Fitness Club Blog
+        <a href="{% url "blog:post_feed" %}">RSS<i class="icon icon-rss"></i></a>
+    </div>
+    <div class="card-body">
+        <div class="total-posts">
+            {% total_posts %}   
+        </div>
+    </div>
+</div>
+{% if not hide_search_bar %}
+    <div class="card">
+        <div class="card-title">
+            Search
+        </div>
+        <div id="search-form" class="card-body">
+            <form atcion="." method="get" accept-charset="utf-8">
+                <div class="input-group mb-2 mt-2">
+                    <input name="query" type="text" class="form-control" placeholder="Search for..."/>
+                    <div class="input-group-append">
+                        <input class="btn btn-primary" type="submit" value="Go!"/>  
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endif %}
+<div class="card">
+    <div class="card-title">
+        Latest posts
+    </div>
+    <div class="card-body">
+        <div class="posts-lits">
+            {% show_latest_posts %}
+        </div>
+    </div>
+</div>
+<div class="card">
+    <div class="card-title">
+        Most commented posts
+    </div>
+    <div class="card-body">
+        <div class="posts-lits">
+            {% show_most_commented_posts %}
+        </div>
+    </div>
+</div>

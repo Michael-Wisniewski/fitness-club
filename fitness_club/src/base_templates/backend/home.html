@@ -1,0 +1,50 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="pl">
+    <head>
+        <!--[if lt IE 9]>
+            <script src="{% static "base_templates/html5shiv.js" %}></script>
+        <![endif]-->
+        <meta charset="UTF-8">
+        <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{% block title %}Fitness Club Dashboard{% endblock %}</title>
+        {% block css %}
+            <link href="{% static "base_templates/backendBase.bundle.css" %}" rel="stylesheet" type="text/css">
+        {% endblock %}
+    </head>
+    <body>
+        {% include "backend/partials/navbar.html" %}
+        <div id="main" class="container-fluid">
+            <div class="row">
+                <sidebar id="sidebar" class="col-lg-2 bg-light" role="navigation">            
+                    <ul class="nav flex-column">
+                        <li class="nav-item {% if section == 'landing_page_backend' %}active{% endif %}">
+                            <a class="nav-link" href="{% url "landing_page_backend" %}">Overview</a>
+                        </li>
+                        <li class="nav-item {% if section == 'blog_backend' %}active{% endif %}">
+                            <a class="nav-link" href="{% url "blog_backend:posts_list" %}">Blog</a>
+                        </li>
+                        <li class="nav-item {% if section == 'slider_backend' %}active{% endif %}">
+                            <a class="nav-link" href="{% url "slider_backend:slides_list" %}">Slides</a>
+                        </li>
+                        <li class="nav-item {% if section == 'employees_backend' %}active{% endif %}">
+                            <a class="nav-link" href="{% url "employees_backend:employees_list" %}">Employees</a>
+                        </li>
+                        <li class="nav-item {% if section == 'footer_backend' %}active{% endif %}">
+                            <a class="nav-link" href="{% url "footer_backend:footer_data" %}">Footer</a>
+                        </li>
+                    </ul>         
+                </sidebar>
+                <content class="col-12 col-lg-10">
+                    <div class="content-wrapper bg-light">
+                        {% block content %}{% endblock %}
+                    </div>
+                </content>
+            </div>
+        </div>
+        {% block javascript %}
+            <script src="{% static "base_templates/backendBase.bundle.js" %}"></script>
+        {% endblock %}
+    </body>
+</html>

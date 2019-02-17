@@ -1,0 +1,14 @@
+{% extends "blog/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block title %}Share post{% endblock %}
+
+{% block blog_content %}
+    <div class="row">
+        <div id="post-share" class="col-8 mx-auto form-container">
+            <form action="." method="post">
+                {% crispy form %} 
+            </form>
+        </div>
+    </div>
+{% endblock %}

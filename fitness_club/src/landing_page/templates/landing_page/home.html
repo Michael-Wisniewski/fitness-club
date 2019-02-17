@@ -1,0 +1,19 @@
+{% extends "frontend/home.html" %}
+{% load staticfiles blog_tags slider_tags employees_tags %}
+
+{% block css %}
+    <link href="{% static "landing_page/landing_page.bundle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div id="landing_page">
+        {% slider_shortcut %}
+        {% employees_shortcut %}
+        {% include "landing_page/counter.html" %}
+        {% blog_content_shortcut %}
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "landing_page/landing_page.bundle.js" %}"></script>
+{% endblock %}

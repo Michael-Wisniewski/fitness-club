@@ -1,0 +1,77 @@
+<div class="row">
+    <div class="col-lg-4 column">
+        <h3>About us</h3>
+        <div class="content">
+            {{ data.about_us|safe }}
+        </div>
+    </div>
+    <div class="col-lg-4 column">
+        <h3>Contact Info</h3>
+        <div class="content">
+            <table> 
+                <tbody>
+                    <tr>
+                        <td class="icon-td" rowspan="2">
+                            <i class="icon icon-map-marked"></i>
+                        </td>
+                        <td>
+                            {{ data.post_code}} {{ data.city }}
+                        </td>
+                    </tr>
+                    <tr>   
+                        <td>
+                            {{ data.street}} {{ data.number }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="icon-td">
+                            <i class="icon icon-mail"></i>
+                        </td>
+                        <td>
+                            {{ data.email}}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="icon-td">
+                            <i class="icon icon-phone"></i>
+                        </td>
+                        <td>
+                            {{ data.phone}}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <div class="col-lg-4 column">
+        <h3>Navigation</h3>
+        <div class="content">
+            <ul>
+                <li>
+                    <i class="icon icon-angle-right"></i>
+                    <a href="{% url "landing_page" %}">
+                        Home
+                    </a>
+                </li>
+                <li>
+                    <i class="icon icon-angle-right"></i>
+                    <a href="{% url "blog:posts_list" %}">
+                        Blog
+                    </a>
+                </li>
+                <li>
+                    <i class="icon icon-angle-right"></i>
+                    <a href="{% url "employees:employees_list" %}">
+                        Trainers
+                    </a>
+                </li>
+                <li>
+                    <i class="icon icon-angle-right"></i>
+                    <a href="#">
+                        Schedule
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

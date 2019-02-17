@@ -1,0 +1,20 @@
+{% extends "blog/base.html" %}
+
+{% block title %}Share post{% endblock %}
+
+{% block blog_content %}
+<div id="share-confirmation" class="col-6 mx-auto">
+    <div class="card text-center">
+        <div class="card-header">
+            Your invitation email has been sent!
+        </div>
+        <div class="card-body">
+            <a href="{{ post.get_absolute_url }}">
+                <button class="btn btn-primary">
+                        Return to the post.
+                </button>
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock %}

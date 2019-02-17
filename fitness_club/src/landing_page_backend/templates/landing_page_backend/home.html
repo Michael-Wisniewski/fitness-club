@@ -1,0 +1,20 @@
+{% extends "backend/home.html" %}
+{% load staticfiles blog_tags %}
+
+{% block css %}
+    <link href="{% static "landing_page_backend/landing_page_backend.bundle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div id="landing_page">
+       <div class="row">
+           <div class="col text-center">
+               <h3 class="text-primary">Welcome on administration panel.</h3>
+           </div>
+       </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "landing_page_backend/landing_page_backend.bundle.js" %}"></script>
+{% endblock %}

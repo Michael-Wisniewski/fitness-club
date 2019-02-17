@@ -1,0 +1,41 @@
+{% extends "backend/home.html" %}
+{% load staticfiles %}
+
+{% block css %}
+    <link href="{% static "employees_backend/employees_backend.bundle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+    <div id="employees_list" class="row">
+        <div class="col-12 text-right mb-3">
+            <a href=" {% url "employees_backend:employee_create" %}">
+                <button class="btn btn-success">Add Employee</button>
+            </a>
+        </div>
+        <div class="table-responsive-md col-12">
+            <table id="list" class="table table-striped table-bordered">
+                <thead>
+                    <tr class="table-primary">
+                        <th></th>
+                        <th>Name</th>
+                        <th>Surname</th>
+                        <th>Email</th>
+                        <th>Edit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascript %}
+    <script>
+        window.urls = {
+            employees_list_data: '{% url 'employees_backend:employees_list_data' %}',
+            employee_edit_blind: '{% url 'employees_backend:employee_edit_blind' %}',
+            employee_delete_blind: '{% url 'employees_backend:employee_delete_blind' %}'
+        }
+    </script>
+    <script src="{% static "employees_backend/employees_backend.bundle.js" %}"></script>
+{% endblock %}

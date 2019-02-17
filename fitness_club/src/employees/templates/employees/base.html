@@ -1,0 +1,23 @@
+{% extends "frontend/home.html" %}
+{% load staticfiles %}
+
+{% block css %}
+    <link href="{% static "employees/employees.bundle.css" %}" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+<div id="employees">
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1><span>O</span>ur <span>t</span>eam</h1>
+            <div class="border"></div>
+            <p>Get to know our instructors better!</p>
+        </div>
+    </div>
+    {% block employees_content %}{% endblock %} 
+</div>
+{% endblock %}
+
+{% block javascript %}
+    <script src="{% static "employees/employees.bundle.js" %}"></script>
+{% endblock %}

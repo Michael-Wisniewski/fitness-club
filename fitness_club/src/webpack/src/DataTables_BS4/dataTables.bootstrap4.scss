@@ -1,0 +1,79 @@
+// Sorting - using :before and :after with UTF8 characters
+table.dataTable thead {
+	> tr > th,
+	> tr > td {
+		&.sorting_asc,
+		&.sorting_desc,
+		&.sorting {
+			padding-right: 30px;
+		}
+
+		&:active {
+			outline: none;
+		}
+	}
+
+	.sorting,
+	.sorting_asc,
+	.sorting_desc,
+	.sorting_asc_disabled,
+	.sorting_desc_disabled {
+		cursor: pointer;
+		position: relative;
+
+		&:before,
+		&:after {
+			position: absolute;
+			bottom: 0.9em;
+			display: block;
+			opacity: 0.3;
+		}
+
+		&:before {
+			right: 1em;
+			content: "\2191"; // up arrow - ascending
+		}
+
+		&:after {
+			right: 0.5em;
+			content: "\2193"; // down arrow - descending
+		}
+	}
+
+	.sorting_asc:before,
+	.sorting_desc:after {
+		opacity: 1;
+	}
+
+	.sorting_asc_disabled:before,
+	.sorting_desc_disabled:after {
+		opacity: 0;
+	}
+}
+
+table.dataTable thead {
+    .sorting, .sorting_desc, .sorting_asc {
+        background-image: none;
+    }
+}
+
+// Responsive
+@media screen and (max-width: 767px) {
+	div.dataTables_wrapper {
+		div.dataTables_length,
+		div.dataTables_filter,
+		div.dataTables_info,
+		div.dataTables_paginate {
+			text-align: center;
+		}
+	}
+}
+
+// Table header
+.table-hover .table-primary:hover > td, 
+.table-hover .table-primary:hover > th, 
+.table-primary > th {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #ffffff;
+}

@@ -1,0 +1,48 @@
+footer {
+    background-color: $third;
+    padding-top: 2em;
+    .column {
+        padding: 0 2em 2em 2em;
+        h3 {
+            color: $primary;
+            font-size: 1.2em;
+            padding: 0 0 1em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 1px solid #bfbfbf;
+        }
+        .content {
+            font-size: 14px;
+            color: #bfbfbf;
+            line-height: 2em;
+            margin: 0;
+            .icon-td {
+                vertical-align: top;
+                padding: 5px 10px 0 0;
+                .icon {
+                    font-size: 18px;
+                }
+            }
+            ul {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                li {
+                    margin-bottom: 10px;
+                    .icon { 
+                        color: $primary;
+                        font-size: 20px;
+                        padding-top: 4px;
+                        line-height: 1.2em;
+                        margin-right: 5px;
+                    }
+                    a {
+                        text-decoration: none;
+                        color: inherit;
+                    }
+                }
+            }
+        }
+    }
+}

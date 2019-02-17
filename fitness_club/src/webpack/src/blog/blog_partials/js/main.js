@@ -1,0 +1,1 @@
+import '../../../base_templates/frontend_partials/js/main.js';
