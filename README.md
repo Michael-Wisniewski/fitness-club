@@ -22,6 +22,17 @@ To run containers:
 docker-compose -f docker-compose.yml -f docker-compose.develop.yml up
 ```
 
+Appplication frontend side.
+```
+url: http://localhost
+```
+Appplication backendside.
+```
+url: http://panel.localhost
+login: employee
+password: fitness
+```
+
 
 #### Table of Contents
 
