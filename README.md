@@ -1,6 +1,27 @@
 # Fitness Club
 **Caution!** This code was created to be a attachment for a job application. It is not suitable for commercial purposes. If you find something interesting in it, please do not hesitate to reuse.
 
+### Instalation
+**Notice** The repository contains all the data required to run the application.
+Please ensure that you have avalible port:80.
+Just copy repository and from the main folder level run listed below commands.
+
+To restore the database:
+
+```
+docker-compose up -d db_postgresql
+
+docker-compose exec -T db_postgresql pg_restore -C --clean --no-acl --no-owner -U fitness_club_admin -d fitness_club < ./databases/database.backup
+
+docker-compose stop db_postgresql
+```
+
+To run containers:
+
+```
+docker-compose -f docker-compose.yml -f docker-compose.develop.yml up
+```
+
 
 #### Table of Contents
 
