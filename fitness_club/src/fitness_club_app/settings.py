@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'kdaee$1l0hfxen(5c*oe7rm(2dvio4w583yk3n&izz-%=!(s8n'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost', 'panel.localhost']
 PREPEND_WWW = False
 
 # Application definition
@@ -157,3 +157,6 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
 )
+
+if os.getenv('PRODUCTION') == 'false':
+    DEBUG = True

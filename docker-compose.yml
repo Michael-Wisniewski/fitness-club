@@ -10,11 +10,11 @@ services:
     container_name: db_postgres_main
     networks:
       - fitness_club_to_postgresql
-    ports:
-      - 5432:5432
   
   fitness_club:
     build: ./docker/fitness_club/
+    environment:
+      PRODUCTION: 'true'
     volumes:
       - ./fitness_club/src:/fitness_club/src
       - ./fitness_club/static:/fitness_club/static
@@ -29,7 +29,6 @@ services:
       - nginx_to_fitness_club
       - fitness_club_to_postgresql
       - fitness_club_to_solr
-      - uwsgi_to_mailhog
 
   server:
     build: ./docker/server/
@@ -47,20 +46,10 @@ services:
   solr:
     build: ./docker/solr
     container_name: solr
-    ports:
-     - "8983:8983"
     volumes:
       - ./databases/solr:/opt/solr/data
     networks:
       - fitness_club_to_solr
-
-  mailhog:
-    image: diyan/mailhog
-    container_name: Mailhog
-    networks:
-      - uwsgi_to_mailhog
-    ports:
-      - 8025:8025
 
 networks:
   nginx_to_fitness_club:
@@ -68,6 +57,4 @@ networks:
   fitness_club_to_postgresql:
     driver: bridge
   fitness_club_to_solr:
-    driver: bridge
-  uwsgi_to_mailhog:
     driver: bridge

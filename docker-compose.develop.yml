@@ -1,0 +1,28 @@
+version: '3'
+
+services:
+  fitness_club:
+    environment:
+      PRODUCTION: 'false'
+    networks:
+      - uwsgi_to_mailhog
+
+  db_postgresql:
+    ports:
+      - 5432:5432
+
+  solr:
+    ports:
+      - "8983:8983"
+
+  mailhog:
+    image: diyan/mailhog
+    container_name: Mailhog
+    networks:
+      - uwsgi_to_mailhog
+    ports:
+      - 8025:8025
+
+networks:
+  uwsgi_to_mailhog:
+    driver: bridge
