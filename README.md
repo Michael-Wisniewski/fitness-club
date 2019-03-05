@@ -19,7 +19,7 @@ docker-compose stop db_postgresql
 To run containers:
 
 ```
-docker-compose -f docker-compose.yml -f docker-compose.develop.yml up
+docker-compose up
 ```
 
 Appplication frontend side.
@@ -67,6 +67,12 @@ password: fitness
 
 <p align="center">
     <img src="./docs/readme/screen.jpg">
+</p>
+<p align="center">
+    <img src="./docs/readme/screen2.jpg">
+</p>
+<p align="center">
+    <img src="./docs/readme/screen3.jpg">
 </p>
 
 #### 3. Programming environment and tools
