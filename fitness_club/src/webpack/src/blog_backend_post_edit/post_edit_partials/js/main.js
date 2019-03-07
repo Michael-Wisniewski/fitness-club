@@ -18,6 +18,7 @@ $(document).ready(function(){
     var $crop_button = $('#crop-button');
     var cropper;
     var imageCroppedFlag = false;
+    var initial_zoom_ratio = 0;
     var conf = {
         aspectRatio: 1 / 0.666666667,
         scalable: false,
@@ -80,28 +81,34 @@ $(document).ready(function(){
         else {
             updateCropDimensions();
         }
-        $range_control.val(0);
         cropper = new Cropper(image_to_crop_el, conf);
     };
+
+    $cropper_container.on('ready', function () {
+        var image_data = cropper.getImageData();
+        initial_zoom_ratio = (image_data.width / image_data.naturalWidth) * 100;
+        $range_control.attr('min', initial_zoom_ratio);
+        $range_control.val(initial_zoom_ratio);
+    });
 
     $cropper_container.on('zoom input', function(e) {
         if(e.type == 'zoom'){
             var new_ratio = e.originalEvent.detail.ratio;
-            if (new_ratio > 2) {
-                e.preventDefault();
-                cropper.zoomTo(2);
-            }
-            else if (new_ratio < 1) {
+            if (new_ratio > 1) {
                 e.preventDefault();
                 cropper.zoomTo(1);
             }
+            else if (new_ratio < 0) {
+                e.preventDefault();
+                cropper.zoomTo(0);
+            }
             else {
-                var ratio_in_percent = ((new_ratio -1) * 100)
+                var ratio_in_percent = ((new_ratio) * 100)
                 $range_control.val(ratio_in_percent);
             }
         }
         else {
-            var new_ratio = (e.originalEvent.originalTarget.valueAsNumber / 100) + 1;
+            var new_ratio = (e.originalEvent.originalTarget.valueAsNumber / 100);
             cropper.zoomTo(new_ratio);
         }
     });
